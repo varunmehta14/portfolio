@@ -1,12 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const skillItems = document.querySelectorAll(".skill-item");
+// Adding smooth scrolling for the navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        targetSection.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
-    skillItems.forEach((item) => {
-        item.addEventListener("mouseover", () => {
-            item.style.backgroundColor = "#005bb5"; // Darker blue on hover
-        });
-        item.addEventListener("mouseout", () => {
-            item.style.backgroundColor = "#0073e6"; // Original blue
-        });
+// Adding fade-in effect on scroll for each section
+window.addEventListener('scroll', () => {
+    const fadeInSections = document.querySelectorAll('.section-fade-in');
+    fadeInSections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight - 100) {
+            section.style.opacity = '1';
+            section.style.transform = 'translateY(0)';
+        }
     });
 });

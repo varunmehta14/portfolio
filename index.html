@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Varun Mehta's Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- CSS File -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Script for Animations -->
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <h1>Varun Mehta</h1>
         <p>Los Angeles, California | 213-275-9629 | <a href="mailto:varunjay@usc.edu">varunjay@usc.edu</a> | <a href="https://linkedin.com/in/mehtavarunj">linkedin.com/in/mehtavarunj</a></p>
     </header>
 
+    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -21,25 +26,38 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
+    <!-- Main Section -->
     <main>
-        <section id="about">
+        <!-- About Section -->
+        <section id="about" class="section-fade-in">
             <h2>About Me</h2>
             <p>I am a Master's student in Computer Science at USC with a passion for software development, machine learning, and natural language processing. I aim to create impactful software solutions.</p>
+            <!-- Add Image Placeholder -->
+            <div class="image-placeholder">
+                <img src="path/to/your/photo.jpg" alt="Varun Mehta's Photo">
+            </div>
         </section>
 
-        <section id="education">
+        <!-- Education Section -->
+        <section id="education" class="section-fade-in">
             <h2>Education</h2>
-            <h3>University of Southern California</h3>
-            <p>Master of Science, Computer Science (Expected May 2025)</p>
-            <h3>Dwarkadas J. Sanghvi College of Engineering</h3>
-            <p>Bachelor of Technology, Computer Engineering (August 2019 - June 2023)</p>
+            <div class="edu-item">
+                <h3>University of Southern California</h3>
+                <p>Master of Science, Computer Science (Expected May 2025)</p>
+            </div>
+            <div class="edu-item">
+                <h3>Dwarkadas J. Sanghvi College of Engineering</h3>
+                <p>Bachelor of Technology, Computer Engineering (August 2019 - June 2023)</p>
+            </div>
         </section>
 
-        <section id="skills">
+        <!-- Skills Section -->
+        <section id="skills" class="section-fade-in">
             <h2>Technical Skills</h2>
             <div class="skills-container">
                 <div class="skill-item">JavaScript</div>
@@ -54,7 +72,8 @@
             </div>
         </section>
 
-        <section id="experience">
+        <!-- Experience Section -->
+        <section id="experience" class="section-fade-in">
             <h2>Experience</h2>
             <div class="experience-item">
                 <h3>Software Engineer Intern, Alien Attorney</h3>
@@ -75,7 +94,8 @@
             </div>
         </section>
 
-        <section id="projects">
+        <!-- Projects Section -->
+        <section id="projects" class="section-fade-in">
             <h2>Projects</h2>
             <div class="project-item">
                 <h3>Information Extraction and Summarization of Medical Reports</h3>
@@ -85,14 +105,33 @@
                 <h3>Waste Classification using Transfer Learning</h3>
                 <p>Developed a smart bin concept using Deep Learning with a 96% accuracy rate.</p>
             </div>
+            <!-- Placeholder for Video Recording -->
+            <div class="video-placeholder">
+                <h3>Watch Project Demo</h3>
+                <video controls>
+                    <source src="path/to/your/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </section>
 
-        <section id="contact">
+        <!-- Publications Section -->
+        <section id="publications" class="section-fade-in">
+            <h2>Publications</h2>
+            <ul>
+                <li><a href="https://link_to_publication_1.com" target="_blank">Paper 1: Video Transcript Extraction and Summarization</a></li>
+                <li><a href="https://link_to_publication_2.com" target="_blank">Paper 2: Voice Recognition for Business Management</a></li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-fade-in">
             <h2>Contact</h2>
             <p>If you would like to get in touch, please reach out via email at <a href="mailto:varunjay@usc.edu">varunjay@usc.edu</a>.</p>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Varun Mehta. All rights reserved.</p>
     </footer>
