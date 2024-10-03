@@ -1,4 +1,4 @@
-// Adding smooth scrolling for the navigation links
+// Smooth scrolling for navigation links
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -9,16 +9,31 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Adding fade-in effect on scroll for each section
+// Highlighting the active section in the navigation
 window.addEventListener('scroll', () => {
-    const fadeInSections = document.querySelectorAll('.section-fade-in');
-    fadeInSections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
 
-        if (sectionTop < windowHeight - 100) {
-            section.style.opacity = '1';
-            section.style.transform = 'translateY(0)';
+    let current = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            current = section.getAttribute('id');
         }
     });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.classList.contains(current)) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Show loading animation while the page loads
+window.addEventListener('load', () => {
+    document.querySelector('.loading').style.display = 'none'; // Hide loading animation
 });

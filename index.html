@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Varun Mehta's Portfolio</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS File -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Script for Animations -->
+    <!-- JavaScript for Animations -->
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="loading">Loading...</div> <!-- Loading Animation -->
+
     <!-- Header Section -->
     <header>
-        <h1>Varun Mehta</h1>
-        <p>Los Angeles, California | 213-275-9629 | <a href="mailto:varunjay@usc.edu">varunjay@usc.edu</a> | <a href="https://linkedin.com/in/mehtavarunj">linkedin.com/in/mehtavarunj</a></p>
+        <h1 class="main-title">Varun Mehta</h1>
+        <p>Computer Science Master's Student | Software Developer | Machine Learning Enthusiast</p>
     </header>
 
     <!-- Navigation -->
@@ -34,46 +36,47 @@
     <!-- Main Section -->
     <main>
         <!-- About Section -->
-        <section id="about" class="section-fade-in">
+        <section id="about" class="section">
             <h2>About Me</h2>
-            <p>I am a Master's student in Computer Science at USC with a passion for software development, machine learning, and natural language processing. I aim to create impactful software solutions.</p>
-            <!-- Add Image Placeholder -->
-            <div class="image-placeholder">
-                <img src="path/to/your/photo.jpg" alt="Varun Mehta's Photo">
-            </div>
+            <p>I am a Master's student in Computer Science at USC with a passion for software development, machine learning, and natural language processing.</p>
+            <img src="https://via.placeholder.com/200?text=Computer+Science+Vector" alt="Computer Science Illustration" class="vector-image animated-image">
         </section>
 
         <!-- Education Section -->
-        <section id="education" class="section-fade-in">
+        <section id="education" class="section">
             <h2>Education</h2>
             <div class="edu-item">
                 <h3>University of Southern California</h3>
                 <p>Master of Science, Computer Science (Expected May 2025)</p>
+                <img src="https://via.placeholder.com/150?text=USC+Logo" alt="USC Logo" class="edu-logo animated-image">
             </div>
             <div class="edu-item">
                 <h3>Dwarkadas J. Sanghvi College of Engineering</h3>
                 <p>Bachelor of Technology, Computer Engineering (August 2019 - June 2023)</p>
+                <img src="https://via.placeholder.com/150?text=DJSCE+Logo" alt="DJSCE Logo" class="edu-logo animated-image">
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="section-fade-in">
+        <section id="skills" class="section">
             <h2>Technical Skills</h2>
             <div class="skills-container">
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">Python</div>
-                <div class="skill-item">Java</div>
-                <div class="skill-item">C++</div>
-                <div class="skill-item">React</div>
-                <div class="skill-item">Node.js</div>
-                <div class="skill-item">Machine Learning</div>
-                <div class="skill-item">Docker</div>
-                <div class="skill-item">AWS</div>
+                <div class="skill-item animated-skill">JavaScript</div>
+                <div class="skill-item animated-skill">Python</div>
+                <div class="skill-item animated-skill">Java</div>
+                <div class="skill-item animated-skill">C++</div>
+                <div class="skill-item animated-skill">React</div>
+                <div class="skill-item animated-skill">Node.js</div>
+                <div class="skill-item animated-skill">Machine Learning</div>
+                <div class="skill-item animated-skill">MERN Stack</div>
+                <div class="skill-item animated-skill">CNN & Transfer Learning</div>
+                <div class="skill-item animated-skill">Data Analytics</div>
+                <div class="skill-item animated-skill">WordPress</div>
             </div>
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="section-fade-in">
+        <section id="experience" class="section">
             <h2>Experience</h2>
             <div class="experience-item">
                 <h3>Software Engineer Intern, Alien Attorney</h3>
@@ -95,7 +98,7 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="section-fade-in">
+        <section id="projects" class="section">
             <h2>Projects</h2>
             <div class="project-item">
                 <h3>Information Extraction and Summarization of Medical Reports</h3>
@@ -105,18 +108,17 @@
                 <h3>Waste Classification using Transfer Learning</h3>
                 <p>Developed a smart bin concept using Deep Learning with a 96% accuracy rate.</p>
             </div>
-            <!-- Placeholder for Video Recording -->
             <div class="video-placeholder">
                 <h3>Watch Project Demo</h3>
                 <video controls>
-                    <source src="path/to/your/video.mp4" type="video/mp4">
+                    <source src="https://via.placeholder.com/640x360?text=Video+Demo" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
         </section>
 
         <!-- Publications Section -->
-        <section id="publications" class="section-fade-in">
+        <section id="publications" class="section">
             <h2>Publications</h2>
             <ul>
                 <li><a href="https://link_to_publication_1.com" target="_blank">Paper 1: Video Transcript Extraction and Summarization</a></li>
@@ -125,7 +127,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section-fade-in">
+        <section id="contact" class="section">
             <h2>Contact</h2>
             <p>If you would like to get in touch, please reach out via email at <a href="mailto:varunjay@usc.edu">varunjay@usc.edu</a>.</p>
         </section>
