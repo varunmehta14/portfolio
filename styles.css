@@ -221,9 +221,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.carousel {
-    height: 400px; /* Set a fixed height for the carousel */
-}
+
 
 .carousel-image-container {
     position: relative;
@@ -255,7 +253,7 @@ html {
 }
 
 .carousel {
-    height: 400px; /* Set a fixed height for the carousel */
+    /* height: 400px; Set a fixed height for the carousel */
     overflow: y; /* Prevent overflow of content */
 }
 
