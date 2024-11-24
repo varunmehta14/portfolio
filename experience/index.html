@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link id='favicon' rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-png">
+   
+    <title>Experience | Portfolio Varun Mehta</title>
+    <link href="https://unpkg.com/flickity@2.2.3/dist/flickity.min.css" rel="stylesheet">
+    <style>
+      /* Custom CSS */
+      /* * { box-sizing: border-box; } */
+  
+      /* body { font-family: sans-serif; } */
+  
+      .carousel {
+        background: black;
+        position: relative;
+      }
+  
+      .carousel-cell {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+  
+      .carousel-cell video {
+        max-width: 100%;
+        max-height: 100%;
+      }
+  
+      .carousel-caption {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        font-size: 24px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+      }
+  
+      .flickity-prev-next-button {
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        opacity: 0.6;
+      }
+  
+      .flickity-prev-next-button:hover {
+        background: transparent;
+        opacity: 1;
+      }
+  
+      .flickity-prev-next-button .arrow {
+        fill: white;
+      }
+  
+      .flickity-prev-next-button.previous { left: 0; }
+      .flickity-prev-next-button.next { right: 0; }
+    </style>
+    
+</head>
+<body oncontextmenu="return false">
+
+<!-- navbar starts -->
+<header>
+        <a href="/" class="logo"><i class="fab fa-node-js"></i> Varun</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#skills">Skills</a></li>
+            <li><a href="/#education">Education</a></li>
+            <li><a href="/#work">Work</a></li>
+            <li><a class="active" href="/#experience">Experience</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+</header>
+<!-- navbar ends -->
+
+<!-- experience section starts -->
+<section class="experience" id="experience">
+  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
+  <div class="timeline">
+      <div class="container right">
+          <div class="content">
+              <div class="tag">
+                  <h2>Alien Attorney</h2>
+              </div>
+              <div class="desc">
+                  <h3>Software Engineer Intern</h3>
+                  <p>June 2024 - October 2024 | Atlanta, GA</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="container left">
+          <div class="content">
+              <div class="tag">
+                  <h2>Baum Family Maker Space, USC</h2>
+              </div>
+              <div class="desc">
+                  <h3>Software Engineer Intern - Digital Fabrication</h3>
+                  <p>September 2023 - Present | Los Angeles, CA</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="container right">
+          <div class="content">
+              <div class="tag">
+                  <h2>Kontaktsource</h2>
+              </div>
+              <div class="desc">
+                  <h3>Web Development Intern</h3>
+                  <p>May 2024 - August 2024 | Remote</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="container left">
+          <div class="content">
+              <div class="tag">
+                  <h2>Divytech Blockchain LLP</h2>
+              </div>
+              <div class="desc">
+                  <h3>Software Engineer Intern</h3>
+                  <p>November 2021 - April 2022 | Mumbai, IN</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="experience-item">
+        <h3>Software Engineer Intern, Alien Attorney | Atlanta, GA</h3>
+<p>June 2024 - October 2024</p>
+
+<div class="technologies-used">
+<strong>Technologies Used:</strong> Python, Docker, Flask, MongoDB, OpenAI's API, RAG architecture, Faker library, custom Faker functions, vector embedding storage, MongoDB Atlas, OpenAI Playground.
+</div>
+<h3>Form Generation</h3>
+<ul>
+<li>Engineered a form generation pipeline integrated with RAG architecture and OpenAI's API, increasing automation efficiency by 35%.</li>
+<li>Implemented MongoDB Atlas Vector Search to achieve 85% accuracy in generating and classifying legal documents.</li>
+<li>Designed dynamic legal document schemas, generating semantically meaningful data using the Faker library and custom functions.</li>
+<li>Developed systems for creating diverse legal documents including driving licenses (across different US states), marriage and divorce certificates, certificates of naturalization, employment verifications, birth certificates, leases, and more, all while handling a variety of fonts and document formats.</li>
+<li>Created a workflow diagram to illustrate document generation, processing, and classification processes.</li>
+<li>Used generated forms to train and test an LLM-based NLP model, enabling users to query form databases and retrieve relevant document data, utilizing vector embeddings stored in MongoDB and OpenAI Playground for real-time analysis.</li>
+<li>Containerized the entire form generation system using Docker, streamlining development and deployment.</li>
+</ul>
+
+<h3>LLM-based Restaurant Recommendation System</h3>
+<ul>
+<li>Developed an LLM-based restaurant recommendation system that tailors recommendations based on user preferences, history, location, and dietary restrictions.</li>
+<li>Designed the system to provide group recommendations for parties with varied individual preferences.</li>
+</ul>
+
+        <!-- Workflow and Example Documents Section -->
+        <div class="workflow-section">
+            <h4>Form Generation Workflow</h4>
+            <ol>
+                <li><strong>Bounding Box Detection:</strong> Identify and mark key fields on the document image using bounding boxes.</li>
+                <li><strong>Extract Field Coordinates and Types:</strong> Capture the coordinates of each bounding box and determine the type of form field (e.g., text, date, number) to generate a JSON schema for the form.</li>
+                <li><strong>Form Cleanup:</strong> Remove the bounding boxes from the image to produce a clean version of the form, ready for data insertion.</li>
+                <li><strong>Populate Form with Semantic Data:</strong> Using the metadata from the JSON schema, insert semantically correct, fake data into the form, ensuring accuracy and realism.</li>
+            </ol>
+        </div>
+        
+       <!-- Flickity Carousel -->
+<div id="projectCarousel" class="carousel js-flickity" data-flickity='{ "cellAlign": "center", "contain": true, "autoPlay": true, "prevNextButtons": true, "pageDots": true }'>
+  
+  <div class="carousel-cell">
+    <div class="carousel-image-container">
+      <img src="media/legal_docs/naturalization_0.png" class="d-block" alt="System Flow">
+    </div>
+    <div class="carousel-caption">
+      <h5>Form with bounding box</h5>
+    </div>
+  </div>
+  
+  <div class="carousel-cell">
+    <div class="carousel-image-container">
+      <img src="media/legal_docs/naturalization_0_annotated.png" class="d-block" alt="Example of a Medical Report">
+    </div>
+    <div class="carousel-caption">
+      <h5>Annotating the box to get the coordinates</h5>
+    </div>
+  </div>
+
+  <div class="carousel-cell">
+    <div class="carousel-image-container">
+      <img src="media/legal_docs/naturalization_0_removed.png" class="d-block" alt="Report generated after OCR">
+    </div>
+    <div class="carousel-caption">
+      <h5>Removing the box to get a new form</h5>
+    </div>
+  </div>
+  
+  <div class="carousel-cell">
+    <div class="carousel-image-container">
+      <img src="media/legal_docs/output_image_8.png" class="d-block" alt="Abnormal Parameters obtained after OCR">
+    </div>
+    <div class="carousel-caption">
+      <h5>Adding semantically correct fake data generated onto the form</h5>
+    </div>
+  </div>
+
+</div>
+    </div>
+    <div class="experience-item">
+        <h3>Software Engineer Intern - Digital Fabrication | Baum Family Maker Space, USC | Los Angeles, CA</h3>
+<p>September 2023 - Present</p>
+<div class="technologies-used">
+<strong>Technologies Used:</strong> React, Node.js, Trello, Python, Google Sheets, IFTTT, WordPress, Rhino, C#.
+</div>
+<ul>
+<li>Developed a comprehensive order and inventory management system, enhancing operational efficiency and reducing equipment loss by 30%.</li>
+<li>Created a laptop rental system for students, streamlining the checkout process and inventory tracking.</li>
+<li>Worked on an AR sandbox project, integrating Rhino and C# with the Grasshopper plugin to enhance interactive visualization capabilities, utilizing the Sandworm plugin to project depth data onto the sandbox.</li>
+<li>Modified existing open-source code to implement the Orbbec Femto Bolt camera for capturing depth data, converting it into mesh point clouds, and simulating environmental events like rainwater flow.</li>
+<li>Orchestrated initiatives that led to a 50% faster delivery, 20% quicker order processing, and a 40% increase in order accuracy.</li>
+<li>Automated scheduling for 3D printers (including Prusa, Formlabs, Stratasys, and Markforged), CNC machines, lathes, and waterjet cutters using Trello integration with Google Forms and IFTTT, optimizing operations for multiple tools concurrently.</li>
+<li>Conducted data analytics on footfall in the workshop, providing insights into operating hours and aiding in important business decision-making.</li>
+<li>Streamlined financial analysis processes, improving efficiency and accuracy in financial reporting and budgeting.</li>
+<li>Maintained the website hosted on WordPress, ensuring content updates and site performance optimization.</li>
+</ul>
+<!-- Workflow Diagram Section -->
+<div class="workflow-section">
+<h4>3D Printing Order Management Workflow</h4>
+<p>The following diagram illustrates the workflow of the 3D printing order management system, detailing the processes from order placement to completion:</p>
+<img src="media/bfms/3D Printing Workflow Diagram Rev 2.5.0.drawio.png" alt="3D Printing Order Management Workflow Diagram" style="max-width:100%; height:auto;" />
+</div>
+
+    </div>
+    <div class="experience-item">
+        <h3>Web Development Intern | Kontaktsource | Remote</h3>
+        <p>May 2024 - August 2024</p>
+        <div class="company-description">
+            <p><strong>Kontaktsource</strong> is a platform established in 2010 that connects professionals in private equity, investment banking, and related sectors, offering networking events and structured meetings to explore market opportunities.</p>
+        </div>
+        <div class="technologies-used">
+            <strong>Technologies Used:</strong> WordPress, MemberPress, BuddyPress, LinkedIn API, HubSpot.
+        </div>
+        <ul>
+            <li>Updated the Kontaktsource website to enhance user experience and functionality.</li>
+            <li>Integrated a real-time LinkedIn feed into the website, enabling dynamic content updates.</li>
+            <li>Developed a membership site using the **MemberPress** plugin, allowing users to subscribe and access exclusive content.</li>
+            <li>Enabled users to create and customize profiles using the **BuddyPress** plugin for a more interactive membership experience.</li>
+            <li>Utilized **HubSpot** for managing website analytics and customer interactions, improving user engagement.</li>
+        </ul>
+        <p><a href="https://kontaktsource.com/" target="_blank">Visit Kontaktsource Website</a></p>
+    </div>
+    <div class="experience-item">
+        <h3>Software Engineer Intern | Divytech Blockchain LLP | Mumbai, IN</h3>
+        <p>November 2021 - April 2022</p>
+        <div class="technologies-used">
+            <strong>Technologies Used:</strong> React, Node.js, MongoDB, Solidity, Polygon.
+        </div>
+        <ul>
+            <li>Revolutionized partner brand engagement by pioneering a digital coupon-sharing platform, reducing costs by 15% compared to physical coupons, thereby boosting brand engagement.</li>
+            <li>Led integration of modules for improved coupon accessibility and extended validity with collectible NFTs, offering an innovative solution for customers.</li>
+            <li>Developed the **Digital NFT Marketplace** project, where users mint ERC721 NFTs and manage them on the Ethereum Blockchain, leveraging **Solidity** for smart contracts and **React** for the frontend interface.</li>
+            <li>Utilized **Truffle** and **Ganache** for developing, testing, and deploying smart contracts locally, integrating them with **Metamask** for DApp transactions.</li>
+            <li>Wrote automated tests using **Chai** and **Mocha** for ensuring contract reliability and correctness.</li>
+            <li>Contributed to building the platform's responsive design, allowing users to create, view, and manage their digital assets with ease.</li>
+        </ul>
+    </div>
+    
+</section>
+  <div class="morebtn">
+    <a href="/#experience" class="btn">
+        <i class="fas fa-arrow-left"></i>
+        <span>Back to Home</span>
+  </a>
+  </div>
+
+</div>
+</section>
+<!-- experience section ends -->
+
+<!-- footer section starts -->
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>Jigar's Portfolio</h3>
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="/#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="/#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+          <a href="/#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+          <a href="/#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+          <a href="/#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+          <a href="/#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+      </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          <p> <i class="fas fa-phone"></i>+91 704-302-4736</p>
+          <p> <i class="fas fa-envelope"></i>jigarsable21@gmail.com</p>
+          <p> <i class="fas fa-map-marked-alt"></i>Pune, India-412206</p>
+          <div class="share">
+
+            <a href="https://www.linkedin.com/in/jigar-sable" class="fab fa-linkedin" target="_blank"></a>
+            <a href="https://github.com/jigar-sable" class="fab fa-github" target="_blank"></a>
+            <a href="mailto:jigarsable21@gmail.com" class="fas fa-envelope" target="_blank"></a>
+            <a href="https://twitter.com/jigar_sable" class="fab fa-twitter" target="_blank"></a>
+            <a href="https://t.me/lifecode5" class="fab fa-telegram-plane" target="_blank"></a>
+          </div>
+      </div>
+  </div>
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/jigar-sable">Varun Mehta</a></h1>
+
+</section>
+<!-- footer section ends -->
+
+<!-- scroll top btn -->
+<a href="#experience" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
+<script>
+  var flkty = new Flickity('#projectCarousel', {
+    cellAlign: 'center',
+    contain: true,
+    prevNextButtons: true,
+    pageDots: false
+  });
+</script>
+<script src="./script.js"></script>
+
+</body>
+</html>

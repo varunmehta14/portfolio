@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varun Mehta's Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for Animations -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="loading">Loading...</div> <!-- Loading Animation -->
+
+    <!-- Header Section -->
+    <header>
+        <h1 class="main-title">Varun Mehta</h1>
+        <p>Computer Science Master's Student | Software Developer | Machine Learning Enthusiast</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <main>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I am a Master's student in Computer Science at USC with a passion for software development, machine learning, and natural language processing.</p>
+            <img src="./media/profile.jpeg" alt="Computer Science Illustration" class="vector-image animated-image">
+        </section>
+
+        <!-- Education Section -->
+<section id="education" class="section">
+    <h2>Education</h2>
+    
+    <div class="edu-item">
+        <h3>University of Southern California</h3>
+        <p>Master of Science, Computer Science (Expected May 2025)</p>
+        <p><strong>GPA:</strong> 3.75/4.0</p>
+        <p><strong>Relevant Courses:</strong> Design and Analysis of Algorithms, Database Management Systems, Machine Learning, Web Technologies, Natural Language Processing, Autonomous Cyber Physical Systems</p>
+        <p><a href="https://www.cs.usc.edu/" target="_blank">USC College Website</a></p>
+        <img src="./media/uscTheSeal.png" alt="USC Logo" class="edu-logo animated-image">
+    </div>
+    
+    <div class="edu-item">
+        <h3>Dwarkadas J. Sanghvi College of Engineering</h3>
+        <p>Bachelor of Technology, Computer Engineering (August 2019 - June 2023)</p>
+        <p><strong>GPA:</strong> 9.38/10.0</p>
+        <p><strong>Relevant Courses:</strong> Artificial Intelligence, Machine Learning, Advanced Algorithms, Data Warehousing and Mining, Database Management Systems, Web Intelligence, Operating Systems, Computer Networks, Information Security, Distributed Computing</p>
+        <p><a href="https://www.djsce.ac.in/" target="_blank">DJSCE College Website</a></p>
+        <img src="./media/djsce.jpeg" alt="DJSCE Logo" class="edu-logo animated-image">
+    </div>
+</section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item animated-skill">JavaScript</div>
+                <div class="skill-item animated-skill">Python</div>
+                <div class="skill-item animated-skill">Java</div>
+                <div class="skill-item animated-skill">C++</div>
+                <div class="skill-item animated-skill">React</div>
+                <div class="skill-item animated-skill">Node.js</div>
+                <div class="skill-item animated-skill">Machine Learning</div>
+                <div class="skill-item animated-skill">MERN Stack</div>
+                <div class="skill-item animated-skill">CNN & Transfer Learning</div>
+                <div class="skill-item animated-skill">Data Analytics</div>
+                <div class="skill-item animated-skill">WordPress</div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Software Engineer Intern, Alien Attorney | Atlanta, GA</h3>
+<p>June 2024 - October 2024</p>
+
+<div class="technologies-used">
+    <strong>Technologies Used:</strong> Python, Docker, Flask, MongoDB, OpenAI's API, RAG architecture, Faker library, custom Faker functions, vector embedding storage, MongoDB Atlas, OpenAI Playground.
+</div>
+<h3>Form Generation</h3>
+<ul>
+    <li>Engineered a form generation pipeline integrated with RAG architecture and OpenAI's API, increasing automation efficiency by 35%.</li>
+    <li>Implemented MongoDB Atlas Vector Search to achieve 85% accuracy in generating and classifying legal documents.</li>
+    <li>Designed dynamic legal document schemas, generating semantically meaningful data using the Faker library and custom functions.</li>
+    <li>Developed systems for creating diverse legal documents including driving licenses (across different US states), marriage and divorce certificates, certificates of naturalization, employment verifications, birth certificates, leases, and more, all while handling a variety of fonts and document formats.</li>
+    <li>Created a workflow diagram to illustrate document generation, processing, and classification processes.</li>
+    <li>Used generated forms to train and test an LLM-based NLP model, enabling users to query form databases and retrieve relevant document data, utilizing vector embeddings stored in MongoDB and OpenAI Playground for real-time analysis.</li>
+    <li>Containerized the entire form generation system using Docker, streamlining development and deployment.</li>
+</ul>
+
+<h3>LLM-based Restaurant Recommendation System</h3>
+<ul>
+    <li>Developed an LLM-based restaurant recommendation system that tailors recommendations based on user preferences, history, location, and dietary restrictions.</li>
+    <li>Designed the system to provide group recommendations for parties with varied individual preferences.</li>
+</ul>
+        
+                <!-- Workflow and Example Documents Section -->
+                <div class="workflow-section">
+                    <h4>Form Generation Workflow</h4>
+                    <ol>
+                        <li><strong>Bounding Box Detection:</strong> Identify and mark key fields on the document image using bounding boxes.</li>
+                        <li><strong>Extract Field Coordinates and Types:</strong> Capture the coordinates of each bounding box and determine the type of form field (e.g., text, date, number) to generate a JSON schema for the form.</li>
+                        <li><strong>Form Cleanup:</strong> Remove the bounding boxes from the image to produce a clean version of the form, ready for data insertion.</li>
+                        <li><strong>Populate Form with Semantic Data:</strong> Using the metadata from the JSON schema, insert semantically correct, fake data into the form, ensuring accuracy and realism.</li>
+                    </ol>
+                </div>
+                
+                <div id="projectCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carousel-image-container">
+                                <img src="media/legal_docs/naturalization_0.png" class="d-block" alt="System Flow">
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Form with bounding box</h5>
+                            </div>
+                        
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-image-container">
+                                <img src="media/legal_docs/naturalization_0_annotated.png" class="d-block" alt="Example of a Medical Report">
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Annotating the box to get the coordinates</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-image-container">
+                                <img src="media/legal_docs/naturalization_0_removed.png" class="d-block" alt="Report generated after OCR">
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Removing the box to get a new form</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-image-container">
+                                <img src="media/legal_docs/output_image_8.png" class="d-block" alt="Abnormal Parameters obtained after OCR">
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Adding semantically correct fake data generated onto the form</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="experience-item">
+                <h3>Software Engineer Intern - Digital Fabrication | Baum Family Maker Space, USC | Los Angeles, CA</h3>
+<p>September 2023 - Present</p>
+<div class="technologies-used">
+    <strong>Technologies Used:</strong> React, Node.js, Trello, Python, Google Sheets, IFTTT, WordPress, Rhino, C#.
+</div>
+<ul>
+    <li>Developed a comprehensive order and inventory management system, enhancing operational efficiency and reducing equipment loss by 30%.</li>
+    <li>Created a laptop rental system for students, streamlining the checkout process and inventory tracking.</li>
+    <li>Worked on an AR sandbox project, integrating Rhino and C# with the Grasshopper plugin to enhance interactive visualization capabilities, utilizing the Sandworm plugin to project depth data onto the sandbox.</li>
+    <li>Modified existing open-source code to implement the Orbbec Femto Bolt camera for capturing depth data, converting it into mesh point clouds, and simulating environmental events like rainwater flow.</li>
+    <li>Orchestrated initiatives that led to a 50% faster delivery, 20% quicker order processing, and a 40% increase in order accuracy.</li>
+    <li>Automated scheduling for 3D printers (including Prusa, Formlabs, Stratasys, and Markforged), CNC machines, lathes, and waterjet cutters using Trello integration with Google Forms and IFTTT, optimizing operations for multiple tools concurrently.</li>
+    <li>Conducted data analytics on footfall in the workshop, providing insights into operating hours and aiding in important business decision-making.</li>
+    <li>Streamlined financial analysis processes, improving efficiency and accuracy in financial reporting and budgeting.</li>
+    <li>Maintained the website hosted on WordPress, ensuring content updates and site performance optimization.</li>
+</ul>
+<!-- Workflow Diagram Section -->
+<div class="workflow-section">
+    <h4>3D Printing Order Management Workflow</h4>
+    <p>The following diagram illustrates the workflow of the 3D printing order management system, detailing the processes from order placement to completion:</p>
+    <img src="media/bfms/3D Printing Workflow Diagram Rev 2.5.0.drawio.png" alt="3D Printing Order Management Workflow Diagram" style="max-width:100%; height:auto;" />
+</div>
+
+            </div>
+            <div class="experience-item">
+                <h3>Web Development Intern | Kontaktsource | Remote</h3>
+                <p>May 2024 - August 2024</p>
+                <div class="company-description">
+                    <p><strong>Kontaktsource</strong> is a platform established in 2010 that connects professionals in private equity, investment banking, and related sectors, offering networking events and structured meetings to explore market opportunities.</p>
+                </div>
+                <div class="technologies-used">
+                    <strong>Technologies Used:</strong> WordPress, MemberPress, BuddyPress, LinkedIn API, HubSpot.
+                </div>
+                <ul>
+                    <li>Updated the Kontaktsource website to enhance user experience and functionality.</li>
+                    <li>Integrated a real-time LinkedIn feed into the website, enabling dynamic content updates.</li>
+                    <li>Developed a membership site using the **MemberPress** plugin, allowing users to subscribe and access exclusive content.</li>
+                    <li>Enabled users to create and customize profiles using the **BuddyPress** plugin for a more interactive membership experience.</li>
+                    <li>Utilized **HubSpot** for managing website analytics and customer interactions, improving user engagement.</li>
+                </ul>
+                <p><a href="https://kontaktsource.com/" target="_blank">Visit Kontaktsource Website</a></p>
+            </div>
+            <div class="experience-item">
+                <h3>Software Engineer Intern | Divytech Blockchain LLP | Mumbai, IN</h3>
+                <p>November 2021 - April 2022</p>
+                <div class="technologies-used">
+                    <strong>Technologies Used:</strong> React, Node.js, MongoDB, Solidity, Polygon.
+                </div>
+                <ul>
+                    <li>Revolutionized partner brand engagement by pioneering a digital coupon-sharing platform, reducing costs by 15% compared to physical coupons, thereby boosting brand engagement.</li>
+                    <li>Led integration of modules for improved coupon accessibility and extended validity with collectible NFTs, offering an innovative solution for customers.</li>
+                    <li>Developed the **Digital NFT Marketplace** project, where users mint ERC721 NFTs and manage them on the Ethereum Blockchain, leveraging **Solidity** for smart contracts and **React** for the frontend interface.</li>
+                    <li>Utilized **Truffle** and **Ganache** for developing, testing, and deploying smart contracts locally, integrating them with **Metamask** for DApp transactions.</li>
+                    <li>Wrote automated tests using **Chai** and **Mocha** for ensuring contract reliability and correctness.</li>
+                    <li>Contributed to building the platform's responsive design, allowing users to create, view, and manage their digital assets with ease.</li>
+                </ul>
+            </div>
+            
+        </section>
+
+        <!-- Projects Section -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <!-- New Stock Market Project -->
+    <div class="project-item">
+        <h3>Stock Market Web and iOS Application</h3>
+
+        <h4>Project Overview</h4>
+        <p>Developed a stock market application utilizing the **MERN stack** (MongoDB, Express.js, React, Node.js) for the web version and a native **iOS app** using **Swift** and **SwiftUI**.</p>
+
+        <h4>Key Technologies Used</h4>
+        <ul>
+            <li>**MERN Stack**: For building the web application, allowing real-time data retrieval and interactive visualizations.</li>
+            <li>**AWS**: Deployed application on Amazon Web Services for scalability and reliability.</li>
+            <li>**Finnhub API**: Integrated for real-time stock market data retrieval.</li>
+            <li>**Highcharts**: Used for creating interactive stock visualizations.</li>
+        </ul>
+
+        <h4>Third-Party Libraries</h4>
+        <ul>
+            <li><a href="https://github.com/Alamofire/Alamofire" target="_blank">Alamofire</a>: Networking library for Swift.</li>
+            <li><a href="https://github.com/SwiftyJSON/SwiftyJSON" target="_blank">SwiftyJSON</a>: Simplifies JSON handling in Swift.</li>
+            <li><a href="https://github.com/onevcat/Kingfisher" target="_blank">Kingfisher</a>: Library for image downloading and caching in Swift.</li>
+        </ul>
+
+        <h4>Visuals</h4>
+        <div id="stockMarketCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                
+                <div class="carousel-item active">
+                    <div class="carousel-image-container">
+                        <video controls>
+                            <source src="media/stock_market/HW3_responsive_demo.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Web Responsive Version</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image-container">
+                        <video controls>
+                            <source src="media/stock_market/HW3_web_demo.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Web Version</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image-container">
+                        <video controls>
+                            <source src="media/stock_market/Assignment4varunjay.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Mobile Application Using SwiftUI</h5>
+                    </div>
+                </div>
+                <!-- Add more images/videos as needed -->
+                <!-- Example of the additional image items -->
+                
+            
+            <a class="carousel-control-prev" href="#stockMarketCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#stockMarketCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        </div>
+    </div>
+    <div class="project-item"></div>
+        <h3>Waste Classification using Transfer Learning</h3>
+        
+        <h4>Project Overview</h4>
+        <p>This project focuses on **classifying waste** into six categories: cardboard, glass, metal, organic, paper, and plastic using **Transfer Learning** with Convolutional Neural Networks (CNNs).</p>
+
+        <h4>Methodology</h4>
+        <p>The initial approach involved **image classification** using Support Vector Machines (SVM). However, due to poor accuracy, we transitioned to deep learning. We employed a CNN architecture to improve classification accuracy by processing images through multiple layers, enabling the model to learn complex features.</p>
+
+        <h4>CNN Architecture</h4>
+        <p>Our CNN model consists of:</p>
+        <ul>
+            <li>**Convolutional Layers**: Detect basic features such as edges and colors.</li>
+            <li>**Pooling Layers**: Reduce dimensionality and summarize features.</li>
+            <li>**Flattening Layer**: Convert the 2D feature maps into a 1D vector.</li>
+            <li>**Fully Connected Layers**: Classify the output based on learned features.</li>
+        </ul>
+
+        <h4>Transfer Learning with ResNet50v2</h4>
+        <p>We utilized **ResNet50v2**, a pre-trained model known for its robustness and depth. This model was fine-tuned for our waste classification task by unfreezing some layers and adding additional dense layers to adapt to our specific output classes.</p>
+
+        <h4>Training Process</h4>
+        <p>We trained the model on an augmented dataset (80% training, 20% validation) using various data augmentation techniques to enhance generalization. The optimal learning rate was determined to be **0.00001**, yielding the best accuracy.</p>
+
+        <h4>Applications</h4>
+        <p>This image classification system can significantly improve waste management practices, helping to segregate recyclable and non-recyclable materials effectively, thus reducing manual labor and enhancing safety for waste workers.</p>
+
+        <h4>Visuals</h4>
+        <div id="wasteClassificationCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-image-container">
+                        <img src="media/waste_classification/Screenshot 2024-10-04 at 3.59.17 PM.png" class="d-block" alt="Image of Waste Classification Model">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>ResNet50v2 structure</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image-container">
+                        <img src="media/waste_classification/Screenshot 2024-10-04 at 3.59.37 PM.png" class="d-block" alt="Data Augmentation Techniques">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Testing Accuracy and Loss</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image-container">
+                        <img src="media/waste_classification/Screenshot 2024-10-04 at 4.00.04 PM.png" class="d-block" alt="Training Accuracy Graph">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Inference on test dataset</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image-container">
+                        <img src="media/waste_classification/Screenshot 2024-10-04 at 4.00.20 PM.png" class="d-block" alt="Sample Waste Classification Result">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Comparison </h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image-container">
+                        <img src="media/waste_classification/Screenshot 2024-10-04 at 4.00.44 PM.png" class="d-block" alt="Confusion Matrix">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Performance metrics on different types of waste</h5>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#wasteClassificationCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#wasteClassificationCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    
+
+    <!-- New OCR Project -->
+    <!-- New OCR Project -->
+<div class="project-item">
+    <h3>OCR for Medical Reports: Enhanced Data Extraction and Summarization</h3>
+    
+    <h4>Overview</h4>
+    <p>This project aims to enhance **data extraction** and **summarization** of medical reports using **OCR** technology and machine learning.</p>
+
+    <h4>Key Highlights</h4>
+    <ul>
+        <li>Combined **information extraction** and **summarization** for better comprehension.</li>
+        <li>Developed a **Medical Dictionary** in collaboration with local doctors.</li>
+        <li>Utilized **AWS Textract** for accurate data extraction from medical records.</li>
+        <li>Implemented a summarization model using **GPT-2** to generate user-friendly reports.</li>
+    </ul>
+
+    <h4>Results</h4>
+    <p>Achieved high accuracy in recognizing structured data, leading to improved analysis and insights for healthcare professionals.</p>
+
+    
+    <h4>Visuals</h4>
+    <div id="projectCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-image-container">
+                    <img src="media/medical_report/Screenshot 2024-10-04 at 3.08.29 PM.png" class="d-block" alt="System Flow">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>System Flow</h5>
+                </div>
+            
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image-container">
+                    <img src="media/medical_report/Screenshot 2024-10-04 at 3.09.15 PM.png" class="d-block" alt="Example of a Medical Report">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Example of a Medical Report</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image-container">
+                    <img src="media/medical_report/Screenshot 2024-10-04 at 3.09.40 PM.png" class="d-block" alt="Report generated after OCR">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Report Generated After OCR</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image-container">
+                    <img src="media/medical_report/Screenshot 2024-10-04 at 3.10.07 PM.png" class="d-block" alt="Abnormal Parameters obtained after OCR">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Abnormal Parameters Obtained After OCR</h5>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+</section>
+
+
+        <!-- Publications Section -->
+        <!-- Publications Section -->
+<!-- Publications Section -->
+<section id="publications" class="section">
+    <h2>Publications</h2>
+    <ul>
+        <li>
+            <a href="https://link.springer.com/chapter/10.1007/978-981-19-9638-2_54" target="_blank">
+                Paper 1: Video Transcript Extraction and Summarization using Transfer Learning (Springer, ICTCS 2022)
+            </a>
+            <p>This paper presents a novel approach to generating concise summaries from video transcripts using Transfer Learning techniques. The model was trained on a dataset of 1000 diverse video samples, achieving a Route-1 score of 0.43, and is particularly effective for applications in content summarization.</p>
+            
+            <!-- Embedded Google Slides presentation -->
+            <div class="presentation-container">
+                <iframe src="https://docs.google.com/presentation/d/19ZACk4jh3atG-8qB44Et21E5hjwyuU_1GgOjgCPvZfM/preview" width="600" height="400" allow="autoplay"></iframe>
+                <p>
+                    <a href="https://docs.google.com/presentation/d/19ZACk4jh3atG-8qB44Et21E5hjwyuU_1GgOjgCPvZfM/edit?usp=sharing" target="_blank">Download or View Full Presentation</a>
+                </p>
+            </div>
+        </li>
+        <li>
+            <a href="https://link_to_publication_2.com" target="_blank">
+                Paper 2: Intelligent Application of Voice Recognition and Personal Secretariat for Business Management (IEEE Xplore, SPICON 2022)
+            </a>
+            <p>This paper discusses the development of a voice recognition personal assistant for local businesses to improve operational efficiency and customer service.</p>
+            <!-- Embedded Google Slides presentation -->
+            <div class="presentation-container">
+                <iframe src="https://docs.google.com/presentation/d/1Pb33WE7PLyczmLm33axuAbISde0e4CuezlJBHabK04w/preview" width="600" height="400" allow="autoplay"></iframe>
+                <p>
+                    <a href="https://docs.google.com/presentation/d/1Pb33WE7PLyczmLm33axuAbISde0e4CuezlJBHabK04w/edit?usp=sharing" target="_blank">Download or View Full Presentation</a>
+                </p>
+            </div>
+        </li>
+
+        <!-- Third Paper -->
+        <li>
+            <a href="https://ieeexplore.ieee.org/document/10039627" target="_blank">
+                Paper 3: Enhanced RSA Cryptosystem: A Secure and Nimble Approach (IEEE Xplore, ICCT 2023)
+            </a>
+            <p>This paper presents a novel enhancement to the RSA cryptosystem, improving both security and efficiency in cryptographic applications.</p>
+
+            <!-- Embedded Google Slides presentation for the third paper -->
+            <div class="presentation-container">
+                <iframe src="https://docs.google.com/presentation/d/1z8bPVMBi4qj0eqjW8717c5Y42tgsHrGXkC-CWqcA4a4/preview" width="600" height="400" allow="autoplay"></iframe>
+                <p>
+                    <a href="https://docs.google.com/presentation/d/1z8bPVMBi4qj0eqjW8717c5Y42tgsHrGXkC-CWqcA4a4/edit?usp=sharing" target="_blank">Download or View Full Presentation</a>
+                </p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>If you would like to get in touch, please reach out via email at <a href="mailto:varunjay@usc.edu">varunjay@usc.edu</a>.</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Varun Mehta. All rights reserved.</p>
+    </footer>
+</body>
+</html>
