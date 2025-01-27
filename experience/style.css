@@ -642,6 +642,156 @@ ul li {
   border-radius: 50%;
 }
 
+/* Work section styling */
+.work{
+  background: linear-gradient(to bottom, #2b2d7f, #110d39);
+  margin-top: 6rem;
+  padding: 5rem 0;
+}
+
+.work h2{
+  color: #fff;
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.work .heading span{
+  color: #ffdd00;
+}
+
+.work .button-group{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  width: 50%;
+}
+
+.work .button-group .btn{
+  outline: none;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.work .button-group .btn:hover,
+.work .button-group .btn.is-checked{
+  background-color: #fff;
+  color: #000;
+}
+
+.work .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem;
+}
+
+.work .box-container .box{
+  flex: 1 1 30rem;
+  border-radius: .5rem;
+  box-shadow: 0 .7rem 1rem rgba(0,0,0,.3);
+  position: relative;
+  overflow: hidden;
+  height: 30rem;
+  background: #fff;
+  border: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.work .box-container .box:hover{
+  transform: scale(1.05);
+}
+
+.work .box-container .box img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.work .box-container .box .content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: background 0.3s ease;
+}
+
+.work .box-container .box:hover .content{
+  background: rgba(0,0,0,0.8);
+}
+
+.work .desc{
+  margin: 2rem;
+}
+
+.work .desc p{
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+.work .desc .btns{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.work .desc .btns .btn{
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background: #2b2b2b;
+}
+
+.work .desc .btns .btn:hover{
+  background: #3b3b3b;
+}
+
+/* Back to home button styling */
+.backbtn{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.backbtn .btn{
+  position: relative;
+  line-height: 0;
+  padding: 1.5rem 3rem;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0px 2px 4px rgba(48, 68, 247, .3);
+}
+
+.backbtn .btn:hover{
+  background: #ffffff;
+  color: #000;
+}
+
+.backbtn .btn i{
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.backbtn .btn:hover i{
+  transform: translateX(-8px);
+}
 /* Link Styling
 a {
   color: #4A90E2;
@@ -762,3 +912,5 @@ header .navbar ul li a:hover{
     right: 0;
   }
 }
+
+

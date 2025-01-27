@@ -608,6 +608,39 @@ header .navbar ul li a:hover {
   font-weight: 700;
 }
 
+/* Styling for Coursework Section */
+.education .box-container .box .content ul {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.education .box-container .box .content ul li {
+  font-size: 1.2rem; /* Slightly smaller font for coursework items */
+  color: #555; /* Neutral color for readability */
+  margin-bottom: 0.5rem;
+  position: relative; /* For custom bullets */
+  padding-left: 1.5rem; /* Space for custom bullet icon */
+}
+
+.education .box-container .box .content ul li::before {
+  content: "•"; /* Custom bullet */
+  position: absolute;
+  left: 0; /* Align bullet to the left */
+  top: 0.3rem; /* Center the bullet vertically */
+  color: #012970; /* Deep blue for visual contrast */
+  font-weight: bold;
+  font-size: 1.5rem; /* Slightly larger bullet size */
+}
+
+.education .box-container .box .content ul li:hover {
+  color: #012970; /* Change text color on hover */
+  transform: translateX(5px); /* Slight movement for interactivity */
+  transition: all 0.2s ease-in-out; /* Smooth transition effect */
+}
+
+
 /* education media queries starts*/
 @media screen and (max-width: 600px) {
   .education .box-container .box {
