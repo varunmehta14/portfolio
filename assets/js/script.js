@@ -38,10 +38,26 @@ $(document).ready(function () {
     });
 
     // <!-- emailjs to mail contact form data -->
-    $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
+    // $("#contact-form").submit(function (event) {
+    //     emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
+        
 
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
+    //     emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
+    //         .then(function (response) {
+    //             console.log('SUCCESS!', response.status, response.text);
+    //             document.getElementById("contact-form").reset();
+    //             alert("Form Submitted Successfully");
+    //         }, function (error) {
+    //             console.log('FAILED...', error);
+    //             alert("Form Submission Failed! Try Again");
+    //         });
+    //     event.preventDefault();
+    // });
+    $("#contact-form").submit(function (event) {
+        // Use your Public Key as the User ID
+        emailjs.init("h4zwmlhjunypxSz7J"); // Replace with your Public Key
+    
+            emailjs.sendForm("service_jssbakf","template_gx5fhw5", '#contact-form')
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
                 document.getElementById("contact-form").reset();
