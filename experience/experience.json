@@ -36,8 +36,28 @@
           "videos": [],
           "images": [
             {
-              "src": "media/bfms/3D_Printing_Workflow.png",
+              "src": "media/bfms/3D_Printing_Workflow_Diagram.png",
               "caption": "3D Printing Order Management Workflow Diagram"
+            },
+            {
+              "src": "media/bfms/trello-board.png",
+              "caption": "3D Printing Order Management Trello Board"
+            },
+            {
+              "src": "media/bfms/trello-card.png",
+              "caption": "3D Printing Order Management Trello Card"
+            },
+            {
+              "src": "media/bfms/tracker1.png",
+              "caption": "3D Printing Order Management Order Tracker"
+            },
+            {
+              "src": "media/bfms/tracker2.png",
+              "caption": "3D Printing Order Management Order Status"
+            },
+            {
+              "src": "media/bfms/laptop-reservation.png",
+              "caption": "Laptop Reservation"
             }
           ]
         }
