@@ -1,0 +1,65 @@
+{
+    "publications": [
+      {
+        "title": "Video Transcript Extraction and Summarization using Transfer Learning",
+        "overview": "This paper presents a novel approach to generating concise summaries from video transcripts using Transfer Learning techniques. The model was trained on a diverse dataset and is particularly effective for content summarization.",
+        "link": "https://link.springer.com/chapter/10.1007/978-981-19-9638-2_54",
+        "presentation": "https://docs.google.com/presentation/d/19ZACk4jh3atG-8qB44Et21E5hjwyuU_1GgOjgCPvZfM/edit?usp=sharing",
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "publications/VideoTranscript.webp",
+              "caption": "Video Transcript Extraction"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intelligent Application of Voice Recognition and Personal Secretariat for Business Management",
+        "overview": "This paper discusses the development of a voice recognition personal assistant for local businesses to improve operational efficiency and customer service.",
+        "link": "https://link_to_publication_2.com",
+        "presentation": "https://docs.google.com/presentation/d/1Pb33WE7PLyczmLm33axuAbISde0e4CuezlJBHabK04w/edit?usp=sharing",
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "publications/Assistant.webp",
+              "caption": "Voice Recognition Application"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Enhanced RSA Cryptosystem: A Secure and Nimble Approach",
+        "overview": "This paper presents a novel enhancement to the RSA cryptosystem, improving both security and efficiency in cryptographic applications.",
+        "link": "https://ieeexplore.ieee.org/document/10039627",
+        "presentation": "https://docs.google.com/presentation/d/1z8bPVMBi4qj0eqjW8717c5Y42tgsHrGXkC-CWqcA4a4/edit?usp=sharing",
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "publications/RSA.webp",
+              "caption": "Enhanced RSA Cryptosystem"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Information Extraction and Summarization of Medical Reports using Textract and GPT-2",
+        "overview": "Devised an OCR-based pipeline leveraging AWS Textract to extract textual data from medical reports and fine-tuned GPT-2 to generate concise summaries. This approach significantly improved retrieval efficiency and supports accurate disease prediction. (RAIC 2024)",
+        "link": "https://doi.org/placeholder-medical-paper", 
+        "presentation": "https://drive.google.com/file/d/placeholder_medical_presentation/view?usp=sharing",
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "publications/MedicalReportSummarization.webp",
+              "caption": "Medical Report Summarization Workflow"
+            }
+          ]
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,151 @@
+{
+    "experience": [
+      {
+        "title": "Software Engineer Intern, Baum Family Maker Space, USC | Los Angeles, CA",
+        "duration": "September 2023 - Present",
+        "highlights": [
+          "Automated RFID door access system using React, TypeScript, Node.js, Express, and MongoDB – reduced manual effort by 90% and detected 200+ unauthorized access attempts.",
+          "Designed a real-time visualization tool with Python, Pandas, Matplotlib, and Plotly – cut facility wait times by 35% and increased equipment availability by 20%.",
+          "Led AUSCAS v2.0, a UML-based data management system with RESTful API integration and Google Apps Script backend – reduced logging errors by 60% and workflow time by 50%.",
+          "Revamped financial transaction reports using Python, Pandas, and SQLAlchemy – processed 10,000+ orders annually, enhancing inventory forecasting by 25%.",
+          "Developed a Grasshopper plugin in C# (using K4AdotNet) for real-time point cloud and depth image processing.",
+          "Engineered an AR sandbox system with the Orbbec SDK in Python – processed depth maps with millimeter-level accuracy for 100+ architecture students.",
+          "Optimized 3D printing scheduling with a predictive prioritization system – improved job completion efficiency by 50% across 1,200+ print jobs.",
+          "Led a Python data analytics pipeline to visualize student footfall from Orbbec and Kinect sensors – reduced energy costs by 15%.",
+          "Offloaded intensive tasks to GPU using OpenGL and Vulkan APIs, significantly reducing CPU load.",
+          "Implemented asynchronous I/O and inter-process communication for non-blocking, real-time data updates."
+        ],
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "Python",
+          "Pandas",
+          "Matplotlib",
+          "Plotly",
+          "Google Apps Script",
+          "C#",
+          "Grasshopper",
+          "Orbbec SDK",
+          "OpenGL",
+          "Vulkan"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "media/bfms/3D_Printing_Workflow.png",
+              "caption": "3D Printing Order Management Workflow Diagram"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Software Engineer Intern, Alien Attorney | Atlanta, GA",
+        "duration": "June 2024 - October 2024",
+        "highlights": [
+          "Engineered an AI-driven legal form automation platform using React-Redux, Flask, and MongoDB – reduced form completion time by 40%.",
+          "Designed and deployed a vector search-enabled legal document retrieval system with MongoDB Atlas and OpenAI API – cut manual classification efforts by 60%.",
+          "Integrated CI/CD pipelines using GitHub Actions and Docker – reduced deployment time by 25%.",
+          "Implemented a Retrieval-Augmented Generation (RAG) pipeline using OpenAI API and MongoDB Vector Search – improved document classification accuracy to 85%.",
+          "Facilitated synthetic legal document generation with Faker and custom scripts – produced 1,500+ forms and accelerated LLM fine-tuning by 50% using AWS Lambda and TensorFlow.",
+          "Developed an LLM-powered restaurant recommendation system leveraging vector embeddings and user clustering – increased recommendation accuracy by 30%."
+        ],
+        "technologies": [
+          "React-Redux",
+          "Flask",
+          "MongoDB",
+          "OpenAI API",
+          "Docker",
+          "GitHub Actions",
+          "AWS Lambda",
+          "TensorFlow"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "media/legal_docs/naturalization_0.png",
+              "caption": "Initial legal form with bounding box"
+            },
+            {
+              "src": "media/legal_docs/naturalization_0_annotated.png",
+              "caption": "Annotated form highlighting key fields"
+            },
+            {
+              "src": "media/legal_docs/naturalization_0_removed.png",
+              "caption": "Clean form after removing bounding boxes"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Web Development Intern, Kontaktsource | Remote",
+        "duration": "May 2024 - August 2024",
+        "highlights": [
+          "Embedded a real-time LinkedIn feed, enabling dynamic content updates and increasing user engagement by 30%.",
+          "Optimized website architecture – reduced page load time by 20% and boosted SEO rankings by 25%.",
+          "Developed a membership site using WordPress MemberPress – allowed users to subscribe and access exclusive content.",
+          "Enhanced overall site functionality and user experience while leveraging HubSpot for analytics and customer interactions."
+        ],
+        "technologies": [
+          "WordPress",
+          "MemberPress",
+          "BuddyPress",
+          "LinkedIn API",
+          "HubSpot"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": []
+        }
+      },
+      {
+        "title": "Software Engineer Intern, Divytech Blockchain LLP | Mumbai, IN",
+        "duration": "November 2021 - April 2022",
+        "highlights": [
+          "Led innovative digital coupon distribution for 10 prominent brands – eliminated physical coupon production with anticipated cost savings of 15%.",
+          "Improved coupon accessibility and extended validity through collectible NFTs, fostering stronger brand-consumer connections."
+        ],
+        "technologies": [
+          "React",
+          "Node.js",
+          "MongoDB",
+          "Solidity",
+          "Polygon"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": []
+        }
+      },
+      {
+        "title": "Software Engineer Intern, Masterbridge",
+        "duration": "Dates Not Provided",
+        "highlights": [
+          "Led development of an NFT-gated marketing platform using React, Express, Node.js, MongoDB, and Solidity – increased brand engagement by 20% and improved user retention.",
+          "Implemented automated testing with Chai and Mocha for smart contracts – reduced bugs by 30% and improved deployment reliability by 15%.",
+          "Directed a team of 4 in developing a phisher detection model using Graph Convolutional Networks (GCN) and PyTorch – improved threat detection accuracy by 25% for cryptocurrency networks.",
+          "Developed an innovative NFT marketplace enabling designers to monetize unique artworks, integrating ERC-20 tokens for a dynamic digital art community."
+        ],
+        "technologies": [
+          "React",
+          "Express",
+          "Node.js",
+          "MongoDB",
+          "Solidity",
+          "Chai",
+          "Mocha",
+          "PyTorch",
+          "Graph Convolutional Networks"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": []
+        }
+      }
+    ]
+  }
+  
