@@ -329,83 +329,90 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
   <script>
-    async function loadProjects() {
-      try {
-        const response = await fetch('projects.json');
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-        const data = await response.json();
-        const projectsContainer = document.getElementById('projectsContainer');
+   async function loadProjects() {
+  try {
+    const response = await fetch('projects.json');
+    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+    const data = await response.json();
+    const projectsContainer = document.getElementById('projectsContainer');
 
-        data.projects.forEach((project, index) => {
-          let visualsHTML = "";
-          if (
-            (project.visuals.videos && project.visuals.videos.length > 0) ||
-            (project.visuals.images && project.visuals.images.length > 0)
-          ) {
-            visualsHTML += `<div id="carousel${index}" class="carousel js-flickity" data-flickity='{ "wrapAround": true, "autoPlay": 3000, "pauseAutoPlayOnHover": true }'>`;
-            if (project.visuals.videos && project.visuals.videos.length) {
-              project.visuals.videos.forEach(video => {
-                visualsHTML += `
-                  <div class="carousel-cell">
-                    <video controls>
-                      <source src="${video.src}" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                    <div class="carousel-caption">
-                      <p>${video.caption}</p>
-                    </div>
-                  </div>`;
-              });
-            }
-            if (project.visuals.images && project.visuals.images.length) {
-              project.visuals.images.forEach(image => {
-                visualsHTML += `
-                  <div class="carousel-cell">
-                    <img src="${image.src}" alt="Project Image">
-                    <div class="carousel-caption">
-                      <p>${image.caption}</p>
-                    </div>
-                  </div>`;
-              });
-            }
-            visualsHTML += `</div>`;
-          }
-
-          let technologiesHTML = Object.keys(project.technologies)
-            .map(category => `<strong>${category.toUpperCase()}:</strong> ${project.technologies[category].join(', ')}`)
-            .join('<br>');
-
-          let applicationsHTML = `<strong>Applications:</strong> ${project.applications.join(', ')}`;
-          let extrasHTML = project.extras && project.extras.length ? `<strong>Extras:</strong> ${project.extras.join(', ')}` : "";
-
-          projectsContainer.innerHTML += `
-            <div class="project-card project-item">
-              <h3>${project.title}</h3>
-              <p>${project.overview}</p>
-              <div class="technologies">${technologiesHTML}</div>
-              <div class="applications">${applicationsHTML}</div>
-              <div class="extras">${extrasHTML}</div>
-              ${project.repo ? `<div class="repository"><a href="${project.repo}" target="_blank">View Repository</a></div>` : ""}
-              ${visualsHTML}
-            </div>
-          `;
-        });
-
-        setTimeout(() => {
-          document.querySelectorAll('.js-flickity').forEach(carousel => {
-            new Flickity(carousel, {
-              wrapAround: true,
-              autoPlay: 3000,
-              pauseAutoPlayOnHover: true
-            });
+    data.projects.forEach((project, index) => {
+      let visualsHTML = "";
+      if (
+        (project.visuals.videos && project.visuals.videos.length > 0) ||
+        (project.visuals.images && project.visuals.images.length > 0)
+      ) {
+        visualsHTML += `<div id="carousel${index}" class="carousel js-flickity" data-flickity='{ "wrapAround": true, "autoPlay": 3000, "pauseAutoPlayOnHover": true }'>`;
+        if (project.visuals.videos && project.visuals.videos.length) {
+          project.visuals.videos.forEach(video => {
+            visualsHTML += `
+              <div class="carousel-cell">
+                <video controls>
+                  <source src="${video.src}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="carousel-caption">
+                  <p>${video.caption}</p>
+                </div>
+              </div>`;
           });
-        }, 500);
-      } catch (error) {
-        console.error("Error loading projects:", error);
+        }
+        if (project.visuals.images && project.visuals.images.length) {
+          project.visuals.images.forEach(image => {
+            visualsHTML += `
+              <div class="carousel-cell">
+                <img src="${image.src}" alt="Project Image">
+                <div class="carousel-caption">
+                  <p>${image.caption}</p>
+                </div>
+              </div>`;
+          });
+        }
+        visualsHTML += `</div>`;
       }
-    }
 
-    document.addEventListener("DOMContentLoaded", loadProjects);
+      let technologiesHTML = Object.keys(project.technologies)
+        .map(category => `<strong>${category.toUpperCase()}:</strong> ${project.technologies[category].join(', ')}`)
+        .join('<br>');
+
+      let applicationsHTML = `<strong>Applications:</strong> ${project.applications.join(', ')}`;
+      let extrasHTML = project.extras && project.extras.length ? `<strong>Extras:</strong> ${project.extras.join(', ')}` : "";
+
+      // Check if a Canva URL exists and add it
+      let canvaHTML = project.canva 
+        ? `<div class="canva"><a href="${project.canva}" target="_blank">View Canva Design</a></div>` 
+        : "";
+
+      projectsContainer.innerHTML += `
+        <div class="project-card project-item">
+          <h3>${project.title}</h3>
+          <p>${project.overview}</p>
+          <div class="technologies">${technologiesHTML}</div>
+          <div class="applications">${applicationsHTML}</div>
+          <div class="extras">${extrasHTML}</div>
+          ${project.repo ? `<div class="repository"><a href="${project.repo}" target="_blank">View Repository</a></div>` : ""}
+          ${canvaHTML}
+          ${visualsHTML}
+        </div>
+      `;
+    });
+
+    setTimeout(() => {
+      document.querySelectorAll('.js-flickity').forEach(carousel => {
+        new Flickity(carousel, {
+          wrapAround: true,
+          autoPlay: 3000,
+          pauseAutoPlayOnHover: true
+        });
+      });
+    }, 500);
+  } catch (error) {
+    console.error("Error loading projects:", error);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadProjects);
+
   </script>
 </body>
 </html>
