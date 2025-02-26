@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link id='favicon' rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-png">
+    <title>Projects | Portfolio Varun</title>
+    <link href="https://unpkg.com/flickity@2.2.3/dist/flickity.min.css" rel="stylesheet">
+
+    <style>
+        /* Global Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5; /* Light background */
+            color: #333;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: #58a6ff;
+            margin-bottom: 10px;
+        }
+
+        /* Project Section */
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+        }
+
+        /* Project Card */
+        .project-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 850px;
+            text-align: left;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(88, 166, 255, 0.5);
+        }
+
+        /* Project Title */
+        .project-card h3 {
+            color: #58a6ff;
+            margin-bottom: 12px;
+            font-size: 2rem;
+        }
+
+        /* Project Details */
+        .technologies, .applications, .extras {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Carousel Styling */
+        .project-visuals {
+            margin-top: 25px;
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Flickity Carousel */
+        .carousel {
+            border-radius: 10px;
+            overflow: hidden;
+            background: black;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Carousel Items */
+        .carousel-cell {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .carousel-cell img, 
+        .carousel-cell video {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            background: black;
+            padding: 8px;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .carousel-cell img:hover, 
+        .carousel-cell video:hover {
+            transform: scale(1.05);
+        }
+
+        /* Video Styling */
+        video {
+            width: 100%;
+            border-radius: 8px;
+            background: black;
+            outline: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Captions */
+        .carousel-caption {
+            margin-top: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 10px;
+            border-radius: 5px;
+            width: 90%;
+            text-align: center;
+        }
+
+        /* Flickity Navigation Buttons */
+        .flickity-prev-next-button {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .flickity-prev-next-button:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .flickity-prev-next-button .arrow {
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/portfolio/" class="logo"><i class="fab fa-node-js"></i> Varun</a>
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                
+    
+                <li><a href="/portfolio/#home">Home</a></li>
+                <li><a href="/portfolio/#about">About</a></li>
+                <li><a href="/portfolio/#skills">Skills</a></li>
+                <li><a href="/portfolio/#education">Education</a></li>
+                <li><a class="active" href="/portfolio/#projects">Work</a></li>
+                <li><a href="/portfolio/#experience">Experience</a></li>
+                <li><a href="/portfolio/#publications">Publications</a></li>
+                <li><a href="/portfolio/#contact">Contact</a></li>
+    
+            </ul>
+        </nav>
+    </header>
+    <section class="work" id="work">
+    <h2><i class="fas fa-laptop-code"></i> My Projects</h2>
+    <div class="projects-container" id="projectsContainer"></div>
+        </section>
+    <!-- External Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
+
+    <script>
+        // Fetch JSON and Load Projects
+        async function loadProjects() {
+            try {
+                const response = await fetch('projects.json');
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
+                const data = await response.json();
+                const projectsContainer = document.getElementById('projectsContainer');
+
+                data.projects.forEach((project, index) => {
+                    let visualsHTML = "";
+
+                    if (project.visuals.videos.length || project.visuals.images.length) {
+                        visualsHTML += `<div id="carousel${index}" class="carousel js-flickity" data-flickity='{ "wrapAround": true, "autoPlay": 3000, "pauseAutoPlayOnHover": true }'>`;
+
+                        // Loop through videos and add captions
+                        project.visuals.videos.forEach(video => {
+                            visualsHTML += `
+                                <div class="carousel-cell">
+                                    <video controls>
+                                        <source src="${video.src}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="carousel-caption">
+                                        <p>${video.caption}</p>
+                                    </div>
+                                </div>`;
+                        });
+
+                        // Loop through images and add captions
+                        project.visuals.images.forEach(image => {
+                            visualsHTML += `
+                                <div class="carousel-cell">
+                                    <img src="${image.src}" alt="Project Image">
+                                    <div class="carousel-caption">
+                                        <p>${image.caption}</p>
+                                    </div>
+                                </div>`;
+                        });
+
+                        visualsHTML += `</div>`;
+                    }
+
+                    let technologiesHTML = Object.keys(project.technologies)
+                        .map(category => `<strong>${category.toUpperCase()}:</strong> ${project.technologies[category].join(', ')}`)
+                        .join('<br>');
+
+                    let applicationsHTML = `<strong>Applications:</strong> ${project.applications.join(', ')}`;
+                    let extrasHTML = project.extras.length ? `<strong>Extras:</strong> ${project.extras.join(', ')}` : '';
+
+                    projectsContainer.innerHTML += `
+                        <div class="project-card">
+                            <h3>${project.title}</h3>
+                            <p>${project.overview}</p>
+                            <div class="technologies">${technologiesHTML}</div>
+                            <div class="applications">${applicationsHTML}</div>
+                            <div class="extras">${extrasHTML}</div>
+                            ${visualsHTML}
+                        </div>
+                    `;
+                });
+
+                setTimeout(() => {
+                    document.querySelectorAll('.js-flickity').forEach(carousel => {
+                        new Flickity(carousel, {
+                            wrapAround: true,
+                            autoPlay: 3000,
+                            pauseAutoPlayOnHover: true
+                        });
+                    });
+                }, 500);
+
+            } catch (error) {
+                console.error("Error loading projects:", error);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", loadProjects);
+    </script>
+
+</body>
+</html>

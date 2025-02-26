@@ -1,122 +1,223 @@
 {
     "projects": [
-        {
-            "title": "Stock Market Web and iOS Application",
-            "overview": "Developed a stock market application utilizing the MERN stack for the web version and Swift for iOS.",
-            "technologies": {
-                "backend": ["Node.js", "Express.js", "MongoDB"],
-                "frontend": ["React.js", "SwiftUI", "Swift"],
-                "cloud": ["AWS", "Firebase"],
-                "third_party": ["Finnhub API", "Highcharts"]
-            },
-            "applications": [
-                "Real-time stock data retrieval",
-                "Financial market trend analysis",
-                "Portfolio tracking for users"
-            ],
-            "extras": [
-                "Built a native iOS app with Swift using MVVM architecture",
-                "Deployed scalable backend on AWS Lambda"
-            ],
-            "visuals": {
-                "videos": [
-                    {
-                        "src": "media/stock_market/HW3_responsive_demo.mov",
-                        "caption": "Responsive UI showcasing the adaptability of the stock market web app."
-                    },
-                    {
-                        "src": "media/stock_market/HW3_web_demo.mov",
-                        "caption": "Stock market web application displaying real-time financial data."
-                    },
-                    {
-                        "src": "media/stock_market/Assignment4varunjay.mp4",
-                        "caption": "Mobile version of the stock market app built using SwiftUI."
-                    }
-                ],
-                "images": []
-            }
+      {
+        "title": "Stock Market Web and iOS Application",
+        "overview": "Developed a stock market application utilizing the MERN stack for the web version and Swift for iOS.",
+        "technologies": {
+          "backend": ["Node.js", "Express.js", "MongoDB"],
+          "frontend": ["React.js", "SwiftUI", "Swift"],
+          "cloud": ["AWS", "Firebase"],
+          "third_party": ["Finnhub API", "Highcharts"]
         },
-        {
-            "title": "Waste Classification using Transfer Learning",
-            "overview": "Developed a CNN-based deep learning model to classify waste into six categories: cardboard, glass, metal, organic, paper, and plastic.",
-            "technologies": {
-                "deep_learning": ["TensorFlow", "Keras", "ResNet50v2"],
-                "backend": ["Python", "Flask"],
-                "cloud": ["Google Colab"]
+        "applications": [
+          "Real-time stock data retrieval",
+          "Financial market trend analysis",
+          "Portfolio tracking for users"
+        ],
+        "extras": [
+          "Built a native iOS app with Swift using MVVM architecture",
+          "Deployed scalable backend on AWS Lambda"
+        ],
+        "visuals": {
+          "videos": [
+            {
+              "src": "media/stock_market/HW3_responsive_demo.mov",
+              "caption": "Responsive UI showcasing the adaptability of the stock market web app."
             },
-            "applications": [
-                "Automated waste classification for recycling centers",
-                "Reduction in manual labor for waste sorting",
-                "Improved waste disposal efficiency"
-            ],
-            "extras": [
-                "Dataset augmentation to improve model generalization",
-                "Fine-tuned ResNet50v2 for better accuracy"
-            ],
-            "visuals": {
-                "videos": [],
-                "images": [
-                    {
-                        "src": "media/waste_classification/Screenshot 2024-10-04 at 3.59.17 PM.png",
-                        "caption": "ResNet50v2 architecture used for waste classification."
-                    },
-                    {
-                        "src": "media/waste_classification/Screenshot 2024-10-04 at 3.59.37 PM.png",
-                        "caption": "Graph depicting the testing accuracy and loss during model training."
-                    },
-                    {
-                        "src": "media/waste_classification/Screenshot 2024-10-04 at 4.00.04 PM.png",
-                        "caption": "Inference results on test dataset for waste classification."
-                    },
-                    {
-                        "src": "media/waste_classification/Screenshot 2024-10-04 at 4.00.20 PM.png",
-                        "caption": "Performance metrics comparing classification accuracy for different waste types."
-                    },
-                    {
-                        "src": "media/waste_classification/Screenshot 2024-10-04 at 4.00.44 PM.png",
-                        "caption": "Confusion matrix illustrating model accuracy for each waste category."
-                    }
-                ]
-            }
-        },
-        {
-            "title": "OCR for Medical Reports: Enhanced Data Extraction and Summarization",
-            "overview": "This project aims to enhance data extraction and summarization of medical reports using OCR technology and machine learning.",
-            "technologies": {
-                "ocr": ["AWS Textract"],
-                "nlp": ["GPT-2", "Transformers"],
-                "backend": ["Python", "Flask"]
+            {
+              "src": "media/stock_market/HW3_web_demo.mov",
+              "caption": "Stock market web application displaying real-time financial data."
             },
-            "applications": [
-                "Automated medical report analysis",
-                "Summarization of large medical documents",
-                "Improved accessibility for healthcare professionals"
-            ],
-            "extras": [
-                "Developed a Medical Dictionary in collaboration with local doctors",
-                "Combined information extraction and summarization for better comprehension"
-            ],
-            "visuals": {
-                "videos": [],
-                "images": [
-                    {
-                        "src": "media/medical_report/Screenshot 2024-10-04 at 3.08.29 PM.png",
-                        "caption": "Workflow diagram illustrating OCR processing steps for medical reports."
-                    },
-                    {
-                        "src": "media/medical_report/Screenshot 2024-10-04 at 3.09.15 PM.png",
-                        "caption": "Example of a raw medical report before OCR processing."
-                    },
-                    {
-                        "src": "media/medical_report/Screenshot 2024-10-04 at 3.09.40 PM.png",
-                        "caption": "Extracted textual data from the medical report using AWS Textract."
-                    },
-                    {
-                        "src": "media/medical_report/Screenshot 2024-10-04 at 3.10.07 PM.png",
-                        "caption": "Highlighted abnormal parameters identified from the extracted text."
-                    }
-                ]
+            {
+              "src": "media/stock_market/Assignment4varunjay.mp4",
+              "caption": "Mobile version of the stock market app built using SwiftUI."
             }
+          ],
+          "images": []
         }
+      },
+      {
+        "title": "Waste Classification using Transfer Learning",
+        "overview": "Developed a CNN-based deep learning model to classify waste into six categories: cardboard, glass, metal, organic, paper, and plastic.",
+        "technologies": {
+          "deep_learning": ["TensorFlow", "Keras", "ResNet50v2"],
+          "backend": ["Python", "Flask"],
+          "cloud": ["Google Colab"]
+        },
+        "applications": [
+          "Automated waste classification for recycling centers",
+          "Reduction in manual labor for waste sorting",
+          "Improved waste disposal efficiency"
+        ],
+        "extras": [
+          "Dataset augmentation to improve model generalization",
+          "Fine-tuned ResNet50v2 for better accuracy"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "media/waste_classification/Screenshot 2024-10-04 at 3.59.17 PM.png",
+              "caption": "ResNet50v2 architecture used for waste classification."
+            },
+            {
+              "src": "media/waste_classification/Screenshot 2024-10-04 at 3.59.37 PM.png",
+              "caption": "Graph depicting the testing accuracy and loss during model training."
+            },
+            {
+              "src": "media/waste_classification/Screenshot 2024-10-04 at 4.00.04 PM.png",
+              "caption": "Inference results on test dataset for waste classification."
+            },
+            {
+              "src": "media/waste_classification/Screenshot 2024-10-04 at 4.00.20 PM.png",
+              "caption": "Performance metrics comparing classification accuracy for different waste types."
+            },
+            {
+              "src": "media/waste_classification/Screenshot 2024-10-04 at 4.00.44 PM.png",
+              "caption": "Confusion matrix illustrating model accuracy for each waste category."
+            }
+          ]
+        }
+      },
+      {
+        "title": "OCR for Medical Reports: Enhanced Data Extraction and Summarization",
+        "overview": "This project aims to enhance data extraction and summarization of medical reports using OCR technology and machine learning.",
+        "technologies": {
+          "ocr": ["AWS Textract"],
+          "nlp": ["GPT-2", "Transformers"],
+          "backend": ["Python", "Flask"]
+        },
+        "applications": [
+          "Automated medical report analysis",
+          "Summarization of large medical documents",
+          "Improved accessibility for healthcare professionals"
+        ],
+        "extras": [
+          "Developed a Medical Dictionary in collaboration with local doctors",
+          "Combined information extraction and summarization for better comprehension"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "media/medical_report/Screenshot 2024-10-04 at 3.08.29 PM.png",
+              "caption": "Workflow diagram illustrating OCR processing steps for medical reports."
+            },
+            {
+              "src": "media/medical_report/Screenshot 2024-10-04 at 3.09.15 PM.png",
+              "caption": "Example of a raw medical report before OCR processing."
+            },
+            {
+              "src": "media/medical_report/Screenshot 2024-10-04 at 3.09.40 PM.png",
+              "caption": "Extracted textual data from the medical report using AWS Textract."
+            },
+            {
+              "src": "media/medical_report/Screenshot 2024-10-04 at 3.10.07 PM.png",
+              "caption": "Highlighted abnormal parameters identified from the extracted text."
+            }
+          ]
+        }
+      },
+      {
+        "title": "CI/CD Pipeline on AWS",
+        "overview": "Developed a cloud-native Java application with an automated CI/CD pipeline leveraging AWS CodePipeline, Docker, and ECS.",
+        "technologies": {
+          "backend": ["Java", "Spring Boot"],
+          "containerization": ["Docker"],
+          "cloud": ["AWS CodePipeline", "ECS"],
+          "devops": ["CI/CD"]
+        },
+        "applications": [
+          "Automated build, test, and deployment of microservices"
+        ],
+        "extras": [
+          "Robust deployment strategies with continuous integration and delivery"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": []
+        },
+        "repo": "https://github.com/varunmehta14/CICD_AWS"
+      },
+      {
+        "title": "ARSandBox",
+        "overview": "Created a Grasshopper plugin using C# and the RhinoCommon API for real-time point cloud and depth image processing to enhance 3D design workflows.",
+        "technologies": {
+          "language": ["C#"],
+          "framework": [".NET", "RhinoCommon API"]
+        },
+        "applications": [
+          "Real-time depth imaging and 3D visualization"
+        ],
+        "extras": [
+          "Hardware-accelerated rendering for improved performance"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": []
+        },
+        "repo": "https://github.com/varunmehta14/ARSandBox"
+      },
+      {
+        "title": "ESG Report Summarizer",
+        "overview": "Implemented an end-to-end pipeline to extract and summarize ESG reports using OCR and advanced NLP models.",
+        "technologies": {
+          "ocr": ["AWS Textract"],
+          "nlp": ["GPT-2", "Transformers"],
+          "backend": ["Python", "Flask"]
+        },
+        "applications": [
+          "Automated extraction and summarization of ESG data for analysis"
+        ],
+        "extras": [
+          "Achieved high summarization accuracy"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": []
+        },
+        "repo": "https://github.com/varunmehta14/ESG_Report_Summarizer"
+      },
+      {
+        "title": "AutoPark",
+        "overview": "Designed an intelligent parking management system that leverages real-time data analytics to optimize parking space utilization.",
+        "technologies": {
+          "backend": ["Node.js", "Express"],
+          "frontend": ["React.js"],
+          "database": ["MongoDB"]
+        },
+        "applications": [
+          "Real-time parking monitoring and allocation"
+        ],
+        "extras": [
+          "Enhanced user experience with data-driven insights"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": []
+        },
+        "repo": "https://github.com/varunmehta14/AutoPark"
+      },
+      {
+        "title": "ACC - Adaptive Cruise Controller",
+        "overview": "Developed an adaptive cruise control system integrating deep learning models with simulation environments to enhance autonomous driving capabilities.",
+        "technologies": {
+          "deep_learning": ["TensorFlow", "Keras"],
+          "simulation": ["CARLA"],
+          "algorithms": ["A*", "PID control", "Reinforcement Learning"]
+        },
+        "applications": [
+          "Adaptive speed control and dynamic obstacle avoidance"
+        ],
+        "extras": [
+          "Achieved high lane classification accuracy"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": []
+        },
+        "repo": "https://github.com/varunmehta14/ACC"
+      }
     ]
-}
+  }
+  
