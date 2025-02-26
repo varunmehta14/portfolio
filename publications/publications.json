@@ -48,7 +48,7 @@
       {
         "title": "Information Extraction and Summarization of Medical Reports using Textract and GPT-2",
         "overview": "Devised an OCR-based pipeline leveraging AWS Textract to extract textual data from medical reports and fine-tuned GPT-2 to generate concise summaries. This approach significantly improved retrieval efficiency and supports accurate disease prediction. (RAIC 2024)",
-        "link": "https://doi.org/placeholder-medical-paper", 
+        "link": "https://www.researchgate.net/publication/382472791_Information_extraction_and_summarization_of_medical_reports_using_Textract_and_GPT-2", 
         "presentation": "https://drive.google.com/file/d/placeholder_medical_presentation/view?usp=sharing",
         "visuals": {
           "videos": [],
