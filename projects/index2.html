@@ -1,0 +1,417 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link id='favicon' rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-png">
+    <title>Projects | Portfolio Varun</title>
+</head>
+<body oncontextmenu="return false">
+
+
+<header>
+    <a href="/" class="logo"><i class="fab fa-node-js"></i> Varun</a>
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#skills">Skills</a></li>
+            <li><a href="/#education">Education</a></li>
+            <li><a class="active" href="/#work">Work</a></li>
+            <li><a href="/#experience">Experience</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<section class="work" id="work">
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+    <div id="filters" class="button-group">
+        <button class="btn is-checked" data-filter="*">All Projects</button>
+        <button class="btn" data-filter=".mern">MERN Stack</button>
+        <button class="btn" data-filter=".lamp">LAMP Stack</button>
+        <button class="btn" data-filter=".basicweb">Basic Web</button>
+        <button class="btn" data-filter=".android">Android App</button>
+    </div>
+    <div class="box-container">
+      
+    </div>
+    
+    <div class="backbtn">
+        <a href="/#work" class="btn">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Home</span>
+        </a>
+    </div>
+</section>
+
+
+
+<a href="#work" class="fas fa-angle-up" id="scroll-top"></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link id='favicon' rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-png">
+    <title>Projects | Portfolio Varun</title>
+    <link href="https://unpkg.com/flickity@2.2.3/dist/flickity.min.css" rel="stylesheet">
+    <style>
+      /* Custom CSS */
+      /* * { box-sizing: border-box; } */
+  
+      /* body { font-family: sans-serif; } */
+  
+      .carousel {
+        background: black;
+        position: relative;
+      }
+  
+      .carousel-cell {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+  
+      .carousel-cell video {
+        max-width: 100%;
+        max-height: 100%;
+      }
+  
+      .carousel-caption {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        font-size: 24px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+      }
+  
+      .flickity-prev-next-button {
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        opacity: 0.6;
+      }
+  
+      .flickity-prev-next-button:hover {
+        background: transparent;
+        opacity: 1;
+      }
+  
+      .flickity-prev-next-button .arrow {
+        fill: white;
+      }
+  
+      .flickity-prev-next-button.previous { left: 0; }
+      .flickity-prev-next-button.next { right: 0; }
+    </style>
+</head>
+<body oncontextmenu="return false">
+
+<!-- navbar starts -->
+<header>
+    <a href="/portfolio/" class="logo"><i class="fab fa-node-js"></i> Varun</a>
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+            
+
+            <li><a href="/portfolio/#home">Home</a></li>
+            <li><a href="/portfolio/#about">About</a></li>
+            <li><a href="/portfolio/#skills">Skills</a></li>
+            <li><a href="/portfolio/#education">Education</a></li>
+            <li><a class="active" href="/portfolio/#projects">Work</a></li>
+            <li><a href="/portfolio/#experience">Experience</a></li>
+            <li><a href="/portfolio/#publications">Publications</a></li>
+            <li><a href="/portfolio/#contact">Contact</a></li>
+
+        </ul>
+    </nav>
+</header>
+<!-- navbar ends -->
+
+<!-- work project section starts -->
+<section class="work" id="work">
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+   
+    <div class="box-container">
+        <!-- Projects will be dynamically injected here -->
+        <section id="projects" class="section">
+          <h2>Projects</h2>
+          <!-- New Stock Market Project -->
+          <div class="project-item">
+              <h3>Stock Market Web and iOS Application</h3>
+      
+              <h4>Project Overview</h4>
+              <p>Developed a stock market application utilizing the **MERN stack** (MongoDB, Express.js, React, Node.js) for the web version and a native **iOS app** using **Swift** and **SwiftUI**.</p>
+      
+              <h4>Key Technologies Used</h4>
+              <ul>
+                  <li>**MERN Stack**: For building the web application, allowing real-time data retrieval and interactive visualizations.</li>
+                  <li>**AWS**: Deployed application on Amazon Web Services for scalability and reliability.</li>
+                  <li>**Finnhub API**: Integrated for real-time stock market data retrieval.</li>
+                  <li>**Highcharts**: Used for creating interactive stock visualizations.</li>
+              </ul>
+      
+              <h4>Third-Party Libraries</h4>
+              <ul>
+                  <li><a href="https://github.com/Alamofire/Alamofire" target="_blank">Alamofire</a>: Networking library for Swift.</li>
+                  <li><a href="https://github.com/SwiftyJSON/SwiftyJSON" target="_blank">SwiftyJSON</a>: Simplifies JSON handling in Swift.</li>
+                  <li><a href="https://github.com/onevcat/Kingfisher" target="_blank">Kingfisher</a>: Library for image downloading and caching in Swift.</li>
+              </ul>
+      
+              <h4>Visuals</h4>
+               <!-- Flickity Carousel -->
+  <div id="stockMarketCarousel" class="carousel js-flickity" data-ride="carousel">
+    <div class="carousel-cell">
+      <div class="carousel-image-container">
+        <video controls>
+          <source src="media/stock_market/HW3_responsive_demo.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Web Responsive Version</h5>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="carousel-image-container">
+        <video controls>
+          <source src="media/stock_market/HW3_web_demo.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Web Version</h5>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="carousel-image-container">
+        <video controls>
+          <source src="media/stock_market/Assignment4varunjay.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Mobile Application Using SwiftUI</h5>
+      </div>
+    </div>
+    <!-- Add more videos as needed -->
+  </div>
+
+             
+            
+          </div>
+          <div class="project-item">
+              <h3>Waste Classification using Transfer Learning</h3>
+              
+              <h4>Project Overview</h4>
+              <p>This project focuses on **classifying waste** into six categories: cardboard, glass, metal, organic, paper, and plastic using **Transfer Learning** with Convolutional Neural Networks (CNNs).</p>
+      
+              <h4>Methodology</h4>
+              <p>The initial approach involved **image classification** using Support Vector Machines (SVM). However, due to poor accuracy, we transitioned to deep learning. We employed a CNN architecture to improve classification accuracy by processing images through multiple layers, enabling the model to learn complex features.</p>
+      
+              <h4>CNN Architecture</h4>
+              <p>Our CNN model consists of:</p>
+              <ul>
+                  <li>**Convolutional Layers**: Detect basic features such as edges and colors.</li>
+                  <li>**Pooling Layers**: Reduce dimensionality and summarize features.</li>
+                  <li>**Flattening Layer**: Convert the 2D feature maps into a 1D vector.</li>
+                  <li>**Fully Connected Layers**: Classify the output based on learned features.</li>
+              </ul>
+      
+              <h4>Transfer Learning with ResNet50v2</h4>
+              <p>We utilized **ResNet50v2**, a pre-trained model known for its robustness and depth. This model was fine-tuned for our waste classification task by unfreezing some layers and adding additional dense layers to adapt to our specific output classes.</p>
+      
+              <h4>Training Process</h4>
+              <p>We trained the model on an augmented dataset (80% training, 20% validation) using various data augmentation techniques to enhance generalization. The optimal learning rate was determined to be **0.00001**, yielding the best accuracy.</p>
+      
+              <h4>Applications</h4>
+              <p>This image classification system can significantly improve waste management practices, helping to segregate recyclable and non-recyclable materials effectively, thus reducing manual labor and enhancing safety for waste workers.</p>
+      
+              <h4>Visuals</h4>
+<!-- Flickity Carousel for Waste Classification -->
+<div id="wasteClassificationCarousel" class="carousel js-flickity" data-ride="carousel">
+  <div class="carousel-cell">
+    <div class="carousel-image-container">
+      <img src="media/waste_classification/Screenshot 2024-10-04 at 3.59.17 PM.png" class="d-block" alt="ResNet50v2 structure">
+    </div>
+    <div class="carousel-caption d-none d-md-block">
+      <h5>ResNet50v2 structure</h5>
+    </div>
+  </div>
+  <div class="carousel-cell">
+    <div class="carousel-image-container">
+      <img src="media/waste_classification/Screenshot 2024-10-04 at 3.59.37 PM.png" class="d-block" alt="Data Augmentation Techniques">
+    </div>
+    <div class="carousel-caption d-none d-md-block">
+      <h5>Testing Accuracy and Loss</h5>
+    </div>
+  </div>
+  <div class="carousel-cell">
+    <div class="carousel-image-container">
+      <img src="media/waste_classification/Screenshot 2024-10-04 at 4.00.04 PM.png" class="d-block" alt="Training Accuracy Graph">
+    </div>
+    <div class="carousel-caption d-none d-md-block">
+      <h5>Inference on test dataset</h5>
+    </div>
+  </div>
+  <div class="carousel-cell">
+    <div class="carousel-image-container">
+      <img src="media/waste_classification/Screenshot 2024-10-04 at 4.00.20 PM.png" class="d-block" alt="Sample Waste Classification Result">
+    </div>
+    <div class="carousel-caption d-none d-md-block">
+      <h5>Comparison</h5>
+    </div>
+  </div>
+  <div class="carousel-cell">
+    <div class="carousel-image-container">
+      <img src="media/waste_classification/Screenshot 2024-10-04 at 4.00.44 PM.png" class="d-block" alt="Confusion Matrix">
+    </div>
+    <div class="carousel-caption d-none d-md-block">
+      <h5>Performance metrics on different types of waste</h5>
+    </div>
+  </div>
+</div>
+
+          </div>
+      
+          
+      
+          <!-- New OCR Project -->
+          <!-- New OCR Project -->
+      <div class="project-item">
+          <h3>OCR for Medical Reports: Enhanced Data Extraction and Summarization</h3>
+          
+          <h4>Overview</h4>
+          <p>This project aims to enhance **data extraction** and **summarization** of medical reports using **OCR** technology and machine learning.</p>
+      
+          <h4>Key Highlights</h4>
+          <ul>
+              <li>Combined **information extraction** and **summarization** for better comprehension.</li>
+              <li>Developed a **Medical Dictionary** in collaboration with local doctors.</li>
+              <li>Utilized **AWS Textract** for accurate data extraction from medical records.</li>
+              <li>Implemented a summarization model using **GPT-2** to generate user-friendly reports.</li>
+          </ul>
+      
+          <h4>Results</h4>
+          <p>Achieved high accuracy in recognizing structured data, leading to improved analysis and insights for healthcare professionals.</p>
+      
+          
+          <h4>Visuals</h4>
+           <!-- Flickity Carousel for Project -->
+  <div id="projectCarousel" class="carousel js-flickity" data-ride="carousel">
+    <div class="carousel-cell">
+      <div class="carousel-image-container">
+        <img src="media/medical_report/Screenshot 2024-10-04 at 3.08.29 PM.png" class="d-block" alt="System Flow">
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>System Flow</h5>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="carousel-image-container">
+        <img src="media/medical_report/Screenshot 2024-10-04 at 3.09.15 PM.png" class="d-block" alt="Example of a Medical Report">
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Example of a Medical Report</h5>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="carousel-image-container">
+        <img src="media/medical_report/Screenshot 2024-10-04 at 3.09.40 PM.png" class="d-block" alt="Report generated after OCR">
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Report Generated After OCR</h5>
+      </div>
+    </div>
+    <div class="carousel-cell">
+      <div class="carousel-image-container">
+        <img src="media/medical_report/Screenshot 2024-10-04 at 3.10.07 PM.png" class="d-block" alt="Abnormal Parameters obtained after OCR">
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Abnormal Parameters Obtained After OCR</h5>
+      </div>
+    </div>
+  </div>
+
+      </div>
+      
+      </section>
+    </div>
+    
+    <div class="backbtn">
+        <a href="/#work" class="btn">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Home</span>
+        </a>
+    </div>
+</section>
+<!-- work project section ends -->
+
+<!-- scroll top btn -->
+<a href="#work" class="fas fa-angle-up" id="scroll-top"></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+<!-- External JS: Flickity JS -->
+<script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
+
+<!-- Initialize Flickity -->
+<script>
+  var flkty = new Flickity('#stockMarketCarousel', {
+    cellAlign: 'center',
+    contain: true,
+    prevNextButtons: true,
+    pageDots: false
+  });
+</script>
+<script>
+  var flkty = new Flickity('#wasteClassificationCarousel', {
+    cellAlign: 'center',
+    contain: true,
+    prevNextButtons: true,
+    pageDots: false
+  });
+</script> 
+<script>
+  var flkty = new Flickity('#projectCarousel', {
+    cellAlign: 'center',
+    contain: true,
+    prevNextButtons: true,
+    pageDots: false
+  });
+</script>
+
+
+
+</body>
+</html>

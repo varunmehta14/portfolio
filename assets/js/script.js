@@ -75,7 +75,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Jigar Sable";
+            document.title = "Portfolio | Varun Mehta";
             $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
@@ -87,12 +87,24 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
+    strings: [
+        "Full-Stack Development",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Mobile Application Development",
+        "Web Development",
+        "Deep Learning",
+        "Data Science",
+        "Natural Language Processing",
+        
+        
+    ],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
     backDelay: 500,
 });
+
 // <!-- typed js effect ends -->
 
 async function fetchData(type = "skills") {
@@ -162,7 +174,7 @@ function showProjects(projects) {
 
 }
 
-fetchData().then(data => {
+fetchData("skills").then(data => {
     showSkills(data);
 });
 
