@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Experience | Portfolio Varun</title>
-  <!-- Font Awesome & Flickity CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://unpkg.com/flickity@2.2.3/dist/flickity.min.css" rel="stylesheet">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
   <!-- Main CSS (same as your projects page) -->
-  <link rel="stylesheet" href="../projects/style.css">
+  <link rel="stylesheet" href="../projects/style.css" />
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
-    /* Global Styles */
+    /* Global Styles from your snippet */
     * {
       margin: 0;
       padding: 0;
@@ -27,31 +31,25 @@
       text-transform: capitalize;
       transition: all 0.2s linear;
     }
-
     html {
       font-size: 62.5%;
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
-
     body {
       background: #f0f0f0;
       font-family: 'Poppins', sans-serif;
     }
-
     *::selection {
       background: #5d2e8c;
       color: #fff;
     }
-
     html::-webkit-scrollbar {
       width: 0.8rem;
     }
-
     html::-webkit-scrollbar-track {
       background: #f0f0f0;
     }
-
     html::-webkit-scrollbar-thumb {
       background: #420177;
     }
@@ -59,9 +57,7 @@
     /* Navbar Styling */
     header {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       z-index: 1000;
       display: flex;
       align-items: center;
@@ -72,11 +68,9 @@
       box-shadow: 0 1px 4px rgba(146,161,176,0.3);
       transition: background-color 0.3s ease;
     }
-
     header:hover {
       background-color: #f3f3f3;
     }
-
     header .logo {
       font-size: 2rem;
       font-weight: 800;
@@ -84,27 +78,22 @@
       display: flex;
       align-items: center;
     }
-
     header .logo i {
       font-size: 2.4rem;
       margin-right: 0.5rem;
     }
-
     header .logo:hover {
       color: #fc8c05;
     }
-
     header .navbar ul {
       list-style: none;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-
     header .navbar li {
       margin-left: 3rem;
     }
-
     header .navbar ul li a {
       font-size: 1.6rem;
       color: #1a1a1a;
@@ -112,20 +101,17 @@
       letter-spacing: 0.05rem;
       padding: 0.6rem 0;
     }
-
     header .navbar ul li a.active,
     header .navbar ul li a:hover {
       color: #5115f2;
       border-bottom: 2px solid #5115f2;
     }
-
     #menu {
       font-size: 3rem;
       cursor: pointer;
       color: #0e0e2c;
       display: none;
     }
-
     @media (max-width: 768px) {
       #menu {
         display: block;
@@ -158,13 +144,12 @@
       }
     }
 
-    /* Work Section Styling */
+    /* Experience Section (like the Work section) */
     .work {
       background: linear-gradient(to bottom, #2b2d7f, #110d39);
       margin-top: 6rem;
       padding: 5rem 0;
     }
-
     .work h2 {
       color: #fff;
       text-align: center;
@@ -172,7 +157,7 @@
       margin-bottom: 2rem;
     }
 
-    /* Projects Container */
+    /* Container for experience items */
     .projects-container {
       display: flex;
       flex-direction: column;
@@ -180,7 +165,7 @@
       padding: 2rem;
     }
 
-    /* Project Card / Item Styling */
+    /* Each experience card */
     .project-card,
     .project-item {
       background: #ffffff;
@@ -190,122 +175,144 @@
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
       overflow: hidden;
     }
-
     .project-card:hover,
     .project-item:hover {
       transform: translateY(-10px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     }
-
-    .project-item h3 {
+    .project-card h3 {
       font-size: 2.2rem;
       font-weight: bold;
       margin-bottom: 15px;
       color: #333;
       transition: color 0.3s ease;
     }
-
-    .project-item h3:hover {
+    .project-card h3:hover {
       color: #0073e6;
     }
-
-    .project-item p {
+    .project-card p {
       font-size: 1.4rem;
       line-height: 1.7;
       margin-bottom: 20px;
       color: #666;
     }
-
-    .project-item .technologies,
-    .project-item .applications,
-    .project-item .extras {
+    .project-card .technologies,
+    .project-card .applications,
+    .project-card .extras {
       font-size: 1.4rem;
       color: #555;
       margin-bottom: 10px;
     }
 
-    /* Repository Link Button */
-    .repository a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 0.5rem 1rem;
-      background: #0073e6;
-      color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 1.4rem;
+    /* Radio-based carousel (3-slot) for images/videos + captions */
+    input[type="radio"] {
+      display: none;
     }
-    .repository a:hover {
-      background: #005bb5;
-    }
-
-    /* Flickity Carousel Styling */
-    .carousel {
-      margin-top: 25px;
-      border-radius: 10px;
-      overflow: hidden;
-      background: black;
-      padding: 10px;
+    .cards {
       position: relative;
       width: 100%;
-      max-width: 750px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-top: 1.5rem;
+      height: 360px; /* fixed or flexible, as you prefer */
     }
-
-    .carousel-cell {
+    .card-label {
+      position: absolute;
+      width: 60%;
+      height: 100%;
+      left: 0; right: 0;
+      margin: auto;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      cursor: pointer;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #000;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0; /* hidden by default, see offset logic below */
+      z-index: 0;
+    }
+    .media-wrapper {
+      flex: 1;
+      width: 100%;
+      display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
-      text-align: center;
-      transition: transform 0.3s ease-in-out;
+      overflow: hidden;
     }
-
-    .carousel-cell img,
-    .carousel-cell video {
-      width: 100%;
-      max-height: 400px;
+    .media-wrapper img,
+    .media-wrapper video {
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
-      background: black;
-      padding: 8px;
-      border-radius: 8px;
-      transition: transform 0.3s ease-in-out;
+      border: none;
     }
-
-    .carousel-cell img:hover,
-    .carousel-cell video:hover {
-      transform: scale(1.05);
-    }
-
-    .carousel-caption {
-      margin-top: 10px;
-      background: rgba(0, 0, 0, 0.8);
-      color: white;
-      font-size: 1.4rem;
-      font-weight: bold;
-      padding: 10px;
-      border-radius: 5px;
-      width: 90%;
+    .media-caption {
+      width: 100%;
+      background: #333;
+      color: #fff;
+      font-size: 1.2rem;
       text-align: center;
+      padding: 0.5rem;
+      box-sizing: border-box;
+    }
+    .card-label:hover {
+      box-shadow: 0 0 10px #7f0;
     }
 
-    /* Flickity Navigation Buttons */
-    .flickity-prev-next-button {
-      width: 45px;
-      height: 45px;
-      background: rgba(255, 255, 255, 0.2);
+    /* Modal for large view */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content img,
+    .modal-content video {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .modal-close {
+      position: absolute;
+      top: 10px; right: 10px;
+      color: #fff;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      font-size: 1.8rem;
+      width: 40px; height: 40px;
       border-radius: 50%;
-      transition: 0.3s;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
     }
-    .flickity-prev-next-button:hover {
-      background: rgba(255, 255, 255, 0.5);
+    .modal-close:hover {
+      background: rgba(255,255,255,0.4);
     }
+
+    /* We'll store dynamic transform rules here */
   </style>
+
+  <style id="dynamicCarouselStyles"></style>
 </head>
 <body>
-  <!-- Navbar (same as your projects page) -->
+  <!-- Navbar (like your snippet) -->
   <header>
     <a href="/portfolio/" class="logo"><i class="fab fa-node-js"></i> Varun</a>
     <div id="menu" class="fas fa-bars"></div>
@@ -323,88 +330,205 @@
     </nav>
   </header>
 
-  <!-- Experience Section (using same container styling as projects) -->
   <section class="work" id="experience">
     <h2><i class="fas fa-briefcase"></i> My Experience</h2>
     <div class="projects-container" id="experienceContainer"></div>
   </section>
 
-  <!-- External Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
+  <!-- Modal for zooming -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content" id="modalContent">
+      <button class="modal-close" id="modalClose">&times;</button>
+    </div>
+  </div>
+
   <script>
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalContent = document.getElementById('modalContent');
+    const modalClose = document.getElementById('modalClose');
+
     async function loadExperience() {
       try {
         const response = await fetch('experience.json');
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         const data = await response.json();
+
         const experienceContainer = document.getElementById('experienceContainer');
+        const styleEl = document.getElementById('dynamicCarouselStyles');
+        let styleRules = "";
 
         data.experience.forEach((exp, index) => {
-          let visualsHTML = "";
-          if (
-            (exp.visuals.videos && exp.visuals.videos.length > 0) ||
-            (exp.visuals.images && exp.visuals.images.length > 0)
-          ) {
-            visualsHTML += `<div id="carouselExp${index}" class="carousel js-flickity" data-flickity='{ "wrapAround": true, "autoPlay": 3000, "pauseAutoPlayOnHover": true }'>`;
-            if(exp.visuals.videos && exp.visuals.videos.length > 0) {
-              exp.visuals.videos.forEach(video => {
-                visualsHTML += `
-                  <div class="carousel-cell">
-                    <video controls>
-                      <source src="${video.src}" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                    <div class="carousel-caption">
-                      <p>${video.caption}</p>
-                    </div>
-                  </div>`;
-              });
-            }
-            if(exp.visuals.images && exp.visuals.images.length > 0) {
-              exp.visuals.images.forEach(image => {
-                visualsHTML += `
-                  <div class="carousel-cell">
-                    <img src="${image.src}" alt="Experience Image">
-                    <div class="carousel-caption">
-                      <p>${image.caption}</p>
-                    </div>
-                  </div>`;
-              });
-            }
-            visualsHTML += `</div>`;
-          }
-          
-          let technologiesHTML = (exp.technologies && exp.technologies.length > 0) 
-            ? `<div class="technologies"><strong>Technologies:</strong> ${exp.technologies.join(', ')}</div>` 
-            : "";
-          let highlightsHTML = (exp.highlights && exp.highlights.length > 0) 
-            ? `<ul>${exp.highlights.map(item => `<li>${item}</li>`).join('')}</ul>` 
-            : "";
-          
-          experienceContainer.innerHTML += `
-            <div class="project-card project-item">
-              <h3>${exp.title}</h3>
-              <p><strong>Duration:</strong> ${exp.duration}</p>
-              ${technologiesHTML}
-              ${highlightsHTML}
-              ${visualsHTML}
-            </div>
+          // Build the experience card
+          let cardHTML = `
+            <h3>${exp.title}</h3>
+            <p><strong>Duration:</strong> ${exp.duration}</p>
           `;
+
+          // Possibly show technologies
+          if (exp.technologies && exp.technologies.length) {
+            cardHTML += `<div class="technologies"><strong>Technologies:</strong> ${exp.technologies.join(', ')}</div>`;
+          }
+          // Possibly show bullet highlights
+          if (exp.highlights && exp.highlights.length) {
+            const liHTML = exp.highlights.map(h => `<li>${h}</li>`).join('');
+            cardHTML += `<ul style="margin-top:10px; padding-left:20px;">${liHTML}</ul>`;
+          }
+
+          // Merge videos and images if any
+          let mediaItems = [];
+          if (exp.visuals?.videos) {
+            exp.visuals.videos.forEach(v => {
+              mediaItems.push({ type:'video', src:v.src, caption:v.caption||""});
+            });
+          }
+          if (exp.visuals?.images) {
+            exp.visuals.images.forEach(i => {
+              mediaItems.push({ type:'image', src:i.src, caption:i.caption||""});
+            });
+          }
+
+          // If we have media
+          if (mediaItems.length > 0) {
+            let radioName = `expSlider-${index}`;
+            let radioHTML = "";
+            let cardsHTML = `<div class="cards">`;
+
+            mediaItems.forEach((m, i) => {
+              let slotID = `expSlot${i}-p${index}`;
+              radioHTML += `<input type="radio" name="${radioName}" id="${slotID}" ${i===0?'checked':''} />`;
+            });
+
+            mediaItems.forEach((m, i) => {
+              let cardID = `expMedia${i}-p${index}`;
+              let slotID = `expSlot${i}-p${index}`;
+              let content = `
+                <div class="media-wrapper">
+                  ${
+                    m.type==='image'
+                    ? `<img src="${m.src}" alt="Experience Media ${i}" />`
+                    : `<video controls><source src="${m.src}" type="video/mp4"></video>`
+                  }
+                </div>
+                ${
+                  m.caption
+                  ? `<div class="media-caption">${m.caption}</div>`
+                  : ""
+                }
+              `;
+              cardsHTML += `
+                <label class="card-label" id="${cardID}" for="${slotID}"
+                  data-media-type="${m.type}" data-media-src="${m.src}">
+                  ${content}
+                </label>
+              `;
+            });
+
+            cardsHTML += "</div>"; // end .cards
+            cardHTML += radioHTML + cardsHTML;
+
+            // Build offset logic: 3-slot
+            styleRules += buildOffsetRules(index, mediaItems.length);
+          }
+
+          // Finally wrap in a .project-card
+          const expDiv = document.createElement('div');
+          expDiv.classList.add('project-card','project-item');
+          expDiv.innerHTML = cardHTML;
+          experienceContainer.appendChild(expDiv);
         });
 
-        setTimeout(() => {
-          document.querySelectorAll('.js-flickity').forEach(carousel => {
-            new Flickity(carousel, {
-              wrapAround: true,
-              autoPlay: 3000,
-              pauseAutoPlayOnHover: true
-            });
-          });
-        }, 500);
+        styleEl.innerHTML = styleRules;
+        attachModalEvents();
+
       } catch (error) {
         console.error("Error loading experience:", error);
       }
+    }
+
+    // Show center, left, right => offset=0, ±1 => visible, else hidden
+    function buildOffsetRules(exIndex, N) {
+      let out = "";
+      for (let i=0; i<N; i++) {
+        let slotID = `expSlot${i}-p${exIndex}`;
+        for (let j=0; j<N; j++) {
+          let cardID = `expMedia${j}-p${exIndex}`;
+          let offset = j - i;
+          while (offset > N/2) offset -= N;
+          while (offset <= -N/2) offset += N;
+
+          let transform = "translateX(200%) scale(0.6)";
+          let op = "0";
+          let z = "0";
+          if (offset === 0) {
+            transform = "translateX(0) scale(1)";
+            op="1"; z="2";
+          } else if (offset === 1 || offset===(1-N)) {
+            transform = "translateX(40%) scale(0.8)";
+            op="0.4"; z="1";
+          } else if (offset === -1 || offset===(N-1)) {
+            transform = "translateX(-40%) scale(0.8)";
+            op="0.4"; z="1";
+          }
+          out += `
+            #${slotID}:checked ~ .cards #${cardID} {
+              transform: ${transform};
+              opacity: ${op};
+              z-index: ${z};
+            }
+          `;
+        }
+      }
+      return out;
+    }
+
+    function attachModalEvents() {
+      // If center is clicked => open modal
+      const allCards = document.querySelectorAll('.card-label');
+      allCards.forEach(card => {
+        card.addEventListener('click', e => {
+          const radioId = card.getAttribute('for');
+          const radio = document.getElementById(radioId);
+          if (radio && radio.checked) {
+            e.preventDefault();
+            const type = card.getAttribute('data-media-type');
+            const src = card.getAttribute('data-media-src');
+            openModal(type, src);
+          }
+        });
+      });
+
+      modalClose.addEventListener('click', closeModal);
+      modalOverlay.addEventListener('click', e => {
+        if (e.target.id === 'modalOverlay') closeModal();
+      });
+    }
+
+    function openModal(type, src) {
+      const content = document.getElementById('modalContent');
+      while (content.firstChild && !content.firstChild.classList?.contains('modal-close')) {
+        content.removeChild(content.firstChild);
+      }
+      let el;
+      if (type==='image') {
+        el = document.createElement('img');
+        el.src= src;
+        el.style.maxWidth='100%';
+        el.style.maxHeight='100%';
+      } else {
+        el = document.createElement('video');
+        el.controls=true;
+        el.style.maxWidth='100%';
+        el.style.maxHeight='100%';
+        const s = document.createElement('source');
+        s.src=src; s.type='video/mp4';
+        el.appendChild(s);
+      }
+      content.insertBefore(el, modalClose);
+      modalOverlay.classList.add('active');
+    }
+
+    function closeModal() {
+      modalOverlay.classList.remove('active');
     }
 
     document.addEventListener("DOMContentLoaded", loadExperience);

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Projects | Portfolio Varun</title>
-  <!-- Font Awesome & Flickity CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://unpkg.com/flickity@2.2.3/dist/flickity.min.css" rel="stylesheet">
-  
-  <!-- Custom Styling -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
@@ -31,25 +31,20 @@
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
-
     body {
       background: #f0f0f0;
       font-family: 'Poppins', sans-serif;
     }
-
     *::selection {
       background: #5d2e8c;
       color: #fff;
     }
-
     html::-webkit-scrollbar {
       width: 0.8rem;
     }
-
     html::-webkit-scrollbar-track {
       background: #f0f0f0;
     }
-
     html::-webkit-scrollbar-thumb {
       background: #420177;
     }
@@ -57,9 +52,7 @@
     /* Navbar Styling */
     header {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       z-index: 1000;
       display: flex;
       align-items: center;
@@ -70,11 +63,9 @@
       box-shadow: 0 1px 4px rgba(146,161,176,0.3);
       transition: background-color 0.3s ease;
     }
-
     header:hover {
       background-color: #f3f3f3;
     }
-
     header .logo {
       font-size: 2rem;
       font-weight: 800;
@@ -82,27 +73,22 @@
       display: flex;
       align-items: center;
     }
-
     header .logo i {
       font-size: 2.4rem;
       margin-right: 0.5rem;
     }
-
     header .logo:hover {
       color: #fc8c05;
     }
-
     header .navbar ul {
       list-style: none;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-
     header .navbar li {
       margin-left: 3rem;
     }
-
     header .navbar ul li a {
       font-size: 1.6rem;
       color: #1a1a1a;
@@ -110,28 +96,24 @@
       letter-spacing: 0.05rem;
       padding: 0.6rem 0;
     }
-
     header .navbar ul li a.active,
     header .navbar ul li a:hover {
       color: #5115f2;
       border-bottom: 2px solid #5115f2;
     }
-
     #menu {
       font-size: 3rem;
       cursor: pointer;
       color: #0e0e2c;
       display: none;
     }
-
     @media (max-width: 768px) {
       #menu {
         display: block;
       }
       header .navbar {
         position: fixed;
-        top: 7rem;
-        right: -120%;
+        top: 7rem; right: -120%;
         width: 70%;
         height: 100%;
         text-align: left;
@@ -162,7 +144,6 @@
       margin-top: 6rem;
       padding: 5rem 0;
     }
-
     .work h2 {
       color: #fff;
       text-align: center;
@@ -188,13 +169,11 @@
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
       overflow: hidden;
     }
-
     .project-card:hover,
     .project-item:hover {
       transform: translateY(-10px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     }
-
     .project-item h3 {
       font-size: 2.2rem;
       font-weight: bold;
@@ -202,18 +181,15 @@
       color: #333;
       transition: color 0.3s ease;
     }
-
     .project-item h3:hover {
       color: #0073e6;
     }
-
     .project-item p {
       font-size: 1.4rem;
       line-height: 1.7;
       margin-bottom: 20px;
       color: #666;
     }
-
     .project-item .technologies,
     .project-item .applications,
     .project-item .extras {
@@ -237,72 +213,116 @@
       background: #005bb5;
     }
 
-    /* Flickity Carousel Styling */
-    .carousel {
-      margin-top: 25px;
-      border-radius: 10px;
-      overflow: hidden;
-      background: black;
-      padding: 10px;
+    /* Radio-based Carousel (3-slot) with captions below media */
+    input[type="radio"] {
+      display: none;
+    }
+    .cards {
       position: relative;
       width: 100%;
-      max-width: 750px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-top: 1.5rem;
+      height: 360px; /* fixed or flexible as you prefer */
     }
-
-    .carousel-cell {
+    .card {
+      position: absolute;
+      width: 60%;
+      height: 100%;
+      left: 0; right: 0;
+      margin: auto;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      cursor: pointer;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #000;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0; /* hidden by default, see offset logic below */
+      z-index: 0;
+    }
+    /* Container for the actual media (image/video) */
+    .media-wrapper {
+      flex: 1;
+      width: 100%;
+      display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
-      text-align: center;
-      transition: transform 0.3s ease-in-out;
+      overflow: hidden;
     }
-
-    .carousel-cell img,
-    .carousel-cell video {
-      width: 100%;
-      max-height: 400px;
+    .media-wrapper img,
+    .media-wrapper video {
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
-      background: black;
-      padding: 8px;
-      border-radius: 8px;
-      transition: transform 0.3s ease-in-out;
+      border: none;
     }
-
-    .carousel-cell img:hover,
-    .carousel-cell video:hover {
-      transform: scale(1.05);
-    }
-
-    .carousel-caption {
-      margin-top: 10px;
-      background: rgba(0, 0, 0, 0.8);
-      color: white;
-      font-size: 1.4rem;
-      font-weight: bold;
-      padding: 10px;
-      border-radius: 5px;
-      width: 90%;
+    .media-caption {
+      width: 100%;
+      background: #333;
+      color: #fff;
+      font-size: 1.2rem;
       text-align: center;
+      padding: 0.5rem;
+      box-sizing: border-box;
+    }
+    .card:hover {
+      box-shadow: 0 0 10px #7f0;
     }
 
-    /* Flickity Navigation Buttons */
-    .flickity-prev-next-button {
-      width: 45px;
-      height: 45px;
-      background: rgba(255, 255, 255, 0.2);
+    /* The modal for zooming in on center card */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content img,
+    .modal-content video {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .modal-close {
+      position: absolute;
+      top: 10px; right: 10px;
+      color: #fff;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      font-size: 1.8rem;
+      width: 40px; height: 40px;
       border-radius: 50%;
-      transition: 0.3s;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
     }
-    .flickity-prev-next-button:hover {
-      background: rgba(255, 255, 255, 0.5);
+    .modal-close:hover {
+      background: rgba(255,255,255,0.4);
     }
+
+    /* We'll store the dynamic transform rules here */
   </style>
+
+  <style id="dynamicCarouselStyles"></style>
 </head>
 <body>
+  <!-- Header and Nav (unchanged) -->
   <header>
     <a href="/portfolio/" class="logo"><i class="fab fa-node-js"></i> Varun</a>
     <div id="menu" class="fas fa-bars"></div>
@@ -322,97 +342,218 @@
 
   <section class="work" id="work">
     <h2><i class="fas fa-laptop-code"></i> My Projects</h2>
-    <div class="projects-container" id="projectsContainer"></div>
+    <div class="projects-container" id="projectsContainer">
+      <!-- We'll populate from projects.json -->
+    </div>
   </section>
 
-  <!-- External Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
+  <!-- Modal for large view -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content" id="modalContent">
+      <button class="modal-close" id="modalClose">&times;</button>
+    </div>
+  </div>
+
   <script>
-   async function loadProjects() {
-  try {
-    const response = await fetch('projects.json');
-    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-    const data = await response.json();
-    const projectsContainer = document.getElementById('projectsContainer');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalContent = document.getElementById('modalContent');
+    const modalClose = document.getElementById('modalClose');
 
-    data.projects.forEach((project, index) => {
-      let visualsHTML = "";
-      if (
-        (project.visuals.videos && project.visuals.videos.length > 0) ||
-        (project.visuals.images && project.visuals.images.length > 0)
-      ) {
-        visualsHTML += `<div id="carousel${index}" class="carousel js-flickity" data-flickity='{ "wrapAround": true, "autoPlay": 3000, "pauseAutoPlayOnHover": true }'>`;
-        if (project.visuals.videos && project.visuals.videos.length) {
-          project.visuals.videos.forEach(video => {
-            visualsHTML += `
-              <div class="carousel-cell">
-                <video controls>
-                  <source src="${video.src}" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="carousel-caption">
-                  <p>${video.caption}</p>
+    async function loadProjects() {
+      try {
+        const res = await fetch('projects.json');
+        if (!res.ok) throw new Error('HTTP error ' + res.status);
+
+        const data = await res.json();
+        const projectsContainer = document.getElementById('projectsContainer');
+        const styleEl = document.getElementById('dynamicCarouselStyles');
+        let styleRules = "";
+
+        data.projects.forEach((proj, pIndex) => {
+          // 1) Build the project card
+          const cardDiv = document.createElement('div');
+          cardDiv.classList.add('project-card', 'project-item');
+
+          // Tech / Applications / Extras
+          let techHTML = Object.keys(proj.technologies || {})
+            .map(cat => `<strong>${cat.toUpperCase()}:</strong> ${proj.technologies[cat].join(', ')}`)
+            .join('<br>');
+          let appsHTML = `<strong>Applications:</strong> ${(proj.applications||[]).join(', ')}`;
+          let extrasHTML = (proj.extras && proj.extras.length)
+            ? `<strong>Extras:</strong> ${proj.extras.join(', ')}`
+            : "";
+          let repoHTML = proj.repo
+            ? `<div class="repository"><a href="${proj.repo}" target="_blank">View Repository</a></div>`
+            : "";
+          let canvaHTML = proj.canva
+            ? `<div class="canva"><a href="${proj.canva}" target="_blank">View Canva Design</a></div>`
+            : "";
+
+          cardDiv.innerHTML = `
+            <h3>${proj.title}</h3>
+            <p>${proj.overview}</p>
+            <div class="technologies">${techHTML}</div>
+            <div class="applications">${appsHTML}</div>
+            <div class="extras">${extrasHTML}</div>
+            ${repoHTML}
+            ${canvaHTML}
+          `;
+
+          // 2) Merge videos+images -> mediaItems
+          let mediaItems = [];
+          if (proj.visuals?.videos) {
+            proj.visuals.videos.forEach(v => mediaItems.push({ type:'video', src: v.src, caption: v.caption || ""}));
+          }
+          if (proj.visuals?.images) {
+            proj.visuals.images.forEach(i => mediaItems.push({ type:'image', src: i.src, caption: i.caption || ""}));
+          }
+
+          // 3) If no media, skip
+          if (mediaItems.length>0) {
+            let radioName = `slider-${pIndex}`;
+            let radioHTML = "";
+            let cardsHTML = `<div class="cards">`;
+
+            // Build radio inputs for each media item
+            mediaItems.forEach((m, i) => {
+              let slotID = `slot${i}-p${pIndex}`;
+              radioHTML += `<input type="radio" name="${radioName}" id="${slotID}" ${i===0?'checked':''} />`;
+            });
+
+            // Build card labels with or without caption
+            mediaItems.forEach((m, i) => {
+              let cardID = `media${i}-p${pIndex}`;
+              let slotID = `slot${i}-p${pIndex}`;
+              let content = `
+                <div class="media-wrapper">
+                  ${
+                    m.type === 'image'
+                    ? `<img src="${m.src}" alt="Media ${i}" />`
+                    : `<video controls><source src="${m.src}" type="video/mp4" /></video>`
+                  }
                 </div>
-              </div>`;
-          });
-        }
-        if (project.visuals.images && project.visuals.images.length) {
-          project.visuals.images.forEach(image => {
-            visualsHTML += `
-              <div class="carousel-cell">
-                <img src="${image.src}" alt="Project Image">
-                <div class="carousel-caption">
-                  <p>${image.caption}</p>
-                </div>
-              </div>`;
-          });
-        }
-        visualsHTML += `</div>`;
+                ${
+                  m.caption
+                  ? `<div class="media-caption">${m.caption}</div>`
+                  : ""
+                }
+              `;
+              cardsHTML += `
+                <label class="card" id="${cardID}" for="${slotID}"
+                  data-media-type="${m.type}" data-media-src="${m.src}">
+                  ${content}
+                </label>
+              `;
+            });
+
+            cardsHTML += "</div>";
+            cardDiv.innerHTML += radioHTML + cardsHTML;
+
+            // 4) Build transform rules => only center, left, right shown
+            styleRules += buildOffsetRules(pIndex, mediaItems.length);
+          }
+
+          projectsContainer.appendChild(cardDiv);
+        });
+
+        document.getElementById('dynamicCarouselStyles').innerHTML = styleRules;
+        attachModalEvents();
+      } catch (err) {
+        console.error("Error loading projects:", err);
       }
+    }
 
-      let technologiesHTML = Object.keys(project.technologies)
-        .map(category => `<strong>${category.toUpperCase()}:</strong> ${project.technologies[category].join(', ')}`)
-        .join('<br>');
+    // offset=0 => center, offset=±1 => side, else hidden
+    function buildOffsetRules(pIndex, N) {
+      let out = "";
+      for (let i=0; i<N; i++) {
+        let slotID = `slot${i}-p${pIndex}`;
+        for (let j=0; j<N; j++) {
+          let cardID = `media${j}-p${pIndex}`;
+          let offset = j - i;
+          while (offset > N/2) offset -= N;
+          while (offset <= -N/2) offset += N;
 
-      let applicationsHTML = `<strong>Applications:</strong> ${project.applications.join(', ')}`;
-      let extrasHTML = project.extras && project.extras.length ? `<strong>Extras:</strong> ${project.extras.join(', ')}` : "";
+          let transform = "translateX(200%) scale(0.6)";
+          let op = "0";
+          let z = "0";
 
-      // Check if a Canva URL exists and add it
-      let canvaHTML = project.canva 
-        ? `<div class="canva"><a href="${project.canva}" target="_blank">View Canva Design</a></div>` 
-        : "";
+          if (offset === 0) {
+            transform = "translateX(0) scale(1)";
+            op = "1"; z="2";
+          } else if (offset === 1 || offset === -(N-1)) {
+            transform = "translateX(40%) scale(0.8)";
+            op = "0.4"; z="1";
+          } else if (offset === -1 || offset === (N-1)) {
+            transform = "translateX(-40%) scale(0.8)";
+            op = "0.4"; z="1";
+          }
+          // else hidden
 
-      projectsContainer.innerHTML += `
-        <div class="project-card project-item">
-          <h3>${project.title}</h3>
-          <p>${project.overview}</p>
-          <div class="technologies">${technologiesHTML}</div>
-          <div class="applications">${applicationsHTML}</div>
-          <div class="extras">${extrasHTML}</div>
-          ${project.repo ? `<div class="repository"><a href="${project.repo}" target="_blank">View Repository</a></div>` : ""}
-          ${canvaHTML}
-          ${visualsHTML}
-        </div>
-      `;
-    });
+          out += `
+            #${slotID}:checked ~ .cards #${cardID} {
+              transform: ${transform};
+              opacity: ${op};
+              z-index: ${z};
+            }
+          `;
+        }
+      }
+      return out;
+    }
 
-    setTimeout(() => {
-      document.querySelectorAll('.js-flickity').forEach(carousel => {
-        new Flickity(carousel, {
-          wrapAround: true,
-          autoPlay: 3000,
-          pauseAutoPlayOnHover: true
+    function attachModalEvents() {
+      // If the card’s radio is already checked => it's center => open modal
+      const allCards = document.querySelectorAll('.card');
+      allCards.forEach(card => {
+        card.addEventListener('click', e => {
+          const radioId = card.getAttribute('for');
+          const radio = document.getElementById(radioId);
+          if (radio && radio.checked) {
+            e.preventDefault();
+            const type = card.getAttribute('data-media-type');
+            const src = card.getAttribute('data-media-src');
+            openModal(type, src);
+          }
         });
       });
-    }, 500);
-  } catch (error) {
-    console.error("Error loading projects:", error);
-  }
-}
 
-document.addEventListener("DOMContentLoaded", loadProjects);
+      modalClose.addEventListener('click', closeModal);
+      modalOverlay.addEventListener('click', e => {
+        if (e.target.id==='modalOverlay') closeModal();
+      });
+    }
 
+    function openModal(type, src) {
+      // Clear old content except the close button
+      while (modalContent.firstChild && !modalContent.firstChild.classList?.contains('modal-close')) {
+        modalContent.removeChild(modalContent.firstChild);
+      }
+      let el;
+      if (type === 'image') {
+        el = document.createElement('img');
+        el.src = src;
+        el.style.maxWidth = '100%';
+        el.style.maxHeight = '100%';
+      } else {
+        el = document.createElement('video');
+        el.controls = true;
+        el.style.maxWidth = '100%';
+        el.style.maxHeight = '100%';
+        const source = document.createElement('source');
+        source.src = src;
+        source.type = 'video/mp4';
+        el.appendChild(source);
+      }
+      modalContent.insertBefore(el, modalClose);
+      modalOverlay.classList.add('active');
+    }
+
+    function closeModal() {
+      modalOverlay.classList.remove('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', loadProjects);
   </script>
 </body>
 </html>
