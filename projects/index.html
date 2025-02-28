@@ -315,6 +315,132 @@
     .modal-close:hover {
       background: rgba(255,255,255,0.4);
     }
+    /* Project Title */
+.project-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.8rem;
+}
+
+/* Project Overview */
+.project-overview {
+  font-size: 1.6rem;
+  background: #f8f8f8;
+  padding: 12px;
+  border-radius: 8px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Technologies Section */
+.technologies {
+  margin-top: 1rem;
+  padding: 10px;
+  border-left: 5px solid #0073e6;
+  background: #eef6ff;
+  border-radius: 5px;
+}
+
+.tech-category {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.tech-list {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+/* Applications */
+.app-list, .extra-list {
+  padding-left: 20px;
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.app-list li, .extra-list li {
+  margin-bottom: 5px;
+}
+
+/* Repository & Canva Links */
+.project-links {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.repo-btn {
+  background: #0073e6;
+}
+
+.repo-btn:hover {
+  background: #005bb5;
+}
+
+.canva-btn {
+  background: #e13ea8;
+}
+
+.canva-btn:hover {
+  background: #af2b83;
+}
+
+/* Dropdown for Extras */
+.extras-dropdown {
+  margin-top: 1rem;
+}
+
+.extras-toggle {
+  background: #444;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.extras-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.extras-toggle.open i {
+  transform: rotate(180deg);
+}
+
+.extras-content {
+  display: none;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.extras-content.active {
+  display: block;
+  max-height: 500px;
+}
+
 
     /* We'll store the dynamic transform rules here */
   </style>
@@ -360,108 +486,142 @@
     const modalClose = document.getElementById('modalClose');
 
     async function loadProjects() {
-      try {
-        const res = await fetch('projects.json');
-        if (!res.ok) throw new Error('HTTP error ' + res.status);
+  try {
+    const res = await fetch('projects.json');
+    if (!res.ok) throw new Error('HTTP error ' + res.status);
 
-        const data = await res.json();
-        const projectsContainer = document.getElementById('projectsContainer');
-        const styleEl = document.getElementById('dynamicCarouselStyles');
-        let styleRules = "";
+    const data = await res.json();
+    const projectsContainer = document.getElementById('projectsContainer');
+    const styleEl = document.getElementById('dynamicCarouselStyles');
+    let styleRules = "";
 
-        data.projects.forEach((proj, pIndex) => {
-          // 1) Build the project card
-          const cardDiv = document.createElement('div');
-          cardDiv.classList.add('project-card', 'project-item');
+    data.projects.forEach((proj, pIndex) => {
+      // 1) Build the project card container
+      const cardDiv = document.createElement('div');
+      cardDiv.classList.add('project-card', 'project-item');
 
-          // Tech / Applications / Extras
-          let techHTML = Object.keys(proj.technologies || {})
-            .map(cat => `<strong>${cat.toUpperCase()}:</strong> ${proj.technologies[cat].join(', ')}`)
-            .join('<br>');
-          let appsHTML = `<strong>Applications:</strong> ${(proj.applications||[]).join(', ')}`;
-          let extrasHTML = (proj.extras && proj.extras.length)
-            ? `<strong>Extras:</strong> ${proj.extras.join(', ')}`
-            : "";
-          let repoHTML = proj.repo
-            ? `<div class="repository"><a href="${proj.repo}" target="_blank">View Repository</a></div>`
-            : "";
-          let canvaHTML = proj.canva
-            ? `<div class="canva"><a href="${proj.canva}" target="_blank">View Canva Design</a></div>`
-            : "";
+      // 2) Styled Title
+      let titleHTML = `<h3 class="project-title">${proj.title}</h3>`;
 
-          cardDiv.innerHTML = `
-            <h3>${proj.title}</h3>
-            <p>${proj.overview}</p>
-            <div class="technologies">${techHTML}</div>
-            <div class="applications">${appsHTML}</div>
-            <div class="extras">${extrasHTML}</div>
-            ${repoHTML}
-            ${canvaHTML}
-          `;
+      // 3) Styled Overview Section
+      let overviewHTML = `<p class="project-overview">${proj.overview}</p>`;
 
-          // 2) Merge videos+images -> mediaItems
-          let mediaItems = [];
-          if (proj.visuals?.videos) {
-            proj.visuals.videos.forEach(v => mediaItems.push({ type:'video', src: v.src, caption: v.caption || ""}));
-          }
-          if (proj.visuals?.images) {
-            proj.visuals.images.forEach(i => mediaItems.push({ type:'image', src: i.src, caption: i.caption || ""}));
-          }
+      // 4) Styled Technologies & Applications
+      let techHTML = Object.keys(proj.technologies || {})
+        .map(cat => `<div class="tech-category"><strong>${cat.toUpperCase()}:</strong> <span class="tech-list">${proj.technologies[cat].join(', ')}</span></div>`)
+        .join('');
 
-          // 3) If no media, skip
-          if (mediaItems.length>0) {
-            let radioName = `slider-${pIndex}`;
-            let radioHTML = "";
-            let cardsHTML = `<div class="cards">`;
+      let appsHTML = proj.applications && proj.applications.length
+        ? `<div class="section"><strong>Applications:</strong><ul class="app-list">${proj.applications.map(app => `<li>${app}</li>`).join('')}</ul></div>`
+        : "";
 
-            // Build radio inputs for each media item
-            mediaItems.forEach((m, i) => {
-              let slotID = `slot${i}-p${pIndex}`;
-              radioHTML += `<input type="radio" name="${radioName}" id="${slotID}" ${i===0?'checked':''} />`;
-            });
+      // 5) "Extras" Expandable Section
+      let extrasID = `extras-${pIndex}`;
+      let extrasHTML = proj.extras && proj.extras.length
+        ? `
+          <div class="extras-dropdown">
+            <button class="extras-toggle" onclick="toggleExtras('${extrasID}')">
+              Extras <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="extras-content" id="${extrasID}">
+              <ul class="extra-list">${proj.extras.map(extra => `<li>${extra}</li>`).join('')}</ul>
+            </div>
+          </div>
+        `
+        : "";
 
-            // Build card labels with or without caption
-            mediaItems.forEach((m, i) => {
-              let cardID = `media${i}-p${pIndex}`;
-              let slotID = `slot${i}-p${pIndex}`;
-              let content = `
-                <div class="media-wrapper">
-                  ${
-                    m.type === 'image'
-                    ? `<img src="${m.src}" alt="Media ${i}" />`
-                    : `<video controls><source src="${m.src}" type="video/mp4" /></video>`
-                  }
-                </div>
-                ${
-                  m.caption
-                  ? `<div class="media-caption">${m.caption}</div>`
-                  : ""
-                }
-              `;
-              cardsHTML += `
-                <label class="card" id="${cardID}" for="${slotID}"
-                  data-media-type="${m.type}" data-media-src="${m.src}">
-                  ${content}
-                </label>
-              `;
-            });
+      // 6) Repository & Canva Links (Styled Buttons)
+      let repoHTML = proj.repo
+        ? `<a href="${proj.repo}" target="_blank" class="btn repo-btn">View Repository</a>`
+        : "";
+      let canvaHTML = proj.canva
+        ? `<a href="${proj.canva}" target="_blank" class="btn canva-btn">View Canva Design</a>`
+        : "";
 
-            cardsHTML += "</div>";
-            cardDiv.innerHTML += radioHTML + cardsHTML;
+      // 7) Final Content Addition
+      cardDiv.innerHTML = `
+        ${titleHTML}
+        ${overviewHTML}
+        <div class="project-details">
+          <div class="technologies">${techHTML}</div>
+          ${appsHTML}
+          ${extrasHTML} <!-- Extras now collapsible -->
+        </div>
+        <div class="project-links">
+          ${repoHTML}
+          ${canvaHTML}
+        </div>
+      `;
 
-            // 4) Build transform rules => only center, left, right shown
-            styleRules += buildOffsetRules(pIndex, mediaItems.length);
-          }
+      // 8) Merge videos+images -> mediaItems (No change)
+      let mediaItems = [];
+      if (proj.visuals?.videos) {
+        proj.visuals.videos.forEach(v => mediaItems.push({ type: 'video', src: v.src, caption: v.caption || "" }));
+      }
+      if (proj.visuals?.images) {
+        proj.visuals.images.forEach(i => mediaItems.push({ type: 'image', src: i.src, caption: i.caption || "" }));
+      }
 
-          projectsContainer.appendChild(cardDiv);
+      // 9) Add Media Carousel If Exists (No change)
+      if (mediaItems.length > 0) {
+        let radioName = `slider-${pIndex}`;
+        let radioHTML = "";
+        let cardsHTML = `<div class="cards">`;
+
+        mediaItems.forEach((m, i) => {
+          let slotID = `slot${i}-p${pIndex}`;
+          radioHTML += `<input type="radio" name="${radioName}" id="${slotID}" ${i === 0 ? 'checked' : ''} />`;
         });
 
-        document.getElementById('dynamicCarouselStyles').innerHTML = styleRules;
-        attachModalEvents();
-      } catch (err) {
-        console.error("Error loading projects:", err);
+        mediaItems.forEach((m, i) => {
+          let cardID = `media${i}-p${pIndex}`;
+          let slotID = `slot${i}-p${pIndex}`;
+          let content = `
+            <div class="media-wrapper">
+              ${
+                m.type === 'image'
+                ? `<img src="${m.src}" alt="Media ${i}" />`
+                : `<video controls><source src="${m.src}" type="video/mp4" /></video>`
+              }
+            </div>
+            ${
+              m.caption
+              ? `<div class="media-caption">${m.caption}</div>`
+              : ""
+            }
+          `;
+          cardsHTML += `
+            <label class="card" id="${cardID}" for="${slotID}"
+              data-media-type="${m.type}" data-media-src="${m.src}">
+              ${content}
+            </label>
+          `;
+        });
+
+        cardsHTML += "</div>";
+        cardDiv.innerHTML += radioHTML + cardsHTML;
+        styleRules += buildOffsetRules(pIndex, mediaItems.length);
       }
-    }
+
+      projectsContainer.appendChild(cardDiv);
+    });
+
+    document.getElementById('dynamicCarouselStyles').innerHTML = styleRules;
+    attachModalEvents();
+  } catch (err) {
+    console.error("Error loading projects:", err);
+  }
+}
+
+// **Dropdown Toggle Function**
+function toggleExtras(id) {
+  const content = document.getElementById(id);
+  content.classList.toggle('active');
+  const button = content.previousElementSibling;
+  button.classList.toggle('open');
+}
+
+
 
     // offset=0 => center, offset=±1 => side, else hidden
     function buildOffsetRules(pIndex, N) {
