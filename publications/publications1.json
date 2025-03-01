@@ -1,0 +1,222 @@
+{
+    "publications": [
+      {
+        "title": "Video Transcript Extraction and Summarization using Transfer Learning",
+        "overview": "Developed an AI-powered system for extracting transcripts from video files and summarizing them using advanced transformer models, achieving a 65% reduction in transcript length while maintaining over 85% semantic accuracy.",
+        "technologies": {
+          "natural_language_processing": ["BART-Large CNN", "T5", "Pegasus", "DistilBART"],
+          "automatic_speech_recognition": ["Google Speech-to-Text", "MoviePy"],
+          "data_processing": ["SpaCy", "NLTK", "TextRank"],
+          "machine_learning": ["PyTorch", "TensorFlow", "Hugging Face Transformers"],
+          "evaluation_metrics": ["ROUGE-1", "BERTScore", "Human Evaluation"]
+        },
+        "applications": [
+          "Automated Summarization of Video Transcripts",
+          "Comparative Analysis of Transformer Models for Summarization",
+          "Enhancing Video Content Accessibility through AI",
+          "AI-Assisted Information Extraction from Audio-Visual Data",
+          "Integration of Speech-to-Text with NLP for Content Summarization"
+        ],
+        "extras": [
+          "Implemented an end-to-end pipeline to extract and preprocess transcripts from video/audio sources using Automatic Speech Recognition (ASR).",
+          "Fine-tuned a BART-Large CNN transformer model on the How2 dataset, increasing summarization accuracy by 12% compared to baseline models.",
+          "Achieved a 43% ROUGE-1 score and 87.3% BERT Score on the How2 dataset, improving video transcript comprehension efficiency.",
+          "Developed an abstractive summarization model that outperformed extractive models by 25% in information retention based on human evaluation.",
+          "Integrated an ASR module with moviepy for video-to-audio conversion, reducing speech-to-text processing time by 30%."
+        ],
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "media/videoTranscript/sumFlow.png",
+              "caption": "Transfer Learning Workflow for Video Transcript Summarization"
+            },
+            {
+              "src": "media/videoTranscript/evaluation.png",
+              "caption": "Evaluation of different models"
+            },
+            {
+              "src": "media/videoTranscript/example.png",
+              "caption": "Example"
+            }
+          ],
+          "presentation": {
+            "src": "https://docs.google.com/presentation/d/19ZACk4jh3atG-8qB44Et21E5hjwyuU_1GgOjgCPvZfM/edit?usp=sharing",
+            "caption": "Conference Presentation on Video Transcript Summarization"
+          }
+        },
+        "repo": "https://github.com/varunmehta14/Video_Summarizer",
+        "doi": "https://link.springer.com/chapter/10.1007/978-981-19-9638-2_54",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CC2mvAUAAAAJ&citation_for_view=CC2mvAUAAAAJ:u5HHmVD_uO8C"
+      },
+      {
+        "title": "Intelligent Application of Voice Recognition and Personal Secretariat for Effective Business Management",
+        "overview": "Developed a mobile application that serves as a personal secretary for small business owners, utilizing voice recognition to manage inventory, sales, and employee records efficiently. The system employs collaborative filtering and association rule mining to provide product recommendations and business insights.",
+        "technologies": {
+          "voice_recognition": ["Automatic Speech Recognition (ASR)", "Natural Language Processing (NLP)"],
+          "machine_learning": ["Collaborative Filtering", "Association Rule Mining", "Apriori Algorithm"],
+          "data_processing": ["Cosine Similarity", "Support & Confidence Measures", "Pattern Evaluation"],
+          "mobile_application": ["Android Development", "Cloud Storage Integration"],
+          "evaluation_metrics": ["Lift", "Leverage", "Conviction"]
+        },
+        "applications": [
+          "Automated store management using voice commands",
+          "Real-time inventory tracking and alerts",
+          "Employee attendance and salary management",
+          "Product recommendations based on sales patterns",
+          "Business insights through data mining and analytics"
+        ],
+        "extras": [
+          "Designed a user-friendly mobile application interface with voice-based navigation.",
+          "Implemented collaborative filtering for personalized product recommendations.",
+          "Utilized the Apriori algorithm to identify frequent itemsets and recommend inventory restocking strategies.",
+          "Developed a cloud-based data storage system for transaction and employee records.",
+          "Integrated real-time notifications for low inventory and payment alerts."
+        ],
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "media/esahayak/welcomesignupmenu.png",
+              "caption": "Mobile Application GUI Design 1"
+            },
+            {
+              "src": "media/esahayak/featureproductsales.png",
+              "caption": "Mobile Application GUI Design 2"
+            },
+            {
+              "src": "media/esahayak/user.png",
+              "caption": "User-to-User Similarity Matrix in Collaborative Filtering"
+            },
+            {
+              "src": "media/esahayak/item.png",
+              "caption": "Item-to-Item Similarity Heatmap"
+            }
+           
+          ],
+          "presentation": {
+            "src": "https://docs.google.com/presentation/d/1Pb33WE7PLyczmLm33axuAbISde0e4CuezlJBHabK04w/edit?usp=sharing",
+            "caption": "Conference Presentation on Voice Recognition for Business Management"
+          }
+        },
+        "repo": "https://github.com/varunmehta14/E_Sahayak",
+        "doi": "https://ieeexplore.ieee.org/abstract/document/10180496",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CC2mvAUAAAAJ&citation_for_view=CC2mvAUAAAAJ:d1gkVwhDpl0C"
+      },
+      {
+        "title": "Information Extraction and Summarization of Medical Reports using Textract and GPT-2",
+        "overview": "Developed a system that extracts and summarizes medical reports using AWS Textract for Optical Character Recognition (OCR) and GPT-2 for text summarization. The system processes medical reports, identifies abnormal parameters, and generates an easy-to-understand summary for patients, achieving 91% accuracy in information extraction.",
+        "technologies": {
+          "optical_character_recognition": ["AWS Textract", "Pytesseract", "EasyOCR", "PDFplumber"],
+          "natural_language_processing": ["GPT-2", "Medical Entity Matching", "Summarization Algorithms"],
+          "data_processing": ["OCR Post-Processing", "Medical Lexicon Matching", "String Similarity Algorithms"],
+          "machine_learning": ["Deep Neural Networks", "Long Short-Term Memory (LSTM)", "Transformer Models (BERT, GPT-2)"],
+          "evaluation_metrics": ["Text Extraction Accuracy", "Summarization Quality", "Word Error Rate (WER)", "Character Error Rate (CER)"]
+        },
+        "applications": [
+          "Automated extraction of medical data from reports",
+          "Summarization of complex medical terminology into patient-friendly language",
+          "Highlighting abnormal medical parameters for easy interpretation",
+          "Generating natural remedies and recommendations for health improvement",
+          "Improving accessibility to medical reports for rural populations"
+        ],
+        "extras": [
+          "Implemented AWS Textract for structured medical data extraction.",
+          "Developed a medical dictionary with expert-reviewed terminologies.",
+          "Created a priority-based dictionary to classify medical conditions.",
+          "Leveraged GPT-2 for medical report summarization.",
+          "Designed a preprocessing pipeline to improve OCR accuracy."
+        ],
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "media/medical_report/flow.png",
+              "caption": "System Flow for Medical Report Extraction and Summarization"
+            },
+            {
+              "src": "media/medical_report/dic.png",
+              "caption": "Medical Dictionary for Mapping Report Entities"
+            },
+            {
+              "src": "media/medical_report/priority.png",
+              "caption": "Priority-Based Dictionary for Medical Conditions"
+            },
+            {
+              "src": "media/medical_report/report.png",
+              "caption": "Medical Report Example"
+            },
+            
+            {
+              "src": "media/medical_report/extracted.png",
+              "caption": "Extracted Text from Medical Reports using AWS Textract"
+            },
+            {
+              "src": "media/medical_report/summary.png",
+              "caption": "GPT-2 Generated Summary of Medical Report"
+            }
+          ]
+
+        },
+        "repo": "https://github.com/varunmehta14/Macromedic",
+        "doi": "https://www.researchgate.net/publication/382472791_Information_extraction_and_summarization_of_medical_reports_using_Textract_and_GPT-2",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CC2mvAUAAAAJ&citation_for_view=CC2mvAUAAAAJ:u-x6o8ySG0sC"
+      },
+      {
+        "title": "Modified RSA Algorithm using Four Prime Numbers and Double Encryption",
+        "overview": "This paper proposes a modification of the classic RSA algorithm to enhance security by introducing four prime numbers for key generation, increasing randomness, and employing double encryption with two public and private key pairs. The modified RSA algorithm improves resistance against factorization, low encryption exponent, and brute force attacks while reducing decryption time using the Chinese Remainder Theorem.",
+        "technologies": {
+          "cryptography": ["Public Key Cryptography", "RSA Algorithm", "Modified RSA Algorithm"],
+          "security": ["Encryption and Decryption", "Factorization Resistance", "Low Encryption Exponent Attack Mitigation"],
+          "number_theory": ["Prime Factorization", "Chinese Remainder Theorem", "Modular Arithmetic"],
+          "data_processing": ["Key Generation", "Randomization Techniques", "Digital Signature Security"],
+          "evaluation_metrics": ["Encryption Time", "Decryption Time", "Security Against Attacks"]
+        },
+        "applications": [
+          "Securing internet-based communications from cyber threats",
+          "Enhancing digital signature verification and authentication",
+          "Providing a more robust encryption method for sensitive data exchange",
+          "Reducing decryption time while maintaining strong encryption security",
+          "Preventing factorization and brute-force attacks on RSA cryptosystems"
+        ],
+        "extras": [
+          "Implemented double encryption and decryption using two sets of prime numbers.",
+          "Enhanced resistance to brute force attacks by increasing modulus complexity.",
+          "Utilized the Chinese Remainder Theorem to optimize decryption time.",
+          "Developed an improved public key generation method to prevent low encryption exponent attacks.",
+          "Tested the algorithm using Python for performance analysis and security validation."
+        ],
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "media/rsa/encshort.png",
+              "caption": "Encryption Time Comparison for Short Messages"
+            },
+            {
+              "src": "media/rsa/decshort.png",
+              "caption": "Decryption Time Comparison for Short Messages"
+            },
+            {
+              "src": "media/rsa/enclong.png",
+              "caption": "Encryption Time Comparison for Long Messages"
+            },
+            {
+              "src": "media/rsa/declong.png",
+              "caption": "Decryption Time Comparison for Long Messages"
+            }
+           
+          ],
+          "presentation": {
+            "src": "https://docs.google.com/presentation/d/1z8bPVMBi4qj0eqjW8717c5Y42tgsHrGXkC-CWqcA4a4/edit?usp=sharing",
+            "caption": "Conference Presentation on Modified RSA Algorithm"
+          }
+        },
+        "repo": "https://github.com/varunmehta14/modifiedRSA",
+        "doi": "https://ieeexplore.ieee.org/abstract/document/10039627/",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CC2mvAUAAAAJ&citation_for_view=CC2mvAUAAAAJ:9yKSN-GCB0IC"
+      }
+  
+    ]
+  }
+  

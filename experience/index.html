@@ -2,26 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Experience | Portfolio Varun</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Portfolio Varun</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
   <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
   />
-
-  <!-- Main CSS (same as your projects page) -->
-  <link rel="stylesheet" href="../projects/style.css" />
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
-    /* Global Styles from your snippet */
+    /* Global Styles */
     * {
       margin: 0;
       padding: 0;
@@ -31,6 +25,7 @@
       text-transform: capitalize;
       transition: all 0.2s linear;
     }
+
     html {
       font-size: 62.5%;
       overflow-x: hidden;
@@ -118,8 +113,7 @@
       }
       header .navbar {
         position: fixed;
-        top: 7rem;
-        right: -120%;
+        top: 7rem; right: -120%;
         width: 70%;
         height: 100%;
         text-align: left;
@@ -144,7 +138,7 @@
       }
     }
 
-    /* Experience Section (like the Work section) */
+    /* Work Section Styling */
     .work {
       background: linear-gradient(to bottom, #2b2d7f, #110d39);
       margin-top: 6rem;
@@ -157,7 +151,7 @@
       margin-bottom: 2rem;
     }
 
-    /* Container for experience items */
+    /* Projects Container */
     .projects-container {
       display: flex;
       flex-direction: column;
@@ -165,7 +159,7 @@
       padding: 2rem;
     }
 
-    /* Each experience card */
+    /* Project Card / Item Styling */
     .project-card,
     .project-item {
       background: #ffffff;
@@ -180,31 +174,46 @@
       transform: translateY(-10px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     }
-    .project-card h3 {
+    .project-item h3 {
       font-size: 2.2rem;
       font-weight: bold;
       margin-bottom: 15px;
       color: #333;
       transition: color 0.3s ease;
     }
-    .project-card h3:hover {
+    .project-item h3:hover {
       color: #0073e6;
     }
-    .project-card p {
+    .project-item p {
       font-size: 1.4rem;
       line-height: 1.7;
       margin-bottom: 20px;
       color: #666;
     }
-    .project-card .technologies,
-    .project-card .applications,
-    .project-card .extras {
+    .project-item .technologies,
+    .project-item .applications,
+    .project-item .extras {
       font-size: 1.4rem;
       color: #555;
       margin-bottom: 10px;
     }
 
-    /* Radio-based carousel (3-slot) for images/videos + captions */
+    /* Repository Link Button */
+    .repository a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 0.5rem 1rem;
+      background: #0073e6;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.4rem;
+    }
+    .repository a:hover {
+      background: #005bb5;
+    }
+
+    /* Radio-based Carousel (3-slot) with captions below media */
     input[type="radio"] {
       display: none;
     }
@@ -212,9 +221,9 @@
       position: relative;
       width: 100%;
       margin-top: 1.5rem;
-      height: 360px; /* fixed or flexible, as you prefer */
+      height: 360px; /* fixed or flexible as you prefer */
     }
-    .card-label {
+    .card {
       position: absolute;
       width: 60%;
       height: 100%;
@@ -232,6 +241,7 @@
       opacity: 0; /* hidden by default, see offset logic below */
       z-index: 0;
     }
+    /* Container for the actual media (image/video) */
     .media-wrapper {
       flex: 1;
       width: 100%;
@@ -256,11 +266,11 @@
       padding: 0.5rem;
       box-sizing: border-box;
     }
-    .card-label:hover {
+    .card:hover {
       box-shadow: 0 0 10px #7f0;
     }
 
-    /* Modal for large view */
+    /* The modal for zooming in on center card */
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -305,14 +315,140 @@
     .modal-close:hover {
       background: rgba(255,255,255,0.4);
     }
+    /* Project Title */
+.project-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.8rem;
+}
 
-    /* We'll store dynamic transform rules here */
+/* Project Overview */
+.project-overview {
+  font-size: 1.6rem;
+  background: #f8f8f8;
+  padding: 12px;
+  border-radius: 8px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Technologies Section */
+.technologies {
+  margin-top: 1rem;
+  padding: 10px;
+  border-left: 5px solid #0073e6;
+  background: #eef6ff;
+  border-radius: 5px;
+}
+
+.tech-category {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.tech-list {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+/* Applications */
+.app-list, .extra-list {
+  padding-left: 20px;
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.app-list li, .extra-list li {
+  margin-bottom: 5px;
+}
+
+/* Repository & Canva Links */
+.project-links {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.repo-btn {
+  background: #0073e6;
+}
+
+.repo-btn:hover {
+  background: #005bb5;
+}
+
+.canva-btn {
+  background: #e13ea8;
+}
+
+.canva-btn:hover {
+  background: #af2b83;
+}
+
+/* Dropdown for Extras */
+.extras-dropdown {
+  margin-top: 1rem;
+}
+
+.extras-toggle {
+  background: #444;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.extras-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.extras-toggle.open i {
+  transform: rotate(180deg);
+}
+
+.extras-content {
+  display: none;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.extras-content.active {
+  display: block;
+  max-height: 500px;
+}
+
+
+    /* We'll store the dynamic transform rules here */
   </style>
 
   <style id="dynamicCarouselStyles"></style>
 </head>
 <body>
-  <!-- Navbar (like your snippet) -->
+  <!-- Header and Nav (unchanged) -->
   <header>
     <a href="/portfolio/" class="logo"><i class="fab fa-node-js"></i> Varun</a>
     <div id="menu" class="fas fa-bars"></div>
@@ -322,7 +458,7 @@
         <li><a href="/portfolio/#about">About</a></li>
         <li><a href="/portfolio/#skills">Skills</a></li>
         <li><a href="/portfolio/#education">Education</a></li>
-        <li><a href="/portfolio/#projects">Work</a></li>
+        <li><a  href="/portfolio/#projects">Work</a></li>
         <li><a class="active" href="/portfolio/#experience">Experience</a></li>
         <li><a href="/portfolio/#publications">Publications</a></li>
         <li><a href="/portfolio/#contact">Contact</a></li>
@@ -330,12 +466,14 @@
     </nav>
   </header>
 
-  <section class="work" id="experience">
-    <h2><i class="fas fa-briefcase"></i> My Experience</h2>
-    <div class="projects-container" id="experienceContainer"></div>
+  <section class="work" id="work">
+    <h2><i class="fas fa-laptop-code"></i> My Projects</h2>
+    <div class="projects-container" id="projectsContainer">
+      <!-- We'll populate from projects.json -->
+    </div>
   </section>
 
-  <!-- Modal for zooming -->
+  <!-- Modal for large view -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal-content" id="modalContent">
       <button class="modal-close" id="modalClose">&times;</button>
@@ -347,111 +485,151 @@
     const modalContent = document.getElementById('modalContent');
     const modalClose = document.getElementById('modalClose');
 
-    async function loadExperience() {
-      try {
-        const response = await fetch('experience.json');
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-        const data = await response.json();
+    async function loadProjects() {
+  try {
+    const res = await fetch('experience.json');
+    if (!res.ok) throw new Error('HTTP error ' + res.status);
 
-        const experienceContainer = document.getElementById('experienceContainer');
-        const styleEl = document.getElementById('dynamicCarouselStyles');
-        let styleRules = "";
+    const data = await res.json();
+    const projectsContainer = document.getElementById('projectsContainer');
+    const styleEl = document.getElementById('dynamicCarouselStyles');
+    let styleRules = "";
 
-        data.experience.forEach((exp, index) => {
-          // Build the experience card
-          let cardHTML = `
-            <h3>${exp.title}</h3>
-            <p><strong>Duration:</strong> ${exp.duration}</p>
-          `;
+    data.experience.forEach((proj, pIndex) => {
+      // 1) Build the project card container
+      const cardDiv = document.createElement('div');
+      cardDiv.classList.add('project-card', 'project-item');
 
-          // Possibly show technologies
-          if (exp.technologies && exp.technologies.length) {
-            cardHTML += `<div class="technologies"><strong>Technologies:</strong> ${exp.technologies.join(', ')}</div>`;
-          }
-          // Possibly show bullet highlights
-          if (exp.highlights && exp.highlights.length) {
-            const liHTML = exp.highlights.map(h => `<li>${h}</li>`).join('');
-            cardHTML += `<ul style="margin-top:10px; padding-left:20px;">${liHTML}</ul>`;
-          }
+      // 2) Styled Title
+      let titleHTML = `<h3 class="project-title">${proj.title}</h3>`;
 
-          // Merge videos and images if any
-          let mediaItems = [];
-          if (exp.visuals?.videos) {
-            exp.visuals.videos.forEach(v => {
-              mediaItems.push({ type:'video', src:v.src, caption:v.caption||""});
-            });
-          }
-          if (exp.visuals?.images) {
-            exp.visuals.images.forEach(i => {
-              mediaItems.push({ type:'image', src:i.src, caption:i.caption||""});
-            });
-          }
+      // 3) Styled Overview Section
+      let overviewHTML = `<p class="project-overview">${proj.overview}</p>`;
 
-          // If we have media
-          if (mediaItems.length > 0) {
-            let radioName = `expSlider-${index}`;
-            let radioHTML = "";
-            let cardsHTML = `<div class="cards">`;
+      // 4) Styled Technologies & Applications
+      let techHTML = Object.keys(proj.technologies || {})
+        .map(cat => `<div class="tech-category"><strong>${cat.toUpperCase()}:</strong> <span class="tech-list">${proj.technologies[cat].join(', ')}</span></div>`)
+        .join('');
 
-            mediaItems.forEach((m, i) => {
-              let slotID = `expSlot${i}-p${index}`;
-              radioHTML += `<input type="radio" name="${radioName}" id="${slotID}" ${i===0?'checked':''} />`;
-            });
+      let appsHTML = proj.applications && proj.applications.length
+        ? `<div class="section"><strong>Applications:</strong><ul class="app-list">${proj.applications.map(app => `<li>${app}</li>`).join('')}</ul></div>`
+        : "";
 
-            mediaItems.forEach((m, i) => {
-              let cardID = `expMedia${i}-p${index}`;
-              let slotID = `expSlot${i}-p${index}`;
-              let content = `
-                <div class="media-wrapper">
-                  ${
-                    m.type==='image'
-                    ? `<img src="${m.src}" alt="Experience Media ${i}" />`
-                    : `<video controls><source src="${m.src}" type="video/mp4"></video>`
-                  }
-                </div>
-                ${
-                  m.caption
-                  ? `<div class="media-caption">${m.caption}</div>`
-                  : ""
-                }
-              `;
-              cardsHTML += `
-                <label class="card-label" id="${cardID}" for="${slotID}"
-                  data-media-type="${m.type}" data-media-src="${m.src}">
-                  ${content}
-                </label>
-              `;
-            });
+      // 5) "Extras" Expandable Section
+      let extrasID = `extras-${pIndex}`;
+      let extrasHTML = proj.extras && proj.extras.length
+        ? `
+          <div class="extras-dropdown">
+            <button class="extras-toggle" onclick="toggleExtras('${extrasID}')">
+              Extras <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="extras-content" id="${extrasID}">
+              <ul class="extra-list">${proj.extras.map(extra => `<li>${extra}</li>`).join('')}</ul>
+            </div>
+          </div>
+        `
+        : "";
 
-            cardsHTML += "</div>"; // end .cards
-            cardHTML += radioHTML + cardsHTML;
+      // 6) Repository & Canva Links (Styled Buttons)
+      let repoHTML = proj.repo
+        ? `<a href="${proj.repo}" target="_blank" class="btn repo-btn">View Repository</a>`
+        : "";
+      let canvaHTML = proj.canva
+        ? `<a href="${proj.canva}" target="_blank" class="btn canva-btn">View Canva Design</a>`
+        : "";
 
-            // Build offset logic: 3-slot
-            styleRules += buildOffsetRules(index, mediaItems.length);
-          }
+      // 7) Final Content Addition
+      cardDiv.innerHTML = `
+        ${titleHTML}
+        ${overviewHTML}
+        <div class="project-details">
+          <div class="technologies">${techHTML}</div>
+          ${appsHTML}
+          ${extrasHTML} <!-- Extras now collapsible -->
+        </div>
+        <div class="project-links">
+          ${repoHTML}
+          ${canvaHTML}
+        </div>
+      `;
 
-          // Finally wrap in a .project-card
-          const expDiv = document.createElement('div');
-          expDiv.classList.add('project-card','project-item');
-          expDiv.innerHTML = cardHTML;
-          experienceContainer.appendChild(expDiv);
+      // 8) Merge videos+images -> mediaItems (No change)
+      let mediaItems = [];
+      if (proj.visuals?.videos) {
+        proj.visuals.videos.forEach(v => mediaItems.push({ type: 'video', src: v.src, caption: v.caption || "" }));
+      }
+      if (proj.visuals?.images) {
+        proj.visuals.images.forEach(i => mediaItems.push({ type: 'image', src: i.src, caption: i.caption || "" }));
+      }
+
+      // 9) Add Media Carousel If Exists (No change)
+      if (mediaItems.length > 0) {
+        let radioName = `slider-${pIndex}`;
+        let radioHTML = "";
+        let cardsHTML = `<div class="cards">`;
+
+        mediaItems.forEach((m, i) => {
+          let slotID = `slot${i}-p${pIndex}`;
+          radioHTML += `<input type="radio" name="${radioName}" id="${slotID}" ${i === 0 ? 'checked' : ''} />`;
         });
 
-        styleEl.innerHTML = styleRules;
-        attachModalEvents();
+        mediaItems.forEach((m, i) => {
+          let cardID = `media${i}-p${pIndex}`;
+          let slotID = `slot${i}-p${pIndex}`;
+          let content = `
+            <div class="media-wrapper">
+              ${
+                m.type === 'image'
+                ? `<img src="${m.src}" alt="Media ${i}" />`
+                : `<video controls><source src="${m.src}" type="video/mp4" /></video>`
+              }
+            </div>
+            ${
+              m.caption
+              ? `<div class="media-caption">${m.caption}</div>`
+              : ""
+            }
+          `;
+          cardsHTML += `
+            <label class="card" id="${cardID}" for="${slotID}"
+              data-media-type="${m.type}" data-media-src="${m.src}">
+              ${content}
+            </label>
+          `;
+        });
 
-      } catch (error) {
-        console.error("Error loading experience:", error);
+        cardsHTML += "</div>";
+        cardDiv.innerHTML += radioHTML + cardsHTML;
+        styleRules += buildOffsetRules(pIndex, mediaItems.length);
       }
-    }
 
-    // Show center, left, right => offset=0, ±1 => visible, else hidden
-    function buildOffsetRules(exIndex, N) {
+      projectsContainer.appendChild(cardDiv);
+    });
+
+    document.getElementById('dynamicCarouselStyles').innerHTML = styleRules;
+    attachModalEvents();
+  } catch (err) {
+    console.error("Error loading projects:", err);
+  }
+}
+
+// **Dropdown Toggle Function**
+function toggleExtras(id) {
+  const content = document.getElementById(id);
+  content.classList.toggle('active');
+  const button = content.previousElementSibling;
+  button.classList.toggle('open');
+}
+
+
+
+    // offset=0 => center, offset=±1 => side, else hidden
+    function buildOffsetRules(pIndex, N) {
       let out = "";
       for (let i=0; i<N; i++) {
-        let slotID = `expSlot${i}-p${exIndex}`;
+        let slotID = `slot${i}-p${pIndex}`;
         for (let j=0; j<N; j++) {
-          let cardID = `expMedia${j}-p${exIndex}`;
+          let cardID = `media${j}-p${pIndex}`;
           let offset = j - i;
           while (offset > N/2) offset -= N;
           while (offset <= -N/2) offset += N;
@@ -459,16 +637,19 @@
           let transform = "translateX(200%) scale(0.6)";
           let op = "0";
           let z = "0";
+
           if (offset === 0) {
             transform = "translateX(0) scale(1)";
-            op="1"; z="2";
-          } else if (offset === 1 || offset===(1-N)) {
+            op = "1"; z="2";
+          } else if (offset === 1 || offset === -(N-1)) {
             transform = "translateX(40%) scale(0.8)";
-            op="0.4"; z="1";
-          } else if (offset === -1 || offset===(N-1)) {
+            op = "0.4"; z="1";
+          } else if (offset === -1 || offset === (N-1)) {
             transform = "translateX(-40%) scale(0.8)";
-            op="0.4"; z="1";
+            op = "0.4"; z="1";
           }
+          // else hidden
+
           out += `
             #${slotID}:checked ~ .cards #${cardID} {
               transform: ${transform};
@@ -482,8 +663,8 @@
     }
 
     function attachModalEvents() {
-      // If center is clicked => open modal
-      const allCards = document.querySelectorAll('.card-label');
+      // If the card’s radio is already checked => it's center => open modal
+      const allCards = document.querySelectorAll('.card');
       allCards.forEach(card => {
         card.addEventListener('click', e => {
           const radioId = card.getAttribute('for');
@@ -499,31 +680,32 @@
 
       modalClose.addEventListener('click', closeModal);
       modalOverlay.addEventListener('click', e => {
-        if (e.target.id === 'modalOverlay') closeModal();
+        if (e.target.id==='modalOverlay') closeModal();
       });
     }
 
     function openModal(type, src) {
-      const content = document.getElementById('modalContent');
-      while (content.firstChild && !content.firstChild.classList?.contains('modal-close')) {
-        content.removeChild(content.firstChild);
+      // Clear old content except the close button
+      while (modalContent.firstChild && !modalContent.firstChild.classList?.contains('modal-close')) {
+        modalContent.removeChild(modalContent.firstChild);
       }
       let el;
-      if (type==='image') {
+      if (type === 'image') {
         el = document.createElement('img');
-        el.src= src;
-        el.style.maxWidth='100%';
-        el.style.maxHeight='100%';
+        el.src = src;
+        el.style.maxWidth = '100%';
+        el.style.maxHeight = '100%';
       } else {
         el = document.createElement('video');
-        el.controls=true;
-        el.style.maxWidth='100%';
-        el.style.maxHeight='100%';
-        const s = document.createElement('source');
-        s.src=src; s.type='video/mp4';
-        el.appendChild(s);
+        el.controls = true;
+        el.style.maxWidth = '100%';
+        el.style.maxHeight = '100%';
+        const source = document.createElement('source');
+        source.src = src;
+        source.type = 'video/mp4';
+        el.appendChild(source);
       }
-      content.insertBefore(el, modalClose);
+      modalContent.insertBefore(el, modalClose);
       modalOverlay.classList.add('active');
     }
 
@@ -531,7 +713,7 @@
       modalOverlay.classList.remove('active');
     }
 
-    document.addEventListener("DOMContentLoaded", loadExperience);
+    document.addEventListener('DOMContentLoaded', loadProjects);
   </script>
 </body>
 </html>

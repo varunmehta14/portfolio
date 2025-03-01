@@ -591,8 +591,11 @@
             }
           `;
           cardsHTML += `
-            <label class="card" id="${cardID}" for="${slotID}"
-              data-media-type="${m.type}" data-media-src="${m.src}">
+           <label class="card card-label"
+       id="${cardID}"
+       for="${slotID}"
+       data-media-type="${m.type}"
+       data-media-src="${m.src}">
               ${content}
             </label>
           `;

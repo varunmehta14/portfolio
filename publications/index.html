@@ -1,105 +1,754 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | Portfolio Varun</title>
-    <link rel="stylesheet" href="../projects/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            padding: 2rem;
-        }
-        .project-card {
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            width: 100%; 
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-            overflow: hidden;
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        .presentation-container {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .presentation-container iframe {
-            width: 100%;
-            height: 400px;
-            border: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Projects | Portfolio Varun</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      outline: none;
+      text-transform: capitalize;
+      transition: all 0.2s linear;
+    }
+
+    html {
+      font-size: 62.5%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    body {
+      background: #f0f0f0;
+      font-family: 'Poppins', sans-serif;
+    }
+    *::selection {
+      background: #5d2e8c;
+      color: #fff;
+    }
+    html::-webkit-scrollbar {
+      width: 0.8rem;
+    }
+    html::-webkit-scrollbar-track {
+      background: #f0f0f0;
+    }
+    html::-webkit-scrollbar-thumb {
+      background: #420177;
+    }
+
+    /* Navbar Styling */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 5%;
+      height: 7rem;
+      background-color: #fff;
+      box-shadow: 0 1px 4px rgba(146,161,176,0.3);
+      transition: background-color 0.3s ease;
+    }
+    header:hover {
+      background-color: #f3f3f3;
+    }
+    header .logo {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #1a1a1a;
+      display: flex;
+      align-items: center;
+    }
+    header .logo i {
+      font-size: 2.4rem;
+      margin-right: 0.5rem;
+    }
+    header .logo:hover {
+      color: #fc8c05;
+    }
+    header .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    header .navbar li {
+      margin-left: 3rem;
+    }
+    header .navbar ul li a {
+      font-size: 1.6rem;
+      color: #1a1a1a;
+      font-weight: 600;
+      letter-spacing: 0.05rem;
+      padding: 0.6rem 0;
+    }
+    header .navbar ul li a.active,
+    header .navbar ul li a:hover {
+      color: #5115f2;
+      border-bottom: 2px solid #5115f2;
+    }
+    #menu {
+      font-size: 3rem;
+      cursor: pointer;
+      color: #0e0e2c;
+      display: none;
+    }
+    @media (max-width: 768px) {
+      #menu {
+        display: block;
+      }
+      header .navbar {
+        position: fixed;
+        top: 7rem; right: -120%;
+        width: 70%;
+        height: 100%;
+        text-align: left;
+        background-color: #1e1e30;
+        transition: right 0.3s ease-in-out;
+      }
+      header .navbar ul {
+        flex-direction: column;
+        padding: 1rem;
+      }
+      header .navbar ul li {
+        width: 100%;
+        margin: 1rem 0;
+      }
+      header .navbar ul li a {
+        font-size: 2.2rem;
+        padding: 1.2rem;
+        color: #fff;
+      }
+      header .navbar.nav-toggle {
+        right: 0;
+      }
+    }
+
+    /* Work Section Styling */
+    .work {
+      background: linear-gradient(to bottom, #2b2d7f, #110d39);
+      margin-top: 6rem;
+      padding: 5rem 0;
+    }
+    .work h2 {
+      color: #fff;
+      text-align: center;
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Projects Container */
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    /* Project Card / Item Styling */
+    .project-card,
+    .project-item {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+    .project-card:hover,
+    .project-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+    .project-item h3 {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+    .project-item h3:hover {
+      color: #0073e6;
+    }
+    .project-item p {
+      font-size: 1.4rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #666;
+    }
+    .project-item .technologies,
+    .project-item .applications,
+    .project-item .extras {
+      font-size: 1.4rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    /* Repository Link Button */
+    .repository a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 0.5rem 1rem;
+      background: #0073e6;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.4rem;
+    }
+    .repository a:hover {
+      background: #005bb5;
+    }
+
+    /* Radio-based Carousel (3-slot) with captions below media */
+    input[type="radio"] {
+      display: none;
+    }
+    .cards {
+      position: relative;
+      width: 100%;
+      margin-top: 1.5rem;
+      height: 360px; /* fixed or flexible as you prefer */
+    }
+    .card {
+      position: absolute;
+      width: 60%;
+      height: 100%;
+      left: 0; right: 0;
+      margin: auto;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      cursor: pointer;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0; /* hidden by default, see offset logic below */
+      z-index: 0;
+    }
+    /* Container for the actual media (image/video) */
+    .media-wrapper {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .media-wrapper img,
+    .media-wrapper video {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border: none;
+    }
+    .media-caption {
+      width: 100%;
+      background: #333;
+      color: #fff;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 0.5rem;
+      box-sizing: border-box;
+    }
+    .card:hover {
+      box-shadow: 0 0 10px #7f0;
+    }
+
+    /* The modal for zooming in on center card */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content img,
+    .modal-content video {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .modal-close {
+      position: absolute;
+      top: 10px; right: 10px;
+      color: #fff;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      font-size: 1.8rem;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .modal-close:hover {
+      background: rgba(255,255,255,0.4);
+    }
+    /* Project Title */
+.project-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.8rem;
+}
+
+/* Project Overview */
+.project-overview {
+  font-size: 1.6rem;
+  background: #f8f8f8;
+  padding: 12px;
+  border-radius: 8px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Technologies Section */
+.technologies {
+  margin-top: 1rem;
+  padding: 10px;
+  border-left: 5px solid #0073e6;
+  background: #eef6ff;
+  border-radius: 5px;
+}
+
+.tech-category {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.tech-list {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+/* Applications */
+.app-list, .extra-list {
+  padding-left: 20px;
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.app-list li, .extra-list li {
+  margin-bottom: 5px;
+}
+
+/* Repository & Canva Links */
+.project-links {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.repo-btn {
+  background: #0073e6;
+}
+
+.repo-btn:hover {
+  background: #005bb5;
+}
+
+.canva-btn {
+  background: #e13ea8;
+}
+
+.canva-btn:hover {
+  background: #af2b83;
+}
+
+/* Dropdown for Extras */
+.extras-dropdown {
+  margin-top: 1rem;
+}
+
+.extras-toggle {
+  background: #444;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.extras-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.extras-toggle.open i {
+  transform: rotate(180deg);
+}
+
+.extras-content {
+  display: none;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.extras-content.active {
+  display: block;
+  max-height: 500px;
+}
+
+
+    /* We'll store the dynamic transform rules here */
+  </style>
+
+  <style id="dynamicCarouselStyles"></style>
 </head>
-<body oncontextmenu="return false">
-    
-<header>
+<body>
+  <!-- Header and Nav (unchanged) -->
+  <header>
     <a href="/portfolio/" class="logo"><i class="fab fa-node-js"></i> Varun</a>
     <div id="menu" class="fas fa-bars"></div>
     <nav class="navbar">
-        <ul>
-            <li><a href="/portfolio/#home">Home</a></li>
-            <li><a href="/portfolio/#about">About</a></li>
-            <li><a href="/portfolio/#skills">Skills</a></li>
-            <li><a href="/portfolio/#education">Education</a></li>
-            <li><a href="/portfolio/#projects">Work</a></li>
-            <li><a href="/portfolio/#experience">Experience</a></li>
-            <li><a class="active" href="/portfolio/#publications">Publications</a></li>
-            <li><a href="/portfolio/#contact">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="/portfolio/#home">Home</a></li>
+        <li><a href="/portfolio/#about">About</a></li>
+        <li><a href="/portfolio/#skills">Skills</a></li>
+        <li><a href="/portfolio/#education">Education</a></li>
+        <li><a  href="/portfolio/#projects">Work</a></li>
+        <li><a href="/portfolio/#experience">Experience</a></li>
+        <li><a class="active" href="/portfolio/#publications">Publications</a></li>
+        <li><a href="/portfolio/#contact">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<section class="work" id="publications">
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Publications</h2>
-    <div class="projects-container" id="publicationsContainer"></div>
-</section>
+  <section class="work" id="work">
+    <h2><i class="fas fa-laptop-code"></i> My Publications</h2>
+    <div class="projects-container" id="projectsContainer">
+      <!-- We'll populate from projects.json -->
+    </div>
+  </section>
 
-<div class="backbtn">
-    <a href="/portfolio/" class="btn">
-        <i class="fas fa-arrow-left"></i>
-        <span>Back to Home</span>
-    </a>
-</div>
+  <!-- Modal for large view -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content" id="modalContent">
+      <button class="modal-close" id="modalClose">&times;</button>
+    </div>
+  </div>
 
-<script>
-    async function loadPublications() {
-        try {
-            const response = await fetch('publications.json');
-            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-            const data = await response.json();
-            const container = document.getElementById('publicationsContainer');
-            
-            data.publications.forEach(pub => {
-                container.innerHTML += `
-                    <div class="project-card">
-                        <h3>${pub.title}</h3>
-                        <p>${pub.overview}</p>
-                        <div class="presentation-container">
-                            <iframe src="${pub.presentation.replace('/edit?usp=sharing', '/preview')}" allow="autoplay"></iframe>
-                            <p>
-                                <a href="${pub.presentation}" target="_blank">Download or View Full Presentation</a>
-                            </p>
+  <script>
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalContent = document.getElementById('modalContent');
+    const modalClose = document.getElementById('modalClose');
+
+    async function loadProjects() {
+    try {
+        const res = await fetch('publications1.json');
+        if (!res.ok) throw new Error('HTTP error ' + res.status);
+
+        const data = await res.json();
+
+        console.log("Full JSON Response:", data); // Check the entire JSON structure
+
+        const projectsContainer = document.getElementById('projectsContainer');
+        const styleEl = document.getElementById('dynamicCarouselStyles');
+        let styleRules = "";
+
+        data.publications.forEach((proj, pIndex) => {
+            // 1) Build the project card container
+            const cardDiv = document.createElement('div');
+            cardDiv.classList.add('project-card', 'project-item');
+
+            // 2) Styled Title
+            let titleHTML = `<h3 class="project-title">${proj.title}</h3>`;
+
+            // 3) Styled Overview Section
+            let overviewHTML = `<p class="project-overview">${proj.overview}</p>`;
+
+            // 4) Styled Technologies & Applications
+            let techHTML = Object.keys(proj.technologies || {})
+                .map(cat => `<div class="tech-category"><strong>${cat.toUpperCase()}:</strong> 
+                <span class="tech-list">${proj.technologies[cat].join(', ')}</span></div>`)
+                .join('');
+
+            let appsHTML = proj.applications && proj.applications.length
+                ? `<div class="section"><strong>Applications:</strong><ul class="app-list">
+                    ${proj.applications.map(app => `<li>${app}</li>`).join('')}
+                </ul></div>`
+                : "";
+
+            // 5) "Extras" Expandable Section
+            let extrasID = `extras-${pIndex}`;
+            let extrasHTML = proj.extras && proj.extras.length
+                ? `
+                <div class="extras-dropdown">
+                    <button class="extras-toggle" onclick="toggleExtras('${extrasID}')">
+                        Extras <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="extras-content" id="${extrasID}">
+                        <ul class="extra-list">${proj.extras.map(extra => `<li>${extra}</li>`).join('')}</ul>
+                    </div>
+                </div>
+                `
+                : "";
+
+            // 6) Repository, Canva, DOI, Scholar, Presentation Links (Styled Buttons)
+            let repoHTML = proj.repo
+                ? `<a href="${proj.repo}" target="_blank" class="btn repo-btn">View Repository</a>`
+                : "";
+            let canvaHTML = proj.canva
+                ? `<a href="${proj.canva}" target="_blank" class="btn canva-btn">View Canva Design</a>`
+                : "";
+            let doiHTML = proj.doi
+                ? `<a href="${proj.doi}" target="_blank" class="btn doi-btn" style="background:#1b5e20;">View DOI</a>`
+                : "";
+            let scholarHTML = proj.scholar
+                ? `<a href="${proj.scholar}" target="_blank" class="btn scholar-btn" style="background:#6d4c41;">View Scholar</a>`
+                : "";
+            let presentationHTML = proj.visuals?.presentation?.src
+                ? `<a href="${proj.visuals.presentation.src}" target="_blank" class="btn pres-btn" style="background:#f9a825;">View Presentation</a>`
+                : "";
+
+            // 7) Final Content Addition
+            cardDiv.innerHTML = `
+                ${titleHTML}
+                ${overviewHTML}
+                <div class="project-details">
+                    <div class="technologies">${techHTML}</div>
+                    ${appsHTML}
+                    ${extrasHTML} <!-- Extras now collapsible -->
+                </div>
+                <div class="project-links">
+                    ${repoHTML}
+                    ${canvaHTML}
+                    ${doiHTML}
+                    ${scholarHTML}
+                    ${presentationHTML}
+                </div>
+            `;
+
+            // 8) Merge videos+images -> mediaItems (No change)
+            let mediaItems = [];
+            if (proj.visuals?.videos) {
+                proj.visuals.videos.forEach(v => mediaItems.push({ type: 'video', src: v.src, caption: v.caption || "" }));
+            }
+            if (proj.visuals?.images) {
+                proj.visuals.images.forEach(i => mediaItems.push({ type: 'image', src: i.src, caption: i.caption || "" }));
+            }
+
+            // >>> ADDED THIS BLOCK to also handle presentation as an iframe <<<
+            if (proj.visuals?.presentation?.src) {
+                mediaItems.push({
+                    type: 'presentation',
+                    src: proj.visuals.presentation.src,
+                    caption: proj.visuals.presentation.caption || ""
+                });
+            }
+            // >>> END OF ADDED BLOCK <<<
+
+            // 9) Add Media Carousel If Exists (No change)
+            if (mediaItems.length > 0) {
+                let radioName = `slider-${pIndex}`;
+                let radioHTML = "";
+                let cardsHTML = `<div class="cards">`;
+
+                mediaItems.forEach((m, i) => {
+                    let slotID = `slot${i}-p${pIndex}`;
+                    radioHTML += `<input type="radio" name="${radioName}" id="${slotID}" ${i === 0 ? 'checked' : ''} />`;
+                });
+
+                mediaItems.forEach((m, i) => {
+                    let cardID = `media${i}-p${pIndex}`;
+                    let slotID = `slot${i}-p${pIndex}`;
+                    // >>> ADDED an extra check for 'presentation' in the same ternary chain <<<
+                    let content = `
+                        <div class="media-wrapper">
+                        ${
+                            m.type === 'image'
+                            ? `<img src="${m.src}" alt="Media ${i}" />`
+                            : m.type === 'video'
+                            ? `<video controls><source src="${m.src}" type="video/mp4" /></video>`
+                            : `<iframe src="${m.src.replace('/edit?usp=sharing', '/preview')}" allow="autoplay" width="100%" height="315" frameborder="0" allowfullscreen></iframe>`
+                        }
                         </div>
-                        <div class="btns">
-                            <a href="${pub.link}" class="btn" target="_blank">
-                                <i class="fas fa-arrow-right"></i> Publication
-                            </a>
-                        </div>
-                    </div>`;
-            });
-        } catch (error) {
-            console.error("Error loading publications:", error);
-        }
+                        ${
+                            m.caption
+                            ? `<div class="media-caption">${m.caption}</div>`
+                            : ""
+                        }
+                    `;
+                    // >>> END of extra check for 'presentation' <<<
+
+                    cardsHTML += `
+                        <label class="card" id="${cardID}" for="${slotID}"
+                        data-media-type="${m.type}" data-media-src="${m.src}">
+                        ${content}
+                        </label>
+                    `;
+                });
+
+                cardsHTML += "</div>";
+                cardDiv.innerHTML += radioHTML + cardsHTML;
+                styleRules += buildOffsetRules(pIndex, mediaItems.length);
+            }
+
+            projectsContainer.appendChild(cardDiv);
+        });
+
+        document.getElementById('dynamicCarouselStyles').innerHTML = styleRules;
+        attachModalEvents();
+    } catch (err) {
+        console.error("Error loading projects:", err);
     }
-    document.addEventListener("DOMContentLoaded", loadPublications);
-</script>
+}
+
+
+    // **Dropdown Toggle Function**
+    function toggleExtras(id) {
+        const content = document.getElementById(id);
+        content.classList.toggle('active');
+        const button = content.previousElementSibling;
+        button.classList.toggle('open');
+    }
+
+
+
+
+    // offset=0 => center, offset=±1 => side, else hidden
+    function buildOffsetRules(pIndex, N) {
+      let out = "";
+      for (let i=0; i<N; i++) {
+        let slotID = `slot${i}-p${pIndex}`;
+        for (let j=0; j<N; j++) {
+          let cardID = `media${j}-p${pIndex}`;
+          let offset = j - i;
+          while (offset > N/2) offset -= N;
+          while (offset <= -N/2) offset += N;
+
+          let transform = "translateX(200%) scale(0.6)";
+          let op = "0";
+          let z = "0";
+
+          if (offset === 0) {
+            transform = "translateX(0) scale(1)";
+            op = "1"; z="2";
+          } else if (offset === 1 || offset === -(N-1)) {
+            transform = "translateX(40%) scale(0.8)";
+            op = "0.4"; z="1";
+          } else if (offset === -1 || offset === (N-1)) {
+            transform = "translateX(-40%) scale(0.8)";
+            op = "0.4"; z="1";
+          }
+          // else hidden
+
+          out += `
+            #${slotID}:checked ~ .cards #${cardID} {
+              transform: ${transform};
+              opacity: ${op};
+              z-index: ${z};
+            }
+          `;
+        }
+      }
+      return out;
+    }
+
+    function attachModalEvents() {
+      // If the card’s radio is already checked => it's center => open modal
+      const allCards = document.querySelectorAll('.card');
+      allCards.forEach(card => {
+        card.addEventListener('click', e => {
+          const radioId = card.getAttribute('for');
+          const radio = document.getElementById(radioId);
+          if (radio && radio.checked) {
+            e.preventDefault();
+            const type = card.getAttribute('data-media-type');
+            const src = card.getAttribute('data-media-src');
+            openModal(type, src);
+          }
+        });
+      });
+
+      modalClose.addEventListener('click', closeModal);
+      modalOverlay.addEventListener('click', e => {
+        if (e.target.id==='modalOverlay') closeModal();
+      });
+    }
+
+    function openModal(type, src) {
+      // Clear old content except the close button
+      while (modalContent.firstChild && !modalContent.firstChild.classList?.contains('modal-close')) {
+        modalContent.removeChild(modalContent.firstChild);
+      }
+      let el;
+      if (type === 'image') {
+        el = document.createElement('img');
+        el.src = src;
+        el.style.maxWidth = '100%';
+        el.style.maxHeight = '100%';
+      } else {
+        el = document.createElement('video');
+        el.controls = true;
+        el.style.maxWidth = '100%';
+        el.style.maxHeight = '100%';
+        const source = document.createElement('source');
+        source.src = src;
+        source.type = 'video/mp4';
+        el.appendChild(source);
+      }
+      modalContent.insertBefore(el, modalClose);
+      modalOverlay.classList.add('active');
+    }
+
+    function closeModal() {
+      modalOverlay.classList.remove('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', loadProjects);
+  </script>
 </body>
 </html>
