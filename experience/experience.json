@@ -46,7 +46,7 @@
               "caption": "3D Printing Order Management Order Status"
             },
             {
-              "src": "experience/media/bfms/laptop-reservation.png",
+              "src": "media/bfms/laptop-reservation.png",
               "caption": "Laptop Reservation"
             }
           ]
@@ -87,7 +87,12 @@
             {
               "src": "media/legal_docs/naturalization_0_removed.png",
               "caption": "Clean form after removing bounding boxes"
+            },
+            {
+              "src": "media/legal_docs/output_image_8.png",
+              "caption": "Example output"
             }
+            
           ]
         }
       },
