@@ -282,6 +282,10 @@
             {
                 "src": "media/bfms/video1.mp4",
                 "caption": "Generated mesh from real-time point cloud data."
+              },
+              {
+                "src": "media/bfms/contours.mp4",
+                "caption": "Contour creation"
               }
           ],
           "images": [
