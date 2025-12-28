@@ -29,20 +29,29 @@ $(document).ready(function () {
         });
     });
 
-    // smooth scrolling (only for same-page anchors)
+    // smooth scrolling (only for anchors that exist on current page)
     $('a[href*="#"]').on('click', function (e) {
         const href = $(this).attr('href');
-        // Only smooth scroll if it's just a hash (same page) or current page with hash
-        if (href.startsWith('#') || (href.includes('#') && href.split('#')[0] === window.location.pathname)) {
-            const target = $(href.includes('#') ? '#' + href.split('#')[1] : href);
-            if (target.length) {
-                e.preventDefault();
-                $('html, body').animate({
-                    scrollTop: target.offset().top,
-                }, 500, 'linear')
-            }
+        let targetId;
+
+        // Extract the hash/ID from the href
+        if (href.startsWith('#')) {
+            targetId = href;
+        } else if (href.includes('#')) {
+            targetId = '#' + href.split('#')[1];
+        } else {
+            return; // No hash, let browser handle it
         }
-        // Otherwise, let the browser navigate normally
+
+        // Only smooth scroll if the target exists on THIS page
+        const target = $(targetId);
+        if (target.length > 0) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top,
+            }, 500, 'linear')
+        }
+        // Otherwise, let browser navigate to the link normally
     });
 
     // <!-- emailjs to mail contact form data -->
