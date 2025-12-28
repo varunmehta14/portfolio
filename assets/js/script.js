@@ -29,12 +29,20 @@ $(document).ready(function () {
         });
     });
 
-    // smooth scrolling
+    // smooth scrolling (only for same-page anchors)
     $('a[href*="#"]').on('click', function (e) {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top,
-        }, 500, 'linear')
+        const href = $(this).attr('href');
+        // Only smooth scroll if it's just a hash (same page) or current page with hash
+        if (href.startsWith('#') || (href.includes('#') && href.split('#')[0] === window.location.pathname)) {
+            const target = $(href.includes('#') ? '#' + href.split('#')[1] : href);
+            if (target.length) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top,
+                }, 500, 'linear')
+            }
+        }
+        // Otherwise, let the browser navigate normally
     });
 
     // <!-- emailjs to mail contact form data -->
