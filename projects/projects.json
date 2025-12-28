@@ -1,5 +1,204 @@
 {
     "projects": [
+       {
+            "title": "Vapi Bridge",
+            "overview": "Developed a comprehensive end-to-end voice AI system combining a robust workflow engine with intelligent voice interaction capabilities through Vapi's AI platform. The system enables dynamic tool configuration, real-time voice processing, and automated workflow execution with financial analysis capabilities.",
+            "technologies": {
+              "backend": ["Python 3.11+", "FastAPI", "SQLAlchemy", "SQLite"],
+              "ai_voice": ["Vapi AI", "OpenAI GPT-4", "LangChain"],
+              "infrastructure": ["ngrok", "Docker", "Virtual Environments"],
+              "tools": ["YAML Configuration", "Webhook Integration", "Background Tasks"],
+              "frontend": ["HTML5", "JavaScript", "Control Panel Interface"]
+            },
+            "applications": [
+              "Real-time voice AI interaction with financial analysis workflows",
+              "Dynamic tool configuration via YAML for customizable AI responses",
+              "Database-driven workflow management with background job processing",
+              "Intelligent request routing between structured and unstructured queries",
+              "Webhook integration for public accessibility via ngrok tunneling",
+              "Financial analysis automation with realistic simulation data",
+              "Interactive control panel for system monitoring and tool testing"
+            ],
+            "extras": [
+              "Built dual-API endpoint system for different interaction patterns",
+              "Implemented comprehensive logging and error handling mechanisms",
+              "Created response template system for customized AI interactions",
+              "Developed automated virtual environment setup with Python 3.11+",
+              "Integrated ngrok for secure HTTPS webhook accessibility",
+              "Designed modular architecture separating workflow engine from AI integration"
+            ],
+            "visuals": {
+              "videos": [
+                {
+                  "src": "media/vapi_bridge/VapiBridge.mov",
+                  "caption": "Demo of Tesseract Workflow Engine with Vapi voice interaction"
+                }
+              ],
+              "images": []
+            },
+            "repo": "https://github.com/varunmehta14/vapi-bridge/tree/feature/webhook-forwarding-langgraph"
+        },
+      {
+            "title": "Recipe Optimizer AI",
+            "overview": "Built an AI-powered full-stack application that intelligently transforms recipes to meet specific dietary goals while preserving flavor and culinary intent. The system uses advanced language models with LangChain for recipe analysis and provides detailed nutritional comparisons with semantic search capabilities.",
+            "technologies": {
+              "frontend": ["React", "TypeScript", "Tailwind CSS", "React Query"],
+              "backend": ["Python", "FastAPI", "LangChain", "Google Generative AI (Gemini)"],
+              "database": ["SQLite", "PostgreSQL Support", "Chroma Vector Store"],
+              "ai_ml": ["Google Gemini", "Semantic Search", "Vector Embeddings"],
+              "infrastructure": ["Docker", "Docker Compose", "Uvicorn"],
+              "tools": ["PDF Processing", "Async Operations", "SSE (Server-Sent Events)"]
+            },
+            "applications": [
+              "AI-powered recipe modification for dietary restrictions and health goals",
+              "PDF recipe upload and intelligent text extraction",
+              "Real-time nutritional analysis with side-by-side comparisons",
+              "Semantic recipe search using Chroma vector database",
+              "Recipe database management with search and filtering",
+              "Performance metrics tracking for AI processing times",
+              "Custom dietary requirement processing with LLM chain of thought"
+            ],
+            "extras": [
+              "Implemented robust recipe parsing with AI for various formats",
+              "Created structured data models with strict output validation",
+              "Developed SSE integration for real-time progress updates",
+              "Optimized large recipe handling with lazy loading and caching",
+              "Built comprehensive test suite with pytest",
+              "Designed responsive UI with dark mode support",
+              "Integrated LangChain for flexible AI model management"
+            ],
+            "visuals": {
+              "videos": [
+                {
+                  "src": "media/recipe_optimizer/optimizeRecipe.mov",
+                  "caption": "Recipe Optimizer AI demonstration showing recipe transformation"
+                }
+              ],
+              "images": []
+            },
+            "repo": "https://github.com/varunmehta14/RecipeOptimizer"
+        },
+       {
+            "title": "LiveConsultAI - Real-Time AI Video Consultation Platform",
+            "overview": "Engineered a sophisticated real-time AI video consultation platform enabling live video chat with AI assistants through WebRTC. The system integrates speech-to-text, LLM processing, and text-to-speech for seamless AI-powered video consultations with real-time bidirectional communication.",
+            "technologies": {
+              "frontend": ["React", "Next.js", "TypeScript", "WebRTC", "WebSockets"],
+              "backend": ["Python 3.10+", "FastAPI", "aiortc", "Poetry"],
+              "ai_services": ["Whisper (Speech-to-Text)", "OpenRouter LLM", "ElevenLabs (Text-to-Speech)"],
+              "real_time": ["WebRTC", "WebSockets", "Peer-to-Peer Communication", "Signaling"],
+              "infrastructure": ["Docker", "Supabase", "Vercel", "Google Cloud Run"],
+              "ci_cd": ["GitHub Actions", "Automated Deployment"]
+            },
+            "applications": [
+              "Real-time AI video consultation with live bidirectional communication",
+              "Speech-to-text transcription using Whisper for accurate voice recognition",
+              "LLM-powered response generation through OpenRouter API integration",
+              "Natural text-to-speech output using ElevenLabs for realistic AI voice",
+              "WebRTC peer-to-peer video streaming with low latency",
+              "WebSocket-based signaling for connection establishment and management",
+              "Supabase logging for consultation tracking and analytics"
+            ],
+            "extras": [
+              "Implemented WebRTC infrastructure with aiortc for Python-based peer connections",
+              "Built real-time WebSocket signaling system for session management",
+              "Integrated multiple AI services (Whisper, OpenRouter, ElevenLabs) in unified pipeline",
+              "Developed responsive Next.js frontend with TypeScript type safety",
+              "Created Docker containerization for consistent deployment environments",
+              "Deployed frontend on Vercel and backend on Google Cloud Run",
+              "Established CI/CD pipeline with GitHub Actions for automated testing and deployment"
+            ],
+            "visuals": {
+              "videos": [
+                {
+                  "src": "media/liveconsultai/GeneralAgency.mov",
+                  "caption": "LiveConsultAI platform demonstration showing real-time AI video consultation"
+                }
+              ],
+              "images": []
+            },
+            "repo": "https://github.com/varunmehta14/generalAgency"
+        },
+        {
+            "title": "Whissle MCP Server",
+            "overview": "Developed a Python-based MCP (Model Context Protocol) server providing comprehensive access to Whissle API endpoints for advanced speech processing, including speech-to-text with diarization, real-time translation, and AI-powered text summarization with robust error handling and retry mechanisms.",
+            "technologies": {
+              "backend": ["Python 3.8+", "FastAPI", "MCP Protocol"],
+              "ai_services": ["Whissle API", "OpenAI", "Speech Recognition", "Diarization"],
+              "audio_processing": ["WAV", "MP3", "OGG", "FLAC", "M4A Support"],
+              "infrastructure": ["Virtual Environments", "pip", "HTTP Retry Logic"],
+              "tools": ["Authentication", "File Validation", "Error Handling"]
+            },
+            "applications": [
+              "Speech-to-text conversion with word-level timestamps and confidence scores",
+              "Multi-speaker diarization with speaker identification and segmentation",
+              "Cross-language translation with source and target language support",
+              "AI-powered text summarization using LLM models with custom instructions",
+              "ASR model listing and capabilities discovery",
+              "Support for multiple audio formats with 25MB file size limit",
+              "Boosted language model for domain-specific terminology recognition"
+            ],
+            "extras": [
+              "Implemented automatic retry mechanism for HTTP 500 server errors",
+              "Built comprehensive error handling for authentication, file validation, and API errors",
+              "Created detailed response formatting with transcript, duration, and confidence metrics",
+              "Developed test suite for verifying all tool functionality",
+              "Supported word-level timestamps for precise transcription alignment",
+              "Integrated speaker diarization with start/end timestamps per speaker segment"
+            ],
+            "visuals": {
+              "videos": [
+                {
+                  "src": "media/whissle_mcp/whissle_mcp.mov",
+                  "caption": "Whissle MCP Server demonstration showing speech processing capabilities"
+                }
+              ],
+              "images": []
+            },
+            "repo": "https://github.com/varunmehta14/whissle_mcp"
+        },
+        {
+            "title": "MentorMatch - AI-Powered Mentor Recommendation System",
+            "overview": "Built an intelligent mentor recommendation platform using Retrieval-Augmented Generation (RAG) with an interactive chat interface. The system analyzes user queries and preferences to provide personalized mentor recommendations while maintaining context-aware conversations for refined matching.",
+            "technologies": {
+              "backend": ["Python 3.11+", "FastAPI", "MongoDB", "ChromaDB", "Pydantic"],
+              "ai_ml": ["RAG (Retrieval-Augmented Generation)", "OpenAI API", "OpenRouter API", "Rekai/reka-flash-3", "Vector Search"],
+              "frontend": ["Next.js", "React", "TypeScript", "TailwindCSS", "Axios"],
+              "database": ["MongoDB Atlas", "MongoDB Local", "ChromaDB Vector Store"],
+              "infrastructure": ["Docker", "Docker Compose", "JWT Authentication"],
+              "tools": ["Data Validation", "Embeddings", "Context Management"]
+            },
+            "applications": [
+              "AI-powered mentor matching based on skills, experience, and user requirements",
+              "Interactive Grok-like chat interface with follow-up questions for recommendation refinement",
+              "Context-aware conversation system remembering previous interactions",
+              "Comprehensive mentor profiles with detailed skills, experience, and reviews",
+              "Secure user authentication and personalized experience tracking",
+              "Admin dashboard for mentor and content management",
+              "Vector search fallback when Atlas Vector Search is unavailable"
+            ],
+            "extras": [
+              "Integrated multiple LLM providers with OpenAI/OpenRouter API fallbacks",
+              "Implemented RAG pipeline for intelligent information retrieval",
+              "Built MongoDB Atlas Vector Search with ChromaDB fallback architecture",
+              "Created mentor data loading scripts and database initialization tools",
+              "Developed RESTful API with comprehensive documentation",
+              "Designed responsive UI with modern conversational UX patterns",
+              "Supported free Rekai reka-flash-3 model through OpenRouter integration"
+            ],
+            "visuals": {
+              "videos": [
+                {
+                  "src": "media/mentor_match/MentorMatch.mov",
+                  "caption": "MentorMatch AI demonstration showing interactive mentor recommendation"
+                }
+              ],
+              "images": []
+            },
+            "repo": "https://github.com/varunmehta14/mentor_match"
+        },
+       
+       
+        
         {
             "title": "Multi-Agent vs Single-Agent LLMs for ESG Report Summarization",
             "overview": "Developed an AI-driven ESG Report Summarization system using both Multi-Agent and Single-Agent architectures to analyze sustainability reports efficiently. The study compares their performance in generating structured ESG insights using advanced NLP and multi-modal AI techniques.",

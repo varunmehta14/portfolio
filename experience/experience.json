@@ -1,7 +1,41 @@
 {
     "experience": [
+      {
+        "title": "Software Engineer, Cymbiotika | Los Angeles, CA",
+        "duration": "July 2025 - Present",
+        "overview": "Built a comprehensive Customer Data Platform integrating 8+ data sources, developed advanced analytics systems, and implemented AI-driven personalization strategies, resulting in $100K+ annual cost savings and 40% operational efficiency improvements.",
+        "technologies": {
+          "frontend": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+          "backend": ["FastAPI", "Python", "Node.js", "Express"],
+          "database": ["PostgreSQL", "Redis", "Segment CDP"],
+          "cloud": ["AWS Amplify", "Heroku", "AWS Lambda"],
+          "data_engineering": ["Pandas", "asyncpg", "ETL Pipelines"],
+          "visualization": ["Tableau", "Plotly"],
+          "tools": ["Docker", "GitHub Actions", "Webhook Integration"]
+        },
+        "applications": [
+          "Architected and deployed a full-stack Customer Data Platform (CDP) with Next.js frontend and FastAPI backend, unifying data from 8+ sources including Shopify, Recharge, Dixa, Okendo, Klaviyo, and internal systems - achieving $100,000+ in annual cost savings.",
+          "Engineered real-time event streaming architecture processing 50,000+ events per day with sub-second latency using Segment CDP, webhooks, and Change Data Capture - reducing customer lookup time from minutes to seconds.",
+          "Developed a multi-dimensional customer scoring system analyzing RFM metrics, engagement velocity, health journey progress, and lifetime value - improving personalization accuracy by 30% and email campaign effectiveness by 25%.",
+          "Built advanced data extraction pipelines and ETL workflows for multiple platforms (Shopify, Recharge, Arise, Quiz) with automated scheduling and error handling - processing millions of records with 99.9% accuracy.",
+          "Optimized PostgreSQL database performance through materialized views, strategic indexing, and connection pooling - achieving 10-100x query performance improvements and reducing response times from 10+ seconds to sub-second.",
+          "Designed and implemented Tableau dashboards for customer journey analysis, churn prediction, subscription metrics, and VIP cohort tracking - enabling data-driven decision making across marketing and customer success teams.",
+          "Created an AI-driven product recommendation engine using vector embeddings and collaborative filtering - increasing cross-sell conversion rates by 20%.",
+          "Developed identity resolution system stitching customer data across anonymous IDs, emails, and platform-specific identifiers - improving customer profile accuracy by 85%."
+        ],
+        "extras": [
+          "Implemented comprehensive CI/CD pipelines using GitHub Actions for automated testing and deployment - reducing deployment time by 60%.",
+          "Built automated data quality monitoring and validation systems detecting anomalies and data integrity issues in real-time - preventing 200+ potential data quality incidents.",
+          "Designed database schema architecture with multi-schema design pattern separating historical, staging, and production data - enabling zero-downtime migrations.",
+          "Developed Redis caching layer for frequently accessed queries - achieving 1000x performance improvement for cached data and reducing database load by 70%."
+        ],
+        "visuals": {
+          "videos": [],
+          "images": []
+        }
+      },
       {"title": "Software Engineer Intern, Baum Family Maker Space, USC | Los Angeles, CA",
-      "duration": "September 2023 - Present",
+      "duration": "September 2023 - May 2025",
       "overview": "Developed software solutions for access control, real-time visualization, and automation, enhancing operational efficiency and security within the maker space.",
       "technologies": {
         "backend": ["Node.js", "Express", "MongoDB", "Google Apps Script"],
@@ -11,16 +45,16 @@
         "graphics": ["OpenGL", "Vulkan"]
       },
       "applications": [
-        "1. Developed an automated RFID door access system using React, TypeScript, Node.js, and MongoDB – reducing manual access management efforts by 90% and detecting 200+ unauthorized access attempts.",
-        "2. Created a real-time visualization tool with Python, Pandas, Matplotlib, and Plotly – cutting facility wait times by 35% and increasing equipment availability by 20%.",
-        "3. Designed and implemented AUSCAS v2.0, a UML-based data management system with RESTful API integration and Google Apps Script – reducing logging errors by 60% and improving workflow efficiency by 50%.",
-        "4. Optimized 3D printing job scheduling with a predictive prioritization system – improving job completion efficiency by 50% across 1,200+ print jobs annually."
+        "Developed an automated RFID door access system using React, TypeScript, Node.js, and MongoDB – reducing manual access management efforts by 90% and detecting 200+ unauthorized access attempts.",
+        "Created a real-time visualization tool with Python, Pandas, Matplotlib, and Plotly – cutting facility wait times by 35% and increasing equipment availability by 20%.",
+        "Designed and implemented AUSCAS v2.0, a UML-based data management system with RESTful API integration and Google Apps Script – reducing logging errors by 60% and improving workflow efficiency by 50%.",
+        "Optimized 3D printing job scheduling with a predictive prioritization system – improving job completion efficiency by 50% across 1,200+ print jobs annually."
       ],
       "extras": [
-        "1. Developed a Grasshopper plugin in C# (using K4AdotNet) for real-time point cloud and depth image processing – enhancing 3D modeling efficiency by 40%.",
-        "2. Engineered an AR sandbox system using the Orbbec SDK in Python – enabling millimeter-level accurate depth map processing for 100+ architecture students.",
-        "3. Offloaded intensive computational tasks to GPU using OpenGL and Vulkan – reducing CPU load by 60% and improving real-time rendering performance.",
-        "4. Led a Python data analytics pipeline to visualize student footfall using Orbbec and Kinect sensors – reducing energy costs by 15% and optimizing space utilization by 30%."
+        "Developed a Grasshopper plugin in C# (using K4AdotNet) for real-time point cloud and depth image processing – enhancing 3D modeling efficiency by 40%.",
+        "Engineered an AR sandbox system using the Orbbec SDK in Python – enabling millimeter-level accurate depth map processing for 100+ architecture students.",
+        "Offloaded intensive computational tasks to GPU using OpenGL and Vulkan – reducing CPU load by 60% and improving real-time rendering performance.",
+        "Led a Python data analytics pipeline to visualize student footfall using Orbbec and Kinect sensors – reducing energy costs by 15% and optimizing space utilization by 30%."
       ],
         "visuals": {
           "videos": [],
@@ -53,75 +87,6 @@
         }
       },
       {
-        "title": "Software Engineer Intern, Alien Attorney | Atlanta, GA",
-        "duration": "June 2024 - October 2024",
-        "overview": "Engineered AI-driven automation solutions for legal processes, document retrieval, and recommendation systems, enhancing efficiency in legal workflows.",
-        "technologies": {
-          "frontend": ["React-Redux"],
-          "backend": ["Flask", "MongoDB", "OpenAI API"],
-          "tools": ["Docker", "GitHub Actions", "AWS Lambda", "TensorFlow"]
-        },
-        "applications": [
-          "1. Engineered an AI-driven legal form automation platform with React-Redux, Flask, and MongoDB, reducing form completion time by 40%.",
-          "2. Designed and deployed a vector search-enabled legal document retrieval system with MongoDB Atlas and OpenAI API, cutting manual classification efforts by 60%.",
-          "3. Integrated CI/CD pipelines using GitHub Actions and Docker, automating deployment and reducing deployment time by 25%.",
-          "4. Designed and implemented a Retrieval-Augmented Generation (RAG) pipeline using OpenAI API and MongoDB Vector Search, improving legal document classification accuracy to 85%.",
-          "5. Facilitated synthetic legal document generation with Faker and custom scripts, producing 1,500+ forms, accelerating LLM fine-tuning by 50% using AWS Lambda and TensorFlow.",
-          "6. Developed an LLM-powered restaurant recommendation system by leveraging vector embeddings and user preference clustering, increasing personalized recommendation accuracy by 30%."
-        ],
-        "extras": [
-          "1. Conducted research on optimizing RAG pipelines for legal document classification, improving inference speed by 20%.",
-          "2. Developed internal tools for AI model explainability using SHAP and LIME, enhancing transparency in legal AI decisions."
-        ],
-        "visuals": {
-          "videos": [],
-          "images": [
-            {
-              "src": "media/legal_docs/naturalization_0.png",
-              "caption": "Initial legal form with bounding box"
-            },
-            {
-              "src": "media/legal_docs/naturalization_0_annotated.png",
-              "caption": "Annotated form highlighting key fields"
-            },
-            {
-              "src": "media/legal_docs/naturalization_0_removed.png",
-              "caption": "Clean form after removing bounding boxes"
-            },
-            {
-              "src": "media/legal_docs/output_image_8.png",
-              "caption": "Example output"
-            }
-            
-          ]
-        }
-      },
-      {
-        "title": "Web Development Intern, Kontaktsource | Remote",
-        "duration": "May 2024 - August 2024",
-        "overview": "Developed and optimized website features, improving user engagement, SEO rankings, and dynamic content integration.",
-        "technologies": {
-          "frontend": ["WordPress", "BuddyPress"],
-          "backend": ["MemberPress", "LinkedIn API"],
-          "tools": ["HubSpot"]
-        },
-        "applications": [
-          "1. Embedded a real-time LinkedIn feed on the website, enabling dynamic content updates and increasing user engagement by 30%.",
-          "2. Optimized website architecture, reducing page load time by 20% and boosting SEO rankings by 25%.",
-          "3. Developed a membership site with WordPress MemberPress, allowing users to subscribe and access exclusive content.",
-          "4. Enhanced the Kontaktsource website’s functionality and user experience.",
-          "5. Utilized HubSpot for managing website analytics and customer interactions, improving engagement."
-        ],
-        "extras": [
-          "1. Designed an automated email marketing workflow using HubSpot, boosting customer retention by 15%.",
-          "2. Conducted A/B testing on different UI elements to optimize conversion rates."
-        ],
-        "visuals": {
-          "videos": [],
-          "images": []
-        }
-      },
-      {
         "title": "Software Engineer Intern, Divytech Blockchain LLP | Mumbai, IN",
         "duration": "November 2021 - April 2022",
         "overview": "Developed blockchain-based digital coupon solutions, leveraging NFTs to improve accessibility and brand engagement.",
@@ -131,12 +96,12 @@
           "blockchain": ["Polygon"]
         },
         "applications": [
-          "1. Led innovative digital coupon distribution for 10 prominent brands, eliminating physical coupon production, with anticipated cost savings of 15% and heightened brand engagement potential upon application launch.",
-          "2. Improved coupon accessibility and extended validity through collectible NFTs, fostering brand-consumer connections."
+          "Led innovative digital coupon distribution for 10 prominent brands, eliminating physical coupon production, with anticipated cost savings of 15% and heightened brand engagement potential upon application launch.",
+          "Improved coupon accessibility and extended validity through collectible NFTs, fostering brand-consumer connections."
         ],
         "extras": [
-          "1. Researched and implemented off-chain storage solutions for NFT metadata using IPFS, improving transaction efficiency.",
-          "2. Developed an Ethereum gas optimization strategy, reducing smart contract deployment costs by 30%."
+          "Researched and implemented off-chain storage solutions for NFT metadata using IPFS, improving transaction efficiency.",
+          "Developed an Ethereum gas optimization strategy, reducing smart contract deployment costs by 30%."
         ],
         "visuals": {
           "videos": [],
@@ -154,14 +119,14 @@
           "machine_learning": ["PyTorch", "Graph Convolutional Networks"]
         },
         "applications": [
-          "1. Led the development of an NFT-gated marketing platform using React, Express, Node.js, MongoDB, and Solidity, increasing brand engagement by 20% and improving user retention through seamless Web3 interactions.",
-          "2. Implemented automated testing with Chai and Mocha to validate smart contracts, reducing bugs by 30%, improving deployment reliability by 15%, and accelerating iteration cycles.",
-          "3. Directed a team of 4 in the development of a phisher detection model using Graph Convolutional Networks (GCN) and PyTorch, improving threat detection accuracy by 25% for cryptocurrency networks.",
-          "4. Developed an innovative NFT marketplace, enabling designers to monetize unique artworks as NFTs, integrating ERC-20 tokens and alternate tokens to create a dynamic digital art community."
+          "Led the development of an NFT-gated marketing platform using React, Express, Node.js, MongoDB, and Solidity, increasing brand engagement by 20% and improving user retention through seamless Web3 interactions.",
+          "Implemented automated testing with Chai and Mocha to validate smart contracts, reducing bugs by 30%, improving deployment reliability by 15%, and accelerating iteration cycles.",
+          "Directed a team of 4 in the development of a phisher detection model using Graph Convolutional Networks (GCN) and PyTorch, improving threat detection accuracy by 25% for cryptocurrency networks.",
+          "Developed an innovative NFT marketplace, enabling designers to monetize unique artworks as NFTs, integrating ERC-20 tokens and alternate tokens to create a dynamic digital art community."
         ],
         "extras": [
-          "1. Designed a Web3 identity verification module using Polygon ID, improving authentication security.",
-          "2. Developed a decentralized escrow smart contract for NFT transactions, increasing user trust."
+          "Designed a Web3 identity verification module using Polygon ID, improving authentication security.",
+          "Developed a decentralized escrow smart contract for NFT transactions, increasing user trust."
         ],
         "visuals": {
           "videos": [],
