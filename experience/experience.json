@@ -1,0 +1,115 @@
+{
+    "experience": [
+      {
+        "title": "AI Solutions Engineer, Cymbiotika | San Diego, CA",
+        "duration": "July 2025 - Present",
+        "overview": "Built a comprehensive Customer Data Platform integrating 8+ data sources, developed advanced analytics systems, and implemented AI-driven personalization strategies, resulting in $100K+ annual cost savings and 40% operational efficiency improvements.",
+        "technologies": {
+          "frontend": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+          "backend": ["FastAPI", "Python", "Node.js", "Express"],
+          "database": ["PostgreSQL", "Redis", "Segment CDP"],
+          "cloud": ["AWS Amplify", "Heroku", "AWS Lambda"],
+          "data_engineering": ["Pandas", "asyncpg", "ETL Pipelines"],
+          "visualization": ["Tableau", "Plotly"],
+          "tools": ["Docker", "GitHub Actions", "Webhook Integration"]
+        },
+        "applications": [
+          "Architected and deployed a full-stack Customer Data Platform (CDP) with Next.js frontend and FastAPI backend, unifying data from 8+ sources including Shopify, Recharge, Dixa, Okendo, Klaviyo, and internal systems - achieving $100,000+ in annual cost savings.",
+          "Engineered real-time event streaming architecture processing 50,000+ events per day with sub-second latency using Segment CDP, webhooks, and Change Data Capture - reducing customer lookup time from minutes to seconds.",
+          "Developed a multi-dimensional customer scoring system analyzing RFM metrics, engagement velocity, health journey progress, and lifetime value - improving personalization accuracy by 30% and email campaign effectiveness by 25%.",
+          "Built advanced data extraction pipelines and ETL workflows for multiple platforms (Shopify, Recharge, Arise, Quiz) with automated scheduling and error handling - processing millions of records with 99.9% accuracy.",
+          "Optimized PostgreSQL database performance through materialized views, strategic indexing, and connection pooling - achieving 10-100x query performance improvements and reducing response times from 10+ seconds to sub-second.",
+          "Designed and implemented Tableau dashboards for customer journey analysis, churn prediction, subscription metrics, and VIP cohort tracking - enabling data-driven decision making across marketing and customer success teams.",
+          "Created an AI-driven product recommendation engine using vector embeddings and collaborative filtering - increasing cross-sell conversion rates by 20%.",
+          "Developed identity resolution system stitching customer data across anonymous IDs, emails, and platform-specific identifiers - improving customer profile accuracy by 85%."
+        ],
+        "extras": [
+          "Implemented comprehensive CI/CD pipelines using GitHub Actions for automated testing and deployment - reducing deployment time by 60%.",
+          "Built automated data quality monitoring and validation systems detecting anomalies and data integrity issues in real-time - preventing 200+ potential data quality incidents.",
+          "Designed database schema architecture with multi-schema design pattern separating historical, staging, and production data - enabling zero-downtime migrations.",
+          "Developed Redis caching layer for frequently accessed queries - achieving 1000x performance improvement for cached data and reducing database load by 70%."
+        ],
+        "visuals": {
+          "videos": [],
+          "images": []
+        }
+      },
+      {"title": "Student Worker - Digital Fabrication Assistant and Web Developer, Baum Family Maker Space, USC | Los Angeles, CA",
+      "duration": "September 2023 - May 2025",
+      "overview": "Developed software solutions for access control, real-time visualization, and automation, enhancing operational efficiency and security within the maker space.",
+      "technologies": {
+        "backend": ["Node.js", "Express", "MongoDB", "Google Apps Script"],
+        "frontend": ["React", "TypeScript"],
+        "data_visualization": ["Python", "Pandas", "Matplotlib", "Plotly"],
+        "hardware_integration": ["Orbbec SDK", "Kinect SDK", "C#", "Grasshopper"],
+        "graphics": ["OpenGL", "Vulkan"]
+      },
+      "applications": [
+        "Created a real-time visualization tool with Python, Pandas, Matplotlib, and Plotly – cutting facility wait times by 35% and increasing equipment availability by 20%.",
+        "Designed and implemented AUSCAS v2.0, a UML-based data management system with RESTful API integration and Google Apps Script – reducing logging errors by 60% and improving workflow efficiency by 50%.",
+        "Developed a Grasshopper plugin in C# (using K4AdotNet) for real-time point cloud and depth image processing – enhancing 3D modeling efficiency by 40%."
+      ],
+      "extras": [
+        "Engineered an AR sandbox system using the Orbbec SDK in Python – enabling millimeter-level accurate depth map processing for 100+ architecture students.",
+        "Offloaded intensive computational tasks to GPU using OpenGL and Vulkan – reducing CPU load by 60% and improving real-time rendering performance.",
+        "Led a Python data analytics pipeline to visualize student footfall using Orbbec and Kinect sensors – reducing energy costs by 15% and optimizing space utilization by 30%."
+      ],
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "media/bfms/3D_Printing_Workflow_Diagram.png",
+              "caption": "3D Printing Order Management Workflow Diagram"
+            },
+            {
+              "src": "media/bfms/trello-board.png",
+              "caption": "3D Printing Order Management Trello Board"
+            },
+            {
+              "src": "media/bfms/trello-card.png",
+              "caption": "3D Printing Order Management Trello Card"
+            },
+            {
+              "src": "media/bfms/tracker1.png",
+              "caption": "3D Printing Order Management Order Tracker"
+            },
+            {
+              "src": "media/bfms/tracker2.png",
+              "caption": "3D Printing Order Management Order Status"
+            },
+            {
+              "src": "media/bfms/laptop-reservation.png",
+              "caption": "Laptop Reservation"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Full Stack Blockchain Developer Intern, Divytech Blockchain LLP (nftholdr) | Mumbai, IN",
+        "duration": "November 2021 - April 2022",
+        "overview": "Developed blockchain-based solutions including NFT platforms, digital coupon distribution, and AI-powered security systems, enhancing brand engagement and security in Web3.",
+        "technologies": {
+          "frontend": ["React"],
+          "backend": ["Express", "Node.js", "MongoDB", "Solidity"],
+          "blockchain": ["Polygon"],
+          "testing": ["Chai", "Mocha"],
+          "machine_learning": ["PyTorch", "Graph Convolutional Networks"]
+        },
+        "applications": [
+          "Implemented automated testing with Chai and Mocha to validate smart contracts, reducing bugs by 30%, improving deployment reliability by 15%, and accelerating iteration cycles.",
+          "Developed an innovative NFT marketplace, enabling designers to monetize unique artworks as NFTs, integrating ERC-20 tokens and alternate tokens to create a dynamic digital art community." 
+        ],
+        "extras": [
+          "Designed a Web3 identity verification module using Polygon ID, improving authentication security.",
+          "Developed a decentralized escrow smart contract for NFT transactions, increasing user trust.",
+          "Researched and implemented off-chain storage solutions for NFT metadata using IPFS, improving transaction efficiency.",
+          "Developed an Ethereum gas optimization strategy, reducing smart contract deployment costs by 30%."
+        ],
+        "visuals": {
+          "videos": [],
+          "images": []
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,611 @@
+{
+    "projects": [
+       {
+            "title": "Vapi Bridge",
+            "overview": "Developed a comprehensive end-to-end voice AI system combining a robust workflow engine with intelligent voice interaction capabilities through Vapi's AI platform. The system enables dynamic tool configuration, real-time voice processing, and automated workflow execution with financial analysis capabilities.",
+            "technologies": {
+              "backend": ["Python 3.11+", "FastAPI", "SQLAlchemy", "SQLite"],
+              "ai_voice": ["Vapi AI", "OpenAI GPT-4", "LangChain"],
+              "infrastructure": ["ngrok", "Docker", "Virtual Environments"],
+              "tools": ["YAML Configuration", "Webhook Integration", "Background Tasks"],
+              "frontend": ["HTML5", "JavaScript", "Control Panel Interface"]
+            },
+            "applications": [
+              "Real-time voice AI interaction with financial analysis workflows",
+              "Dynamic tool configuration via YAML for customizable AI responses",
+              "Database-driven workflow management with background job processing",
+              "Intelligent request routing between structured and unstructured queries",
+              "Webhook integration for public accessibility via ngrok tunneling",
+              "Financial analysis automation with realistic simulation data",
+              "Interactive control panel for system monitoring and tool testing"
+            ],
+            "extras": [
+              "Built dual-API endpoint system for different interaction patterns",
+              "Implemented comprehensive logging and error handling mechanisms",
+              "Created response template system for customized AI interactions",
+              "Developed automated virtual environment setup with Python 3.11+",
+              "Integrated ngrok for secure HTTPS webhook accessibility",
+              "Designed modular architecture separating workflow engine from AI integration"
+            ],
+            "visuals": {
+              "videos": [
+                {
+                  "src": "media/vapi_bridge/VapiBridge.mov",
+                  "caption": "Demo of Tesseract Workflow Engine with Vapi voice interaction"
+                }
+              ],
+              "images": []
+            },
+            "repo": "https://github.com/varunmehta14/vapi-bridge/tree/feature/webhook-forwarding-langgraph"
+        },
+      {
+            "title": "Recipe Optimizer AI",
+            "overview": "Built an AI-powered full-stack application that intelligently transforms recipes to meet specific dietary goals while preserving flavor and culinary intent. The system uses advanced language models with LangChain for recipe analysis and provides detailed nutritional comparisons with semantic search capabilities.",
+            "technologies": {
+              "frontend": ["React", "TypeScript", "Tailwind CSS", "React Query"],
+              "backend": ["Python", "FastAPI", "LangChain", "Google Generative AI (Gemini)"],
+              "database": ["SQLite", "PostgreSQL Support", "Chroma Vector Store"],
+              "ai_ml": ["Google Gemini", "Semantic Search", "Vector Embeddings"],
+              "infrastructure": ["Docker", "Docker Compose", "Uvicorn"],
+              "tools": ["PDF Processing", "Async Operations", "SSE (Server-Sent Events)"]
+            },
+            "applications": [
+              "AI-powered recipe modification for dietary restrictions and health goals",
+              "PDF recipe upload and intelligent text extraction",
+              "Real-time nutritional analysis with side-by-side comparisons",
+              "Semantic recipe search using Chroma vector database",
+              "Recipe database management with search and filtering",
+              "Performance metrics tracking for AI processing times",
+              "Custom dietary requirement processing with LLM chain of thought"
+            ],
+            "extras": [
+              "Implemented robust recipe parsing with AI for various formats",
+              "Created structured data models with strict output validation",
+              "Developed SSE integration for real-time progress updates",
+              "Optimized large recipe handling with lazy loading and caching",
+              "Built comprehensive test suite with pytest",
+              "Designed responsive UI with dark mode support",
+              "Integrated LangChain for flexible AI model management"
+            ],
+            "visuals": {
+              "videos": [
+                {
+                  "src": "media/recipe_optimizer/optimizeRecipe.mov",
+                  "caption": "Recipe Optimizer AI demonstration showing recipe transformation"
+                }
+              ],
+              "images": []
+            },
+            "repo": "https://github.com/varunmehta14/RecipeOptimizer"
+        },
+       {
+            "title": "LiveConsultAI - Real-Time AI Video Consultation Platform",
+            "overview": "Engineered a sophisticated real-time AI video consultation platform enabling live video chat with AI assistants through WebRTC. The system integrates speech-to-text, LLM processing, and text-to-speech for seamless AI-powered video consultations with real-time bidirectional communication.",
+            "technologies": {
+              "frontend": ["React", "Next.js", "TypeScript", "WebRTC", "WebSockets"],
+              "backend": ["Python 3.10+", "FastAPI", "aiortc", "Poetry"],
+              "ai_services": ["Whisper (Speech-to-Text)", "OpenRouter LLM", "ElevenLabs (Text-to-Speech)"],
+              "real_time": ["WebRTC", "WebSockets", "Peer-to-Peer Communication", "Signaling"],
+              "infrastructure": ["Docker", "Supabase", "Vercel", "Google Cloud Run"],
+              "ci_cd": ["GitHub Actions", "Automated Deployment"]
+            },
+            "applications": [
+              "Real-time AI video consultation with live bidirectional communication",
+              "Speech-to-text transcription using Whisper for accurate voice recognition",
+              "LLM-powered response generation through OpenRouter API integration",
+              "Natural text-to-speech output using ElevenLabs for realistic AI voice",
+              "WebRTC peer-to-peer video streaming with low latency",
+              "WebSocket-based signaling for connection establishment and management",
+              "Supabase logging for consultation tracking and analytics"
+            ],
+            "extras": [
+              "Implemented WebRTC infrastructure with aiortc for Python-based peer connections",
+              "Built real-time WebSocket signaling system for session management",
+              "Integrated multiple AI services (Whisper, OpenRouter, ElevenLabs) in unified pipeline",
+              "Developed responsive Next.js frontend with TypeScript type safety",
+              "Created Docker containerization for consistent deployment environments",
+              "Deployed frontend on Vercel and backend on Google Cloud Run",
+              "Established CI/CD pipeline with GitHub Actions for automated testing and deployment"
+            ],
+            "visuals": {
+              "videos": [
+                {
+                  "src": "media/liveconsultai/GeneralAgency.mov",
+                  "caption": "LiveConsultAI platform demonstration showing real-time AI video consultation"
+                }
+              ],
+              "images": []
+            },
+            "repo": "https://github.com/varunmehta14/generalAgency"
+        },
+        {
+            "title": "Whissle MCP Server",
+            "overview": "Developed a Python-based MCP (Model Context Protocol) server providing comprehensive access to Whissle API endpoints for advanced speech processing, including speech-to-text with diarization, real-time translation, and AI-powered text summarization with robust error handling and retry mechanisms.",
+            "technologies": {
+              "backend": ["Python 3.8+", "FastAPI", "MCP Protocol"],
+              "ai_services": ["Whissle API", "OpenAI", "Speech Recognition", "Diarization"],
+              "audio_processing": ["WAV", "MP3", "OGG", "FLAC", "M4A Support"],
+              "infrastructure": ["Virtual Environments", "pip", "HTTP Retry Logic"],
+              "tools": ["Authentication", "File Validation", "Error Handling"]
+            },
+            "applications": [
+              "Speech-to-text conversion with word-level timestamps and confidence scores",
+              "Multi-speaker diarization with speaker identification and segmentation",
+              "Cross-language translation with source and target language support",
+              "AI-powered text summarization using LLM models with custom instructions",
+              "ASR model listing and capabilities discovery",
+              "Support for multiple audio formats with 25MB file size limit",
+              "Boosted language model for domain-specific terminology recognition"
+            ],
+            "extras": [
+              "Implemented automatic retry mechanism for HTTP 500 server errors",
+              "Built comprehensive error handling for authentication, file validation, and API errors",
+              "Created detailed response formatting with transcript, duration, and confidence metrics",
+              "Developed test suite for verifying all tool functionality",
+              "Supported word-level timestamps for precise transcription alignment",
+              "Integrated speaker diarization with start/end timestamps per speaker segment"
+            ],
+            "visuals": {
+              "videos": [
+                {
+                  "src": "media/whissle_mcp/whissle_mcp.mov",
+                  "caption": "Whissle MCP Server demonstration showing speech processing capabilities"
+                }
+              ],
+              "images": []
+            },
+            "repo": "https://github.com/varunmehta14/whissle_mcp"
+        },
+        {
+            "title": "MentorMatch - AI-Powered Mentor Recommendation System",
+            "overview": "Built an intelligent mentor recommendation platform using Retrieval-Augmented Generation (RAG) with an interactive chat interface. The system analyzes user queries and preferences to provide personalized mentor recommendations while maintaining context-aware conversations for refined matching.",
+            "technologies": {
+              "backend": ["Python 3.11+", "FastAPI", "MongoDB", "ChromaDB", "Pydantic"],
+              "ai_ml": ["RAG (Retrieval-Augmented Generation)", "OpenAI API", "OpenRouter API", "Rekai/reka-flash-3", "Vector Search"],
+              "frontend": ["Next.js", "React", "TypeScript", "TailwindCSS", "Axios"],
+              "database": ["MongoDB Atlas", "MongoDB Local", "ChromaDB Vector Store"],
+              "infrastructure": ["Docker", "Docker Compose", "JWT Authentication"],
+              "tools": ["Data Validation", "Embeddings", "Context Management"]
+            },
+            "applications": [
+              "AI-powered mentor matching based on skills, experience, and user requirements",
+              "Interactive Grok-like chat interface with follow-up questions for recommendation refinement",
+              "Context-aware conversation system remembering previous interactions",
+              "Comprehensive mentor profiles with detailed skills, experience, and reviews",
+              "Secure user authentication and personalized experience tracking",
+              "Admin dashboard for mentor and content management",
+              "Vector search fallback when Atlas Vector Search is unavailable"
+            ],
+            "extras": [
+              "Integrated multiple LLM providers with OpenAI/OpenRouter API fallbacks",
+              "Implemented RAG pipeline for intelligent information retrieval",
+              "Built MongoDB Atlas Vector Search with ChromaDB fallback architecture",
+              "Created mentor data loading scripts and database initialization tools",
+              "Developed RESTful API with comprehensive documentation",
+              "Designed responsive UI with modern conversational UX patterns",
+              "Supported free Rekai reka-flash-3 model through OpenRouter integration"
+            ],
+            "visuals": {
+              "videos": [
+                {
+                  "src": "media/mentor_match/MentorMatch.mov",
+                  "caption": "MentorMatch AI demonstration showing interactive mentor recommendation"
+                }
+              ],
+              "images": []
+            },
+            "repo": "https://github.com/varunmehta14/mentor_match"
+        },
+       
+       
+        
+        {
+            "title": "Multi-Agent vs Single-Agent LLMs for ESG Report Summarization",
+            "overview": "Developed an AI-driven ESG Report Summarization system using both Multi-Agent and Single-Agent architectures to analyze sustainability reports efficiently. The study compares their performance in generating structured ESG insights using advanced NLP and multi-modal AI techniques.",
+            "technologies": {
+              "natural_language_processing": ["BERT", "ESG-BERT", "MiniLM", "GPT-4", "Llama 3", "Gemma 2"],
+              "multi-modal_ai": ["CLIP-ViT", "OCR (Tesseract)", "Pillow (PIL)"],
+              "data_processing": ["SpaCy", "NLTK", "Cosine Similarity", "Sentence Transformers"],
+              "machine_learning": ["PyTorch", "TensorFlow", "Hugging Face Transformers"],
+              "evaluation_metrics": ["BERTScore", "ROUGE-L", "Human Evaluation"],
+              "multi-agent_systems": ["Agentic LLM Architectures", "Task-Specific AI Agents"]
+            },
+            "applications": [
+              "Automated ESG Report Summarization for Corporate Compliance",
+              "Comparative Analysis of Multi-Agent vs Single-Agent LLM Approaches",
+              "Extracting Key ESG Metrics for Sustainability Reporting",
+              "AI-Assisted Financial and Corporate Sustainability Analysis",
+              "Scalable AI System for Automated Report Processing"
+            ],
+            "extras": [
+              "Implemented ESG Report Data Extraction Pipeline (Text & Image)",
+              "Developed Single-Agent LLM and Multi-Agent System for ESG Summarization",
+              "Leveraged ESG-BERT for Classification and CLIP for Image Processing",
+              "Evaluated Results using Quantitative and Qualitative Metrics",
+              "Conducted Human Evaluation with Finance and ESG Experts"
+            ],
+            "visuals": {
+              "videos": [],
+              "images": [
+                {
+                    "src": "media/esg/workflow.png",
+                    "caption": "Data Collection and Processing Pipeline for ESG Analysis."
+                  },
+                  {
+                      "src": "media/esg/json.png",
+                      "caption": "Extracted json."
+                    },
+                {
+                  "src": "media/esg/multi_prompt.png",
+                  "caption": "Sample Prompt for Multi-Agent Summarization."
+                },
+                {
+                  "src": "media/esg/single_prompt.png",
+                  "caption": "Sample Prompt for Single-Agent ESG Report Summarization."
+                }
+            
+                
+              ]
+            },
+            "repo": "https://github.com/varunmehta14/ESG_Report_Summarizer"
+          },    
+        {
+            "title": "Stock Market Web and iOS Application",
+            "overview": "Developed a full-stack stock market tracking and analysis application designed for both web and iOS platforms. The web version is built using the MERN stack, while the iOS version is developed with Swift and SwiftUI. The application provides real-time stock tracking, financial analysis, AI-driven insights, and a virtual trading experience.",
+            "technologies": {
+              "backend": ["Node.js", "Express.js", "MongoDB", "AWS Lambda", "Google App Engine"],
+              "frontend": ["React.js", "Next.js", "SwiftUI", "Swift"],
+              "cloud": ["AWS", "Firebase"],
+              "third_party": ["Finnhub API", "Polygon.io API", "Highcharts.js", "AJAX", "JSON"],
+              "database": ["MongoDB Atlas"],
+              "mobile": ["Alamofire", "SwiftyJSON", "Kingfisher", "WKWebView"]
+            },
+            "applications": [
+              "Real-time stock data retrieval using Finnhub API and Polygon.io API",
+              "Financial market trend analysis with AI-driven insights",
+              "Portfolio tracking and virtual stock trading",
+              "AI-powered sentiment analysis and expert recommendations",
+              "Market predictions and investment suggestions",
+              "Comprehensive stock search with autocomplete functionality",
+              "Secure authentication and personalized user experience"
+            ],
+            "extras": [
+              "Built a native iOS app with Swift using MVVM architecture",
+              "Implemented advanced financial charts using Highcharts.js",
+              "Deployed scalable backend on AWS Lambda and Google Cloud",
+              "Designed a fully responsive web and mobile UI with modern UX principles",
+              "Optimized API calls with debounce and pagination for smooth performance",
+              "Dark Mode support for iOS and web platforms"
+            ],
+            "visuals": {
+              "videos": [
+                {
+                  "src": "media/stock_market/HW3_responsive_demo.mov",
+                  "caption": "Responsive UI showcasing the adaptability of the stock market web app."
+                },
+                {
+                  "src": "media/stock_market/HW3_web_demo.mov",
+                  "caption": "Stock market web application displaying real-time financial data."
+                },
+                {
+                  "src": "media/stock_market/Assignment4varunjay.mp4",
+                  "caption": "Mobile version of the stock market app built using SwiftUI."
+                }
+              ],
+              "images": []
+            },
+            "features": [
+              {
+                "title": "Home Screen",
+                "description": "Displays user portfolio, favorite stocks, and market updates with real-time tracking."
+              },
+              {
+                "title": "Detailed Stock Information",
+                "description": "Provides in-depth stock details, including technical analysis, earnings charts, and sentiment insights."
+              },
+              {
+                "title": "Virtual Trading System",
+                "description": "Users can simulate buying and selling stocks with virtual money, track investments, and manage portfolios."
+              },
+              {
+                "title": "Market Predictions & AI-Powered Insights",
+                "description": "Aggregates expert ratings and social media trends to provide smart investment recommendations."
+              },
+              {
+                "title": "News & Market Updates",
+                "description": "Live updates from trusted financial news sources for real-time stock market insights."
+              }
+            ],
+            "repo": "https://github.com/varunmehta14/Stock_App"
+            
+          },
+          {
+            "title": "Waste Classification using Transfer Learning",
+            "overview": "Developed an AI-powered waste classification system using deep learning techniques. The project utilizes CNNs with transfer learning (ResNet50V2) to accurately classify waste into six categories: cardboard, glass, metal, organic, paper, and plastic. This system enhances automated waste segregation efficiency, reducing manual effort and environmental impact.",
+            "technologies": {
+              "deep_learning": ["TensorFlow", "Keras", "ResNet50v2"],
+              "backend": ["Python", "Flask"],
+              "cloud": ["Google Colab"],
+              "image_processing": ["OpenCV", "Matplotlib"],
+              "data_augmentation": ["TensorFlow Data Augmentation API"]
+            },
+            "applications": [
+              "Automated waste classification for smart bins and recycling centers",
+              "Real-time image-based waste segregation using AI models",
+              "Reduction in manual labor and increased efficiency in waste sorting",
+              "Optimization of recycling processes by accurate classification",
+              "Implementation in urban waste management to reduce landfill overflow",
+              "Integration with IoT smart bins for automated waste disposal"
+            ],
+            "extras": [
+              "Implemented ResNet50V2 transfer learning model for superior accuracy",
+              "Enhanced model performance through data augmentation techniques",
+              "Experimented with CNN, SVM, and ResNet50V2 for comparative accuracy analysis",
+              "Achieved 96.88% training accuracy and 92.87% validation accuracy",
+              "Developed a complete waste classification pipeline with preprocessing, training, and inference",
+              "Integrated image augmentation techniques such as rotation, flipping, and zooming",
+              "Generated precision-recall metrics and confusion matrices for model evaluation"
+            ],
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+                "src": "media/waste_classification/process.png",
+                "caption": "Baseflow Architecture Diagram"
+              },
+            {
+              "src": "media/waste_classification/Screenshot 2024-10-04 at 3.59.17 PM.png",
+              "caption": "ResNet50v2 architecture used for waste classification."
+            },
+            {
+              "src": "media/waste_classification/Screenshot 2024-10-04 at 3.59.37 PM.png",
+              "caption": "Graph depicting the testing accuracy and loss during model training."
+            },
+            {
+              "src": "media/waste_classification/Screenshot 2024-10-04 at 4.00.04 PM.png",
+              "caption": "Inference results on test dataset for waste classification."
+            },
+            {
+              "src": "media/waste_classification/Screenshot 2024-10-04 at 4.00.20 PM.png",
+              "caption": "Performance metrics comparing classification accuracy for different waste types."
+            },
+            {
+              "src": "media/waste_classification/Screenshot 2024-10-04 at 4.00.44 PM.png",
+              "caption": "Confusion matrix illustrating model accuracy for each waste category."
+            }
+          ]
+        }
+      },
+      {
+        "title": "OCR for Medical Reports: Enhanced Data Extraction and Summarization",
+        "overview": "This project aims to enhance data extraction and summarization of medical reports using OCR technology and machine learning.",
+        "technologies": {
+          "ocr": ["AWS Textract"],
+          "nlp": ["GPT-2", "Transformers"],
+          "backend": ["Python", "Flask"]
+        },
+        "applications": [
+          "Automated medical report analysis",
+          "Summarization of large medical documents",
+          "Improved accessibility for healthcare professionals"
+        ],
+        "extras": [
+          "Developed a Medical Dictionary in collaboration with local doctors",
+          "Combined information extraction and summarization for better comprehension"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "media/medical_report/Screenshot 2024-10-04 at 3.08.29 PM.png",
+              "caption": "Workflow diagram illustrating OCR processing steps for medical reports."
+            },
+            {
+              "src": "media/medical_report/Screenshot 2024-10-04 at 3.09.15 PM.png",
+              "caption": "Example of a raw medical report before OCR processing."
+            },
+            {
+              "src": "media/medical_report/Screenshot 2024-10-04 at 3.09.40 PM.png",
+              "caption": "Extracted textual data from the medical report using AWS Textract."
+            },
+            {
+              "src": "media/medical_report/Screenshot 2024-10-04 at 3.10.07 PM.png",
+              "caption": "Highlighted abnormal parameters identified from the extracted text."
+            }
+          ]
+        }
+      },
+      {
+        "title": "CI/CD Pipeline on AWS",
+        "overview": "Developed a cloud-native Java application with an automated CI/CD pipeline using AWS services such as CodePipeline, CodeBuild, and ECS. The pipeline ensures seamless deployment and scaling of microservices in a containerized environment with Docker.",
+        "technologies": {
+          "backend": ["Java", "Spring Boot"],
+          "containerization": ["Docker", "Elastic Container Registry (ECR)"],
+          "cloud": ["AWS CodePipeline", "AWS CodeBuild", "AWS ECS", "AWS Elastic Container Registry (ECR)"],
+          "devops": ["CI/CD", "Infrastructure as Code (IaC)", "Buildspec.yaml", "GitHub Actions"],
+          "orchestration": ["AWS Fargate", "Load Balancer"]
+        },
+        "applications": [
+          "Automated build, test, and deployment of microservices",
+          "Containerized application deployment using AWS ECS",
+          "Continuous Integration and Continuous Deployment (CI/CD) using AWS CodePipeline",
+          "Scalable and fault-tolerant architecture using AWS Fargate",
+          "GitHub-integrated version control for automated deployments"
+        ],
+        "extras": [
+          "End-to-end CI/CD pipeline implementation using AWS services",
+          "Optimized Docker image build process with efficient caching",
+          "AWS IAM role-based access control for security in CI/CD pipeline",
+          "Automated testing and validation before deployment",
+          "Monitoring and logging integration using AWS CloudWatch",
+          "Reduced deployment downtime with blue-green and rolling deployments"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "media/ci-cd/347887404-342e97bf-5fbe-490f-bf76-b5bdd33ce415.png",
+              "caption": "CI/CD pipeline flow diagram demonstrating integration of AWS services."
+            }
+           
+          ]
+        },
+        "repo": "https://github.com/varunmehta14/CICD_AWS",
+        "documentation": "https://github.com/varunmehta14/CICD_AWS/tree/main/aws-cicd-main"
+    },      
+    {
+        "title": "ARSandbox: Real-time 3D Depth Visualization in Rhino",
+        "overview": "Developed a Grasshopper plugin utilizing C# and the RhinoCommon API for real-time depth visualization and point cloud rendering using the Orbbec Femto sensor. The tool enhances 3D design workflows by seamlessly integrating live depth sensing with Rhino's geometry processing capabilities.",
+        "technologies": {
+          "language": ["C#"],
+          "framework": [".NET", "RhinoCommon API", "Grasshopper SDK"],
+          "hardware": ["Orbbec Femto Depth Sensor"],
+          "graphics": ["Point Cloud Processing", "Mesh Generation", "Contour Extraction"]
+        },
+        "applications": [
+          "Real-time point cloud visualization within Rhino",
+          "Depth-based terrain and topography modeling",
+          "Automated mesh and contour generation for design workflows",
+          "Dynamic interaction with depth data for architectural and engineering use cases",
+          "Enhanced 3D modeling with live environmental data"
+        ],
+        "extras": [
+          "Optimized depth data processing using multi-threading",
+          "Interactive parameter tuning for real-time visualization",
+          "Integration of custom color-mapping for depth representation",
+          "Seamless interaction with Rhino’s native geometry operations",
+          "Removed unnecessary features like raindrop simulation and redundant contours for improved performance"
+        ],
+        "visuals": {
+          "videos": [
+            {
+                "src": "media/bfms/video1.mp4",
+                "caption": "Generated mesh from real-time point cloud data."
+              },
+              {
+                "src": "media/bfms/contours.mp4",
+                "caption": "Contour creation"
+              }
+          ],
+          "images": [
+            {
+              "src": "media/bfms/setup.jpeg",
+              "caption": "Live point cloud visualization in Rhino using Orbbec Femto."
+            },
+            {
+              "src": "media/bfms/contours_and_water.jpg",
+              "caption": "Depth image captured and color-mapped for better visualization with contours and flood simulation event."
+            }
+        
+          ]
+        },
+        "repo": "https://github.com/varunmehta14/ARSandBox",
+        "documentation": "https://github.com/varunmehta14/ARSandBox/blob/main/README.md"
+      },      
+      {
+        "title": "Autonomous Path Planning and Parking Simulation",
+        "overview": "Developed a scalable and computationally efficient simulation framework for autonomous parking, integrating path planning, motion control, and multi-vehicle coordination. The system initially used CARLA for high-fidelity simulation but was later optimized for lightweight Pygame-based simulations to ensure rapid iteration and real-time adaptability.",
+        "technologies": {
+          "path_planning": ["A* Algorithm", "Graph-Based Cost Calculation", "Cubic Spline Interpolation"],
+          "motion_control": ["Pure Pursuit Algorithm", "PID Controller"],
+          "obstacle_detection": ["LIDAR-Based Raycasting", "Real-Time Collision Avoidance"],
+          "simulation_frameworks": ["CARLA", "Pygame"],
+          "multi_agent_systems": ["Dynamic Replanning", "Multi-Vehicle Navigation"]
+        },
+        "applications": [
+          "Autonomous vehicle navigation in parking environments",
+          "Dynamic obstacle detection and avoidance in real-time",
+          "Scalable multi-agent path planning and coordination",
+          "Simulation-based evaluation of self-driving parking algorithms",
+          "Integration of AI-driven decision-making in autonomous systems"
+        ],
+        "extras": [
+          "Optimized A* algorithm for real-time response (<0.5s in 2D, ~0.8s in 3D)",
+          "Obstacle detection success rate: 99% for static obstacles, 92% for dynamic obstacles",
+          "Multi-agent simulation enables real-time adjustments for improved coordination",
+          "Future integration with Reinforcement Learning for adaptive decision-making",
+          "Parallelized path planning for enhanced real-time response in complex environments"
+        ],
+        "visuals": {
+          "videos": [
+            {
+                "src": "media/acp/CarlaUE4-withoutobstacles.mp4",
+                "caption": "No obstacles"
+              },
+              {
+                "src": "media/acp/multicars.mp4",
+                "caption": "Multiple cars"
+              },
+              {
+                "src": "media/acp/withpedestrian.mp4",
+                "caption": "With pedestrian and obstacles"
+              },
+            {
+                "src": "https://github.com/user-attachments/assets/a5025e6f-2cbe-43a6-ac6e-8d58dffcd8a2",
+                "caption": "2d Results"
+              },
+              
+            {
+                "src": "https://github.com/user-attachments/assets/51abf4ad-2c89-4b57-a336-89ca063453ad",
+                "caption": "LIDAR-based obstacle detection in simulated parking environment."
+              },
+              {
+                "src": "https://github.com/user-attachments/assets/a3b1794e-9e4f-444a-a6ed-58ff1b771bd4",
+                "caption": "Pure pursuit algorithm"
+              }
+             
+              
+          ],
+          "images": [
+            {
+              "src": "https://github.com/user-attachments/assets/887e2ac3-b45e-453e-81ef-0b488a447687",
+              "caption": "Final output of multi-agent autonomous parking simulation."
+            }
+           
+    
+          ]
+        },
+        "repo": "https://github.com/varunmehta14/AutoPark",
+        "canva": "https://www.canva.com/design/DAEZw--q3Do/9kYITxLAQyoL_ypAXR4yTg/view?utm_content=DAEZw--q3Do&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0aaebf22f9"
+      },      
+      {
+        "title": "Perception-Based Adaptive Cruise Control in CARLA",
+        "overview": "Developed an AI-powered Adaptive Cruise Control (ACC) system using deep learning-based distance estimation and lane detection in the CARLA simulator. The project leverages high-performance computing (HPC) for model training and real-time inference.",
+        "technologies": {
+          "deep_learning": ["TensorFlow", "PyTorch", "YOLOv3", "Keras"],
+          "simulation_framework": ["CARLA"],
+          "control_systems": ["PID Controller"],
+          "HPC": ["Singularity", "Docker", "RT-AMT for STL-based evaluation"],
+          "data_processing": ["NumPy", "Pandas", "Matplotlib", "Scikit-learn"]
+        },
+        "applications": [
+          "Autonomous vehicle cruise control with real-time distance estimation",
+          "Lane detection and prediction for adaptive driving strategies",
+          "Safe following distance computation for self-driving cars",
+          "End-to-end simulation testing for autonomous driving research",
+          "Integration of AI-based perception into adaptive driving assistance systems"
+        ],
+        "extras": [
+          "Trained a Neural Network to predict distance between vehicles using image-based inference",
+          "Implemented a lane detection model to classify if the lead car is in the same lane",
+          "Developed an ACC controller that adjusts vehicle speed based on real-time perception",
+          "Utilized HPC for training deep learning models to enhance computational efficiency",
+          "Evaluated controller performance using STL-based verification"
+        ],
+        "visuals": {
+          "videos": [],
+          "images": [
+            {
+              "src": "media/acp/image.png",
+              "caption": "Example of distance estimation between ego and lead car."
+            }
+           
+          ]
+        },
+        "repo": "https://github.com/varunmehta14/ACC"
+      }
+     
+      
+    ]
+  }
+  

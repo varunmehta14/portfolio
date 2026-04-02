@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience | Portfolio Varun</title>
+  <!-- Font Awesome & Flickity CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/flickity@2.2.3/dist/flickity.min.css" rel="stylesheet">
+  
+  <!-- Main CSS (same as your projects page) -->
+  <link rel="stylesheet" href="../projects/style.css">
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      outline: none;
+      text-transform: capitalize;
+      transition: all 0.2s linear;
+    }
+
+    html {
+      font-size: 62.5%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f0f0f0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    *::selection {
+      background: #5d2e8c;
+      color: #fff;
+    }
+
+    html::-webkit-scrollbar {
+      width: 0.8rem;
+    }
+
+    html::-webkit-scrollbar-track {
+      background: #f0f0f0;
+    }
+
+    html::-webkit-scrollbar-thumb {
+      background: #420177;
+    }
+
+    /* Navbar Styling */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 5%;
+      height: 7rem;
+      background-color: #fff;
+      box-shadow: 0 1px 4px rgba(146,161,176,0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    header:hover {
+      background-color: #f3f3f3;
+    }
+
+    header .logo {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #1a1a1a;
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo i {
+      font-size: 2.4rem;
+      margin-right: 0.5rem;
+    }
+
+    header .logo:hover {
+      color: #fc8c05;
+    }
+
+    header .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header .navbar li {
+      margin-left: 3rem;
+    }
+
+    header .navbar ul li a {
+      font-size: 1.6rem;
+      color: #1a1a1a;
+      font-weight: 600;
+      letter-spacing: 0.05rem;
+      padding: 0.6rem 0;
+    }
+
+    header .navbar ul li a.active,
+    header .navbar ul li a:hover {
+      color: #5115f2;
+      border-bottom: 2px solid #5115f2;
+    }
+
+    #menu {
+      font-size: 3rem;
+      cursor: pointer;
+      color: #0e0e2c;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      #menu {
+        display: block;
+      }
+      header .navbar {
+        position: fixed;
+        top: 7rem;
+        right: -120%;
+        width: 70%;
+        height: 100%;
+        text-align: left;
+        background-color: #1e1e30;
+        transition: right 0.3s ease-in-out;
+      }
+      header .navbar ul {
+        flex-direction: column;
+        padding: 1rem;
+      }
+      header .navbar ul li {
+        width: 100%;
+        margin: 1rem 0;
+      }
+      header .navbar ul li a {
+        font-size: 2.2rem;
+        padding: 1.2rem;
+        color: #fff;
+      }
+      header .navbar.nav-toggle {
+        right: 0;
+      }
+    }
+
+    /* Work Section Styling */
+    .work {
+      background: linear-gradient(to bottom, #2b2d7f, #110d39);
+      margin-top: 6rem;
+      padding: 5rem 0;
+    }
+
+    .work h2 {
+      color: #fff;
+      text-align: center;
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Projects Container */
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    /* Project Card / Item Styling */
+    .project-card,
+    .project-item {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .project-card:hover,
+    .project-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-item h3 {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .project-item h3:hover {
+      color: #0073e6;
+    }
+
+    .project-item p {
+      font-size: 1.4rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    .project-item .technologies,
+    .project-item .applications,
+    .project-item .extras {
+      font-size: 1.4rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    /* Repository Link Button */
+    .repository a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 0.5rem 1rem;
+      background: #0073e6;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.4rem;
+    }
+    .repository a:hover {
+      background: #005bb5;
+    }
+
+    /* Flickity Carousel Styling */
+    .carousel {
+      margin-top: 25px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: black;
+      padding: 10px;
+      position: relative;
+      width: 100%;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .carousel-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .carousel-cell img,
+    .carousel-cell video {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      background: black;
+      padding: 8px;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .carousel-cell img:hover,
+    .carousel-cell video:hover {
+      transform: scale(1.05);
+    }
+
+    .carousel-caption {
+      margin-top: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      font-size: 1.4rem;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+      width: 90%;
+      text-align: center;
+    }
+
+    /* Flickity Navigation Buttons */
+    .flickity-prev-next-button {
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+    .flickity-prev-next-button:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar (same as your projects page) -->
+  <header>
+    <a href="/portfolio/" class="logo"><i class="fab fa-node-js"></i> Varun</a>
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/portfolio/#home">Home</a></li>
+        <li><a href="/portfolio/#about">About</a></li>
+        <li><a href="/portfolio/#skills">Skills</a></li>
+        <li><a href="/portfolio/#education">Education</a></li>
+        <li><a href="/portfolio/#projects">Work</a></li>
+        <li><a class="active" href="/portfolio/#experience">Experience</a></li>
+        <li><a href="/portfolio/#publications">Publications</a></li>
+        <li><a href="/portfolio/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Experience Section (using same container styling as projects) -->
+  <section class="work" id="experience">
+    <h2><i class="fas fa-briefcase"></i> My Experience</h2>
+    <div class="projects-container" id="experienceContainer"></div>
+  </section>
+
+  <!-- External Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
+  <script>
+    async function loadExperience() {
+      try {
+        const response = await fetch('experience.json');
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        const data = await response.json();
+        const experienceContainer = document.getElementById('experienceContainer');
+
+        data.experience.forEach((exp, index) => {
+          let visualsHTML = "";
+          if (
+            (exp.visuals.videos && exp.visuals.videos.length > 0) ||
+            (exp.visuals.images && exp.visuals.images.length > 0)
+          ) {
+            visualsHTML += `<div id="carouselExp${index}" class="carousel js-flickity" data-flickity='{ "wrapAround": true, "autoPlay": 3000, "pauseAutoPlayOnHover": true }'>`;
+            if(exp.visuals.videos && exp.visuals.videos.length > 0) {
+              exp.visuals.videos.forEach(video => {
+                visualsHTML += `
+                  <div class="carousel-cell">
+                    <video controls>
+                      <source src="${video.src}" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="carousel-caption">
+                      <p>${video.caption}</p>
+                    </div>
+                  </div>`;
+              });
+            }
+            if(exp.visuals.images && exp.visuals.images.length > 0) {
+              exp.visuals.images.forEach(image => {
+                visualsHTML += `
+                  <div class="carousel-cell">
+                    <img src="${image.src}" alt="Experience Image">
+                    <div class="carousel-caption">
+                      <p>${image.caption}</p>
+                    </div>
+                  </div>`;
+              });
+            }
+            visualsHTML += `</div>`;
+          }
+          
+          let technologiesHTML = (exp.technologies && exp.technologies.length > 0) 
+            ? `<div class="technologies"><strong>Technologies:</strong> ${exp.technologies.join(', ')}</div>` 
+            : "";
+          let highlightsHTML = (exp.highlights && exp.highlights.length > 0) 
+            ? `<ul>${exp.highlights.map(item => `<li>${item}</li>`).join('')}</ul>` 
+            : "";
+          
+          experienceContainer.innerHTML += `
+            <div class="project-card project-item">
+              <h3>${exp.title}</h3>
+              <p><strong>Duration:</strong> ${exp.duration}</p>
+              ${technologiesHTML}
+              ${highlightsHTML}
+              ${visualsHTML}
+            </div>
+          `;
+        });
+
+        setTimeout(() => {
+          document.querySelectorAll('.js-flickity').forEach(carousel => {
+            new Flickity(carousel, {
+              wrapAround: true,
+              autoPlay: 3000,
+              pauseAutoPlayOnHover: true
+            });
+          });
+        }, 500);
+      } catch (error) {
+        console.error("Error loading experience:", error);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadExperience);
+  </script>
+</body>
+</html>

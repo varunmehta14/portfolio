@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Portfolio Varun</title>
+    <link rel="stylesheet" href="../projects/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .project-card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%; 
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .presentation-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .presentation-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false">
+    
+<header>
+    <a href="/portfolio/" class="logo"><i class="fab fa-node-js"></i> Varun</a>
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/portfolio/#home">Home</a></li>
+            <li><a href="/portfolio/#about">About</a></li>
+            <li><a href="/portfolio/#skills">Skills</a></li>
+            <li><a href="/portfolio/#education">Education</a></li>
+            <li><a href="/portfolio/#projects">Work</a></li>
+            <li><a href="/portfolio/#experience">Experience</a></li>
+            <li><a class="active" href="/portfolio/#publications">Publications</a></li>
+            <li><a href="/portfolio/#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="work" id="publications">
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Publications</h2>
+    <div class="projects-container" id="publicationsContainer"></div>
+</section>
+
+<div class="backbtn">
+    <a href="/portfolio/" class="btn">
+        <i class="fas fa-arrow-left"></i>
+        <span>Back to Home</span>
+    </a>
+</div>
+
+<script>
+    async function loadPublications() {
+        try {
+            const response = await fetch('publications.json');
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            const data = await response.json();
+            const container = document.getElementById('publicationsContainer');
+            
+            data.publications.forEach(pub => {
+                container.innerHTML += `
+                    <div class="project-card">
+                        <h3>${pub.title}</h3>
+                        <p>${pub.overview}</p>
+                        <div class="presentation-container">
+                            <iframe src="${pub.presentation.replace('/edit?usp=sharing', '/preview')}" allow="autoplay"></iframe>
+                            <p>
+                                <a href="${pub.presentation}" target="_blank">Download or View Full Presentation</a>
+                            </p>
+                        </div>
+                        <div class="btns">
+                            <a href="${pub.link}" class="btn" target="_blank">
+                                <i class="fas fa-arrow-right"></i> Publication
+                            </a>
+                        </div>
+                    </div>`;
+            });
+        } catch (error) {
+            console.error("Error loading publications:", error);
+        }
+    }
+    document.addEventListener("DOMContentLoaded", loadPublications);
+</script>
+</body>
+</html>
